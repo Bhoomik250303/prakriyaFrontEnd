@@ -1,0 +1,8 @@
+.square{
+    width: 15vw;
+    height: 16vw;
+
+    /* max-width: 210px;
+    max-height:210px ; */
+    background: goldenrod;
+}

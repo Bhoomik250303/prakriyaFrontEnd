@@ -1,0 +1,38 @@
+.cardContainer{
+    width: 18%;
+    height: 70%;
+    background: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.showModal{
+    transition: all 1s ease ease-in-out;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.Heading{
+    width: 100%;
+    height: 20%;
+    background: gold;
+}
+.Para{
+    width: 100%;
+    height: 60%;
+    background: gold;
+}
+
+.transition{
+    
+    -webkit-transition: all 5s ease;
+  transition: all 15 ease;
+}

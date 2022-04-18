@@ -1,0 +1,80 @@
+
+
+.navContainer{
+    display: flex;
+    width: 100%;
+    height: 13vw;
+    max-height: 90px;
+    background: green;
+    align-items: center;
+    justify-content: center;
+}
+.navMain{
+    display: flex;
+    width: 97%;
+    height: 100%;
+    /* max-height: 90px; */
+    background: rgb(128, 0, 96);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo{
+    height: 100%;
+    width: 15%;
+    max-width: 95px;
+    
+    background: gold;
+}
+.Right{
+    display: flex;
+    height: 100%;
+    /* max-height: 90px; */
+    width: 65%;
+    /* max-width: 360px; */
+    background: gold;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.Options{
+    height: 100%;
+    width: 60%;
+   
+    background: rgb(5, 183, 112);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.Options div{
+    height: 50%;
+    width: 30%;
+    background: gray;
+    font-size: 2vw;
+}
+
+.ToggleBar{
+    width:20%;
+    max-width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 90px; */
+    background: goldenrod;
+}
+
+/* .modalOverlay {
+    
+    background: black;
+    opacity: 0.9;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+
+
+} */
