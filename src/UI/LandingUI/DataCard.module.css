@@ -5,7 +5,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
+}
+@media (max-width: 800px) {
+  .cardContainer{
+    background: rgb(24, 139, 215);
+    margin: 5px;
+    width: 93%;
+    height: 90vw;
+    max-width: 530px;
+    min-height: 410px;
+  }
 }
 
 .showModal{

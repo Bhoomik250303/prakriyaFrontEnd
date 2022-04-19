@@ -11,6 +11,11 @@
     cursor: pointer;
   
 }
+.mainContainer{
+  width: 76vw;
+  height: 32vw;
+  background-color: palevioletred;
+}
 
 .closeModal{
     display: flex;

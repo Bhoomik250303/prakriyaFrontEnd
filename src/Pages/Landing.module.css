@@ -21,7 +21,29 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  
 }
+@media (max-width: 800px) {
+  .DataContainer {
+    background: rgb(181, 126, 126);
+    margin: 5px;
+    flex-direction: column;
+    height: fit-content;
+
+  }
+  .Data{
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    
+  }
+  .temp{
+    max-height: 150px;
+    background: green;
+  }
+
+}
+
 
 
 .Data2 {

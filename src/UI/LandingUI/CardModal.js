@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./CardModal.module.css"
 const CardModal = (dim) => {
-    console.log("dhisoddid")
+    // console.log("dhisoddid")
     // const[dimension,setdimension]=useState({width:'',height:""})
 
     // useEffect(()=>{
@@ -12,12 +12,13 @@ const CardModal = (dim) => {
         dim.setboolean();
     }
 
-    console.log(dim.dim.height + "px");
+    // console.log(dim.dim.height + "px");
     return (
         <>
            
                
-                <div style={{ maxWidth: dim.dim.width + "px", maxHeight: dim.dim.height + "px", background: "pink", height: "40vw", width: "90%" ,display:"flex",flexDirection:"column",alignItems:"center"}}>
+                {/* <div style={{ maxWidth: dim.dim.width + "px", maxHeight: dim.dim.height + "px", background: "pink", height: "40vw", width: "90%" ,display:"flex",flexDirection:"column",alignItems:"center"}}> */}
+                <div className={classes.mainContainer}>
                     <div className={classes.container}>
                         <div className={classes.closeModal}>
                                 <div className={classes.closeButton} onClick={clickHandler}>

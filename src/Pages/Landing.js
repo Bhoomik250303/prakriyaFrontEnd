@@ -13,25 +13,25 @@ const Landing = () => {
   const [cardModalData, setCardModalData] = useState('')
   const [temp, settemp] = useState(false)
 
-  useEffect(() => {
-    
-    if (dim.height === container.current.clientHeight && dim.width === container.current.clientWidth)
-      return
-    // console.log(container.current.clientHeight)
-    // console.log(container.current.clientWidth)
-    setDim({ height: container.current.clientHeight, width: container.current.clientWidth })
+  // useEffect(() => {
+  //   console.log("Useeffect Ran")
+  //   if (dim.height === container.current.clientHeight && dim.width === container.current.clientWidth)
+  //     return
+  //   // console.log(container.current.clientHeight)
+  //   // console.log(container.current.clientWidth)
+  //   setDim({ height: container.current.clientHeight, width: container.current.clientWidth })
 
-    window.addEventListener('resize',(e)=>{
+  //   window.addEventListener('resize',(e)=>{
         
-        if(!container.current?.clientHeight){
-          return
-        }
-        console.log(container)
-        setDim({ height: container.current.clientHeight, width: container.current.clientWidth })
-      })
+  //       if(!container.current?.clientHeight){
+  //         return
+  //       }
+  //       console.log(container)
+  //       setDim({ height: container.current.clientHeight, width: container.current.clientWidth })
+  //     })
        
 
-  }, [])
+  // }, [])
 
   // window.addEventListener('resize',(e)=>{
   //   console.log(e)
@@ -73,7 +73,7 @@ const Landing = () => {
 
       <div className={classes.Data}>
         <div className={classes.DataContainer}>
-          <DataCard></DataCard>
+          <DataCard className={classes.temp}></DataCard>
           <DataCard></DataCard>
           <DataCard></DataCard>
           <DataCard></DataCard>
