@@ -1,6 +1,6 @@
 .cardContainer{
-    width: 18%;
-    height: 70%;
+    width: 23%;
+    height: 90%;
     background: darkcyan;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: space-between;
     
-}
+} 
 
 .Heading{
     width: 100%;
@@ -36,3 +36,29 @@
     -webkit-transition: all 5s ease;
   transition: all 15 ease;
 }
+
+.MyClassEnter{
+    opacity: 0;
+  }
+
+  .MyClassEnterActive {
+    
+    transition: opacity 500ms;
+    opacity:0.6 ;        
+  }
+  .MyClassEnterDone{
+    opacity: 0.6;
+  }
+
+
+  .MyClassExit {
+    opacity: 0.6;
+  }
+  .MyClassExitActive {
+    opacity: 0;
+    transition: opacity 500ms;
+  } 
+  .MyClassExitDone {
+    opacity: 0;
+    transition: opacity 500ms;
+  } 

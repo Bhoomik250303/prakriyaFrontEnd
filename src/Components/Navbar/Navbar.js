@@ -1,7 +1,8 @@
 import React,{useState,useCallback,useEffect} from 'react';
-import HamBurger from '../../UI/HamBurger';
-import ModalOverlay from '../../UI/ModalOverlay';
+import HamBurger from '../../UI/NavbarUI/HamBurger';
+import ModalOverlay from '../../UI/NavbarUI/ModalOverlay';
 import classes from "./Navbar.module.css"
+
 
 const Navbar = () => {
   const [modal, setModal] = useState(false)
@@ -37,10 +38,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {modal && <ModalOverlay closeModal={closeModalHandler}/>}
-
-
-    </>
+      <ModalOverlay show={modal} closeModal={closeModalHandler}/>
+      </>
   );
 }
 

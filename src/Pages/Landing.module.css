@@ -55,3 +55,57 @@
     position: relative;
 }
 
+.MyClassEnter{
+    opacity: 0;
+  }
+
+  .MyClassEnterActive {
+    
+    transition: opacity 500ms;
+    opacity:1 ;        
+  }
+  .MyClassEnterDone{
+    opacity: 1;
+  }
+
+
+  .MyClassExit {
+    display: none;
+  }
+  .MyClassExitActive {
+     display: none; 
+    /* opacity: 0;
+    transition: opacity 500ms; */
+  } 
+  .MyClassExitDone {
+    display: none;
+  } 
+
+  .MyClass2Enter{
+    opacity: 0;
+    
+  }
+
+  .MyClass2EnterActive {
+    
+    
+    transition: opacity 500ms ease-out;
+    opacity:1 ;        
+  }
+  .MyClass2EnterDone{
+    opacity: 1;
+  }
+
+
+  .MyClass2Exit {
+    opacity: 1;
+    display: none;
+  }
+  .MyClass2ExitActive {
+    opacity: 0;
+    transition: opacity 500ms;
+  } 
+  .MyClass2ExitDone {
+    opacity: 0;
+    
+  } 
