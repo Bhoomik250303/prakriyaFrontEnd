@@ -7,7 +7,7 @@
 .Data {
     width: 100%;
     height: 100vh;
-    background: rgb(0, 255, 34);
+    background: rgb(55, 82, 59);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,7 @@
   
 }
 @media (max-width: 800px) {
+ 
   .DataContainer {
     background: rgb(181, 126, 126);
     margin: 5px;
@@ -36,12 +37,25 @@
     height: fit-content;
     flex-direction: column;
     
+    
   }
-  .temp{
-    max-height: 150px;
-    background: green;
-  }
+  .gridContainer{
+  display: none;
+}
+  
 
+}
+
+@media(max-width: 500px){
+  .Data3{
+    background: brown;
+  }
+  .container{
+    background: plum;
+  }
+  .sliderContainer{
+    background-color: blue;
+  }
 }
 
 
@@ -49,11 +63,29 @@
 .Data2 {
     width: 100%;
     height: 100vh;
-    background: rgb(25, 70, 31);
+    background: rgb(119, 183, 128);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.Data3{
+  width: 100%;
+  height: fit-content;
+  
+  background: greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sliderContainer{
+  width: 95%;
+  height: 150vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
 }
 
 .gridContainer{
@@ -62,7 +94,7 @@
     height: fit-content;
     max-width: fit-content;
     max-height: fit-content;
-    background-color: aqua;
+    background-color: rgb(185, 1, 154);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -71,10 +103,10 @@
 }
 
 .temp{
-    background-color: black;
+    background-color: rgb(255, 40, 40);
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 300px;
+    
 }
 
 .MyClassEnter{
@@ -131,3 +163,22 @@
     opacity: 0;
     
   } 
+
+  .SlideModalOverlay{
+    width: 95%;
+    height: 130vw;
+    max-height: 900px;
+    margin: 0 auto;
+    position: absolute;
+    background: rgb(132, 189, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SlideModalOverlay button{
+    width: 100px;
+    height: 100px;
+   
+  }

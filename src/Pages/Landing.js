@@ -1,17 +1,25 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classes from "./Landing.module.css"
-import Navbar from '../Components/Navbar/Navbar.js';
+import { useMediaQuery } from 'react-responsive'
 import DataCard from '../UI/LandingUI/DataCard';
 import GridCard from '../UI/LandingUI/GridCard';
 import { CSSTransition } from 'react-transition-group';
 import CardModal from '../UI/LandingUI/CardModal';
+import Slider from '../UI/LandingUI/Slider';
 const Landing = () => {
 
   const container = useRef();
   const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
+
   const [temp, settemp] = useState(false)
+  const isMobile = useMediaQuery({
+    query: '(min-width: 800px)'
+  })
+
+  const [slideModalData, setSlideModalData] = useState({data:'',bool:false})
+  
 
   // useEffect(() => {
   //   console.log("Useeffect Ran")
@@ -62,6 +70,15 @@ const Landing = () => {
     exit:0
   }
 
+ const sliderDataHandler=(data)=>{
+   setSlideModalData(data)
+ }
+ const closeSlideModalOverlay=()=>{
+   
+    setSlideModalData({bool:false})
+  
+   
+ }
 
   return (
     <>
@@ -81,7 +98,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className={classes.Data2}>
+      {isMobile&&<div className={classes.Data2}>
         
          <CSSTransition
             mountOnEnter
@@ -104,7 +121,7 @@ const Landing = () => {
          </CSSTransition>
           {/* {bool&& <CardModal dim = {dim} data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>} */}
             
-          <CSSTransition
+         <CSSTransition
           mountOnEnter
           unmountOnExit
           in={!temp}
@@ -157,8 +174,60 @@ const Landing = () => {
 
 
           </div>} */}
+         
         
-      </div>
+      </div>}
+
+      {!isMobile &&<div className={classes.Data3}>
+        <div className={classes.temp}></div>
+        <div className={classes.sliderContainer}>
+        
+         <CSSTransition
+            mountOnEnter
+            
+            in={!slideModalData.bool}
+            timeout={time}
+            classNames={{
+                
+                    enter:classes.MyClassEnter,
+                    enterActive:classes.MyClassEnterActive,
+                    enterDone:classes.MyClassEnterDone,
+                    exit:classes.MyClassExit,
+                    exitActive: classes.MyClassExitActive,
+                    exitDone: classes.MyClassExitDone
+                
+            }}>
+              <Slider sliderDataHandler={sliderDataHandler}></Slider>
+            </CSSTransition>
+          
+
+         <CSSTransition
+          mountOnEnter
+          unmountOnExit
+          in={slideModalData.bool}
+          timeout={500}
+          enter={true}
+          classNames={{
+              
+                  enter:classes.MyClass2Enter,
+                  enterActive:classes.MyClass2EnterActive,
+                  enterDone:classes.MyClass2EnterDone,
+                  exit:classes.MyClass2Exit,
+                  exitActive: classes.MyClass2ExitActive,
+                  exitDone: classes.MyClass2ExitDone
+                  
+              
+          }}>
+                  <div className={classes.SlideModalOverlay}>
+                    <button onClick={closeSlideModalOverlay}>X</button>
+                    {slideModalData.data}
+                  </div>
+          </CSSTransition>
+         
+                  
+         </div> 
+        
+      </div> } 
 
 
 

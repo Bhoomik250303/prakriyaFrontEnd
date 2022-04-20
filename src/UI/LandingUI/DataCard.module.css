@@ -8,6 +8,7 @@
     /* transition: all 1s ease; */
 }
 @media (max-width: 800px) {
+ 
   .cardContainer{
     background: rgb(24, 139, 215);
     margin: 5px;
