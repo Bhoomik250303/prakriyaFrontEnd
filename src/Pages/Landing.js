@@ -9,13 +9,15 @@ import Slider from '../UI/LandingUI/Slider';
 import useScrollBlock from '../Hooks/useScrollBlock';
 const Landing = () => {
 
-
+  
   
   const [blockScroll, allowScroll] = useScrollBlock();
   
 
   const container = useRef();
   const scrollContainer = useRef();
+  const circle = useRef();
+
   const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
@@ -87,13 +89,33 @@ const Landing = () => {
    
  }
  const onWheel=(e)=>{
-  
-  //  console.log(e.deltaY)
+  let count = 0;
+  // if(count === 0){
+  //   circle.current.children[1].classList.remove(classes.circleTransform)
+  //   circle.current.children[0].classList.add(classes.circleTransform)
+    
+  //  }
+   console.log(e.deltaY)
   //  console.log(scrollContainer);
   //  console.log(window.pageYOffset)
- 
+  // console.log(scrollContainer.current.scrollLeft += e.deltaY*2000)
   
-   scrollContainer.current.scrollLeft += e.deltaY*2;
+  
+   scrollContainer.current.scrollLeft += e.deltaY*2000;
+ 
+   
+   if(e.deltaY > 0){
+    circle.current.children[1].classList.add(classes.circleTransform)
+    circle.current.children[0].classList.remove(classes.circleTransform)
+    return;
+   }
+   if(e.deltaY < 0){
+    circle.current.children[1].classList.remove(classes.circleTransform)
+    circle.current.children[0].classList.add(classes.circleTransform)
+   }
+   
+  
+  
 
   
    scrollContainer.current.classList.add(classes.setPos)
@@ -257,19 +279,21 @@ const Landing = () => {
         <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={blockScroll} onMouseLeave={allowScroll} > 
           
             <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient} style={{background:'green'}}></div>
             <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient} style={{background:'green'}}></div>
             <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient}></div>
+            
             <div className={classes.contentForClient} style={{background:'green'}}></div>
          
            
          
            
         </div> 
-         
+         <div className={classes.clientDot} ref={circle}>
+           <div className={`${classes.clientDotCircle1} ${classes.circleTransform}`}> </div>
+           <div className={classes.clientDotCircle1}> </div>
+         </div>
   
     
         

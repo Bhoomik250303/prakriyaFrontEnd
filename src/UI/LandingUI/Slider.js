@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect,useRef,useState } from "react";
 import "./Slider.css"
 import image1 from "../../Assets/SliderImages/img-1.jpg"
 import image2 from "../../Assets/SliderImages/img-2.jpg"
@@ -7,7 +7,8 @@ import image4 from "../../Assets/SliderImages/img-4.jpg"
 const Slider = (prop) => {
 
     const [data,setData]= useState({data:'',bool:false})
-    
+    const circle = useRef();
+    let circleCount = 0;
 
 
     useEffect(() => {
@@ -21,6 +22,20 @@ const Slider = (prop) => {
             slides.forEach((s, i) => s.style.transform = `translateX(${(i - slide) * 100}%)`);
         }
         const next = function () {
+            if(circleCount<9){
+                console.log(circle.current.children[0].classList);
+                circle.current.children[circleCount].classList.remove('circleTransform')
+                circle.current.children[circleCount+1].classList.add('circleTransform')
+                circleCount++;
+            }else{
+                circle.current.children[circleCount].classList.remove('circleTransform')
+                circleCount=0;
+                circle.current.children[circleCount].classList.add('circleTransform')
+
+            }
+           
+
+
             if (curSlide == maxSlide - 1) {
                 curSlide = 0;
             } else { curSlide++; };
@@ -29,6 +44,19 @@ const Slider = (prop) => {
             gotoSlide(curSlide);
         }
         const prev = function () {
+            if(circleCount>0){
+                console.log(circle.current.children[0].classList);
+                circle.current.children[circleCount].classList.remove('circleTransform')
+                circle.current.children[circleCount-1].classList.add('circleTransform')
+                circleCount--;
+            }else{
+                circle.current.children[circleCount].classList.remove('circleTransform')
+                circleCount=9;
+                circle.current.children[circleCount].classList.add('circleTransform')
+
+            }
+
+
 
             if (curSlide == 0) {
                 curSlide = maxSlide - 1;
@@ -76,11 +104,31 @@ const Slider = (prop) => {
                     <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
                     <div id={"C"}  className="slide colour3" onClick={clickHandler}>Tap C</div>
                     <div id={"D"}  className="slide colour4" onClick={clickHandler}>Tap D</div>
-
-                    </div>
-                    <div className="slider-modal-button">
+                    <div id={"A"} className="slide colour1"  onClick={clickHandler}>Tap A</div>
+                    <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
+                    <div id={"C"}  className="slide colour3" onClick={clickHandler}>Tap C</div>
+                    <div id={"D"}  className="slide colour4" onClick={clickHandler}>Tap D</div>
+                    <div id={"A"} className="slide colour1"  onClick={clickHandler}>Tap A</div>
+                    <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
+                    
+                </div>
+                <div className="slider-modal-button">
                     <button className="slider__btn slider__btn--left">&larr;</button>
                     <button className="slider__btn slider__btn--right">&rarr;</button>
+                </div>
+                <div className="slider-modal-circle">
+                    <div className="circleContainer" ref={circle}>
+                        <div className="circleIndicator circleTransform"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator"></div>
+                    </div>
                 </div>
             
            

@@ -21,9 +21,21 @@
     width: 95%;
     height: 1px;
     opacity: .5;
-    /* background: rgb(0, 0, 0); */
+    background: rgb(0, 0, 0);
     position: absolute;
   }
+
+  .slider-modal-circle{
+    width: 95%;
+    height: 1px;
+    display: flex;
+    
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    top:42%
+  }
+  
   
   .slide {
     
@@ -89,3 +101,31 @@
   }
 
 
+  .circleContainer{
+    width: 190px;
+    height: 20px;
+    /* background: black; */
+    position: relative;
+    top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  
+  }
+  
+  
+  .circleIndicator{
+    width: 5px;
+    height: 5px;
+    background: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    
+  }
+  
+  .circleTransform{
+    transition: all 500ms ease;
+    transform: scale(1.5);
+    opacity: 1;
+  }
