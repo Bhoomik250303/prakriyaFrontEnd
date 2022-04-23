@@ -72,9 +72,9 @@
     font-family: inherit;
     color: #333;
     border-radius: 50%;
-    height: 4.5rem;
-    width: 4.5rem;
-    font-size: 2.5rem;
+    height: 2rem;
+    width: 2rem;
+    font-size:1;
     cursor: pointer;
   }
   

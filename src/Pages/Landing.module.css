@@ -50,9 +50,7 @@
   .Data3{
     background: brown;
   }
-  .container{
-    background: plum;
-  }
+ 
   .sliderContainer{
     background-color: blue;
   }
@@ -182,3 +180,52 @@
     height: 100px;
    
   }
+
+
+  /* //////////////////////////////////////////////////// */
+
+  .bodyForClient{
+    height: 100vh;
+    width:100%;
+    background: rgba(180, 166, 10, 0.802);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.containerForClient{
+    
+    overflow: scroll;
+    overflow-y: hidden;
+    margin-left: 34px;
+    margin-right: 34px;
+    
+    display: flex;
+    border: 2px solid red;
+    
+    scroll-behavior: smooth;
+   
+}
+.containerForClient::-webkit-scrollbar {
+    background: transparent;
+    
+  }
+
+
+.contentForClient{
+    width: 20vw;
+    min-width: 20vw;
+    max-height: 20vw;
+    height:20vw;
+    margin: 8px;
+    background: palevioletred;
+}
+
+.setPos{
+  background: red;
+  /* position: sticky; */
+  
+}

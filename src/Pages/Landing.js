@@ -6,9 +6,16 @@ import GridCard from '../UI/LandingUI/GridCard';
 import { CSSTransition } from 'react-transition-group';
 import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
+import useScrollBlock from '../Hooks/useScrollBlock';
 const Landing = () => {
 
+
+  
+  const [blockScroll, allowScroll] = useScrollBlock();
+  
+
   const container = useRef();
+  const scrollContainer = useRef();
   const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
@@ -79,6 +86,21 @@ const Landing = () => {
   
    
  }
+ const onWheel=(e)=>{
+  
+  //  console.log(e.deltaY)
+  //  console.log(scrollContainer);
+  //  console.log(window.pageYOffset)
+ 
+  
+   scrollContainer.current.scrollLeft += e.deltaY*2;
+
+  
+   scrollContainer.current.classList.add(classes.setPos)
+ }
+
+
+
 
   return (
     <>
@@ -86,7 +108,7 @@ const Landing = () => {
       <div className={classes.container}>
         
       </div>
-
+     
 
       <div className={classes.Data}>
         <div className={classes.DataContainer}>
@@ -97,7 +119,7 @@ const Landing = () => {
           
         </div>
       </div>
-
+  
       {isMobile&&<div className={classes.Data2}>
         
          <CSSTransition
@@ -229,6 +251,31 @@ const Landing = () => {
         
       </div> } 
 
+     
+       <div className={classes.bodyForClient}  >
+ 
+        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={blockScroll} onMouseLeave={allowScroll} > 
+          
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient}></div>
+            <div className={classes.contentForClient} style={{background:'green'}}></div>
+         
+           
+         
+           
+        </div> 
+         
+  
+    
+        
+        
+    </div>
+         
 
 
     </>
