@@ -100,7 +100,7 @@ const Slider = (prop) => {
             
                 <div className="slider">
 
-                    <div id={"A"} className="slide colour1"  onClick={clickHandler}>Tap A</div>
+                    <div id={"A"} className="slide colour1"  onClick={clickHandler} >Tap A</div>
                     <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
                     <div id={"C"}  className="slide colour3" onClick={clickHandler}>Tap C</div>
                     <div id={"D"}  className="slide colour4" onClick={clickHandler}>Tap D</div>
@@ -118,16 +118,16 @@ const Slider = (prop) => {
                 </div>
                 <div className="slider-modal-circle">
                     <div className="circleContainer" ref={circle}>
-                        <div className="circleIndicator circleTransform"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
-                        <div className="circleIndicator"></div>
+                        <div className="circleIndicator circleTransform transform1"></div>
+                        <div className="circleIndicator transform2"></div>
+                        <div className="circleIndicator transform3"></div>
+                        <div className="circleIndicator transform4"></div>
+                        <div className="circleIndicator transform5"></div>
+                        <div className="circleIndicator transform5"></div>
+                        <div className="circleIndicator transform4"></div>
+                        <div className="circleIndicator transform3"></div>
+                        <div className="circleIndicator transform2"></div>
+                        <div className="circleIndicator transform1"></div>
                     </div>
                 </div>
             

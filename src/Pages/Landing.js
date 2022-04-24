@@ -132,7 +132,7 @@ const Landing = () => {
       </div>
      
 
-      <div className={classes.Data}>
+      <div id='content2' className={classes.Data}>
         <div className={classes.DataContainer}>
           <DataCard className={classes.temp}></DataCard>
           <DataCard></DataCard>
@@ -274,9 +274,9 @@ const Landing = () => {
       </div> } 
 
      
-       <div className={classes.bodyForClient}  >
+      <div className={classes.bodyForClient}  >
  
-        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={blockScroll} onMouseLeave={allowScroll} > 
+        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={()=>{isMobile&&blockScroll()}} onMouseLeave={()=>{allowScroll()}} > 
           
             <div className={classes.contentForClient}></div>
             <div className={classes.contentForClient} style={{background:'green'}}></div>
@@ -290,15 +290,16 @@ const Landing = () => {
          
            
         </div> 
-         <div className={classes.clientDot} ref={circle}>
-           <div className={`${classes.clientDotCircle1} ${classes.circleTransform}`}> </div>
-           <div className={classes.clientDotCircle1}> </div>
-         </div>
+        
+        <div className={classes.clientDot} ref={circle}>
+                <div className={`${classes.clientDotCircle1} ${classes.circleTransform}`}> </div>
+                <div className={classes.clientDotCircle1}> </div>
+        </div>
   
     
         
         
-    </div>
+      </div>
          
 
 

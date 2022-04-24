@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className={classes.Logo}>Logo</div>
           <div className={classes.Right}>
             <div className={classes.Options}>
-              <div>Options1</div>
+              <div><a href='#content2'>Options1</a></div>
               <div>Options2</div>
               <div>Options3</div>
 

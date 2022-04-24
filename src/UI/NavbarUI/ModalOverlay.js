@@ -38,7 +38,19 @@ const ModalOverlay = (props) => {
 
                         </div>
                     </div>
-                    <div className={classes.options}></div>
+                    <div className={classes.options}>
+                        
+                        <div className={classes.optionsStyle}>
+                            <div className={classes.textStyle}><span>Option1</span></div>
+                            <div className={classes.textStyle}><span>Option1</span></div>
+                            <div className={classes.textStyle}><span>Option1</span></div>
+                            <div className={classes.textStyle}><span>Option1</span></div>
+                            <div className={classes.textStyle}><span>Option1</span></div>
+                            
+                        </div>
+                       
+                        
+                    </div>
                     <div className={classes.contactUs}></div>
                 </div>
             </CSSTransition>,document.getElementById("modalOverlay"))}
