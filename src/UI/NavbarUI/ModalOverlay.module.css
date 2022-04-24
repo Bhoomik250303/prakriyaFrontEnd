@@ -32,6 +32,7 @@
 .optionsStyle{
   /* background-color: bisque; */
   width: 90%;
+  
   height: fit-content;
   
 }
@@ -42,23 +43,58 @@
   font-weight: 900;
   font-family: cursive;
   color: aliceblue;
+ 
+  /* animation: TextAnimationSpan  400ms ease-out forwards; */
+
+  /* animation: animateSpan 400ms ease-out forwards;
+  animation-direction: reverse; */
+
 }
 
 .textStyle span sup{
   font-size: 15px;
+ 
 }
 
 .textStyle span:hover{
   display: inline-block;
   /* background: green; */
-  transition: all 100ms ease-in-out;
-  color: rgb(132, 3, 3); 
-  position: relative; 
-  left: 10px;
+  /* transition: all 100ms linear; */
+  
+  /* left: 10px;  */
   /* translate:r̥ */
   /* transform: translateX(15px); */
+  animation: animateSpan 300ms ease-out forwards;
 
 }
+
+
+@keyframes animateSpan {
+  from{
+    position: relative; 
+    left: 0px;
+  }
+  to{
+    position: relative; 
+    color: rgb(132, 3, 3); 
+  
+    left: 10px;
+  }
+  
+}
+@keyframes reverseAnimateSpan {
+  0%{
+    position: relative; 
+    
+  }
+  100%{
+    position: relative; 
+    left: -15px;
+  }
+  
+}
+
+
 
 .contactUs{
    background-color: rgb(255, 66, 66);
