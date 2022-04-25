@@ -38,9 +38,10 @@ const HamBurger = (props) => {
         <>  
             
             <div className={classes.container} onClick={clickHandler}  >
-                <div className={classes.bar1}></div>
+                {/* <div className={classes.bar1}></div>
                 <div className={classes.bar2}></div>
-                <div className={classes.bar3}></div>
+                <div className={classes.bar3}></div> */}
+                <span className="material-symbols-outlined">menu</span>
             </div>
         </>
     )

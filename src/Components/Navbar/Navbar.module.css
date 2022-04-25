@@ -8,9 +8,30 @@
     background: green;
     align-items: center;
     justify-content: center;
-    /* position: fixed; */
-    /* opacity: 0.2; */
+    /* position: sticky;
+    top:0; */
+    z-index: 900000;
+    position: fixed;
+    max-width: calc(100vw - 18px);
+    
+    /* opacity: 0.5 */
 }
+
+.hideNav{
+    transform: translateY(-100px);
+    transition: all 200ms ease-in-out;
+}
+.showNav{
+    transform: translateY(0px);
+    width: 100%;
+    transition: all 200ms ease-in-out;
+    
+}
+.setBg{
+    /* opacity: 0.5; */
+    background: black;
+}
+
 .navMain{
     display: flex;
     width: 97%;
@@ -49,7 +70,9 @@
     justify-content: space-around;
 
 }
-
+.Options a{
+    text-decoration: none;
+}
 .Options div{
     height: 50%;
     width: 30%;

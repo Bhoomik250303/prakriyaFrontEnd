@@ -118,16 +118,16 @@ const Slider = (prop) => {
                 </div>
                 <div className="slider-modal-circle">
                     <div className="circleContainer" ref={circle}>
-                        <div className="circleIndicator circleTransform transform1"></div>
-                        <div className="circleIndicator transform2"></div>
-                        <div className="circleIndicator transform3"></div>
-                        <div className="circleIndicator transform4"></div>
-                        <div className="circleIndicator transform5"></div>
-                        <div className="circleIndicator transform5"></div>
-                        <div className="circleIndicator transform4"></div>
-                        <div className="circleIndicator transform3"></div>
-                        <div className="circleIndicator transform2"></div>
-                        <div className="circleIndicator transform1"></div>
+                        <div className="circleIndicator circleTransform "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
+                        <div className="circleIndicator "></div>
                     </div>
                 </div>
             
