@@ -41,11 +41,11 @@ const ModalOverlay = (props) => {
                     <div className={classes.options}>
                         
                         <div className={classes.optionsStyle}>
-                            <div className={classes.textStyle}><span>Option1</span></div>
-                            <div className={classes.textStyle}><span>Option1</span></div>
-                            <div className={classes.textStyle}><span>Option1</span></div>
-                            <div className={classes.textStyle}><span>Option1</span></div>
-                            <div className={classes.textStyle}><span>Option1</span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#content2">Option1</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span>Option1</span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span>Option1</span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span>Option1</span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span>Option1</span></div>
                             
                         </div>
                        

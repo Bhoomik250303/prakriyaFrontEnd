@@ -10,7 +10,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 100;
+    z-index: 90000000000;
     
   }
 
@@ -48,6 +48,11 @@
 
   /* animation: animateSpan 400ms ease-out forwards;
   animation-direction: reverse; */
+
+}
+.textStyle a{
+
+  text-decoration: none;
 
 }
 
