@@ -3,12 +3,14 @@ import HamBurger from '../../UI/NavbarUI/HamBurger';
 import ModalOverlay from '../../UI/NavbarUI/ModalOverlay';
 import classes from "./Navbar.module.css"
 import useWindowDimensions from '../../Hooks/useWindowDimension';
+import logo from "../../Assets/ImageAssets/mainLogo.png"
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [modal, setModal] = useState(false)
   const [y, setY] = useState(0)
   const [appear, setAppear] = useState(true);
   const [bg, setBg] = useState(false);
+  
  
   const navBar = useRef();
 
@@ -22,7 +24,7 @@ const Navbar = () => {
     e => {
       
       const window = e.currentTarget;
-      if(window.scrollY>height){
+      if(window.scrollY>height-150){
         setBg(true)
       }else{
         setBg(false)
@@ -63,21 +65,25 @@ const Navbar = () => {
   return (
     <>
       
-      <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${bg && classes.setBg } `} ref={navBar} onWheel={navScrollHandler}>
-        <div className={classes.navMain}>
-          <div className={classes.Logo}>Logo</div>
-          <div className={classes.Right}>
-            <div className={classes.Options}>
-              <div><a href='#content2'>Options1</a></div>
-              <div>Options2</div>
-              <div>Options3</div>
+      <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${bg && classes.setBg } ${props.navWidth && classes.navWidth} `} ref={navBar} onWheel={navScrollHandler}>
+        <div className={classes.navInnerContainer}>
+          <div className={classes.navMain}>
+            <div className={classes.Logo}><img src={logo}></img></div>
+            <div className={classes.Right}>
+              <div className={classes.Options}>
+                <div><a href='#content2'>Home</a></div>
+                <div>Influencer Registration</div>
+                <div>About</div>
+                <div>Contact Us</div>
 
-            </div>
-            <div className={classes.ToggleBar}>
-              <HamBurger handleModal={handleModal}></HamBurger>
+              </div>
+              <div className={classes.ToggleBar}>
+                <HamBurger handleModal={handleModal}></HamBurger>
+              </div>
             </div>
           </div>
         </div>
+        
       </div>
       <ModalOverlay show={modal} closeModal={closeModalHandler}/>
       </>

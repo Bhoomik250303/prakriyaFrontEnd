@@ -7,7 +7,10 @@ import { CSSTransition } from 'react-transition-group';
 import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
 import useScrollBlock from '../Hooks/useScrollBlock';
-const Landing = () => {
+import BgImage from "../Assets/LandingBG/homebg.png"
+import prakriyaMan from "../Assets/LandingBG/prakriyaMan.png"
+import prakriyaMan2 from "../Assets/LandingBG/prakriyaman.svg"
+const Landing = (props) => {
 
   
   
@@ -21,6 +24,7 @@ const Landing = () => {
   const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
+  const [navWidth, setNavWidth] = useState(false);
 
   const [temp, settemp] = useState(false)
   const isMobile = useMediaQuery({
@@ -121,6 +125,15 @@ const Landing = () => {
    scrollContainer.current.classList.add(classes.setPos)
  }
 
+ const mouseOnClient = ()=>{
+   if(isMobile){
+      blockScroll();
+      props.navWidthHandler(true);
+   }
+   
+   
+ }
+
 
 
 
@@ -129,6 +142,30 @@ const Landing = () => {
 
       <div className={classes.container}>
         
+      <img className={classes.prakriyaMan} src={prakriyaMan2}></img>
+      
+        <img className={classes.BgImage} src={BgImage}></img>
+        <div className={classes.frontText}>
+          <div className={classes.frontTextTop}>
+              <div className={classes.frontTextTopLeft}>
+                The Caffeine
+              </div>
+              <div className={classes.frontTextTopRight}>
+                <div className={classes.frontTextTopRightContent}> For your </div>
+              </div>
+          </div>
+          <div className={classes.frontTextBottom}>
+                <span>B</span>
+                <span>U</span>
+                <span>S</span>
+                <span>I</span>
+                <span>N</span>
+                <span>E</span>
+                <span>S</span>
+                <span>S</span>
+          </div>
+          
+        </div>
       </div>
      
 
@@ -184,17 +221,17 @@ const Landing = () => {
           }}> 
                 <div className={classes.gridContainer} ref={container}>
                     
-                    <GridCard bool={handleBool} data={'1'}>1</GridCard>
+                    <GridCard bool={handleBool} data={'image1'}></GridCard>
 
-                    <GridCard bool={handleBool} data={'2'}>2</GridCard>
-                    <GridCard bool={handleBool} data={'3'}>3</GridCard>
-                    <GridCard bool={handleBool} data={'4'}>4</GridCard>
-                    <GridCard bool={handleBool} data={'5'}>5</GridCard>
-                    <GridCard bool={handleBool} data={'6'}>6</GridCard>
-                    <GridCard bool={handleBool} data={'7'}>7</GridCard>
-                    <GridCard bool={handleBool} data={'8'}>8</GridCard>
-                    <GridCard bool={handleBool} data={'9'}>9</GridCard>
-                    <GridCard bool={handleBool} data={'10'}>10</GridCard>
+                    <GridCard bool={handleBool} data={'image2'}></GridCard>
+                    <GridCard bool={handleBool} data={'image3'}></GridCard>
+                    <GridCard bool={handleBool} data={'image4'}></GridCard>
+                    <GridCard bool={handleBool} data={'image5'}></GridCard>
+                    <GridCard bool={handleBool} data={'image6'}></GridCard>
+                    <GridCard bool={handleBool} data={'image7'}></GridCard>
+                    <GridCard bool={handleBool} data={'image8'}></GridCard>
+                    <GridCard bool={handleBool} data={'image9'}></GridCard>
+                    <GridCard bool={handleBool} data={'image10'}></GridCard>
 
 
                 </div>
@@ -276,7 +313,7 @@ const Landing = () => {
      
       <div className={classes.bodyForClient}  >
  
-        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={()=>{isMobile&&blockScroll()}} onMouseLeave={()=>{allowScroll()}} > 
+        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={mouseOnClient} onMouseLeave={()=>{allowScroll()}} > 
           
             <div className={classes.contentForClient}></div>
             <div className={classes.contentForClient} style={{background:'green'}}></div>

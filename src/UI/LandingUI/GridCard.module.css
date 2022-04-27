@@ -4,8 +4,18 @@
 
     /* max-width: 210px;
     max-height:210px ; */
-    background: goldenrod;
+    background: #D81330;
 }
+
 .square:hover{
-    background: rgb(154, 154, 71);
+    cursor: pointer;
+}
+
+.square img{
+    width: 100%;
+    height: 100%;
+}
+
+.square:hover{
+    opacity: 0.9;
 }

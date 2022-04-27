@@ -1,8 +1,11 @@
 .container{
-    display: flex;
-    flex-direction: column;
+    
+    position: absolute;
+    right: 30px;
+    top:8px;   
+    /* background: goldenrod; */
     /* align-items: center; */
-
+    z-index: 500;
 }
 .closeButton{
   
@@ -14,31 +17,36 @@
 .mainContainer{
   width: 76vw;
   height: 32vw;
-  background-color: palevioletred;
+  background-color: #D81330;
+  /* border: 2px solid red; */
+  position: absolute;
 }
 
 .closeModal{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  position: absolute;
+  /* border: 2px solid black; */
+  
   
 }
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    margin: 6px 0;
-    transition: 0.4s;
-  }
 
-  .bar1{
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  .bar2{
-      opacity: 0;
-  }
-  .bar3{
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
+.imagee{
+  position: absolute;
+  /* border: 2px solid rgb(38, 228, 0); */
+  width: 100%;
+  height: 100%;
+  
+}
+
+.imageText{
+  position: absolute;
+  bottom: 8.5%;
+  right: 3.5%;
+  background: #FFDC6D ;
+  width: 93%;
+  height: 55%;
+}
+
+.imagee img{
+  width: 100%;
+  height: 100%;
+}

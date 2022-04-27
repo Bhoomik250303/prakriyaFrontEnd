@@ -1,31 +1,41 @@
 
-
+.navWidth{
+    max-width: calc(100vw - 19px);
+}
 .navContainer{
     display: flex;
     width: 100%;
     height: 13vw;
-    max-height: 90px;
-    background: green;
-    align-items: center;
+    max-height: 100px;
+    /* background: green; */
+
     justify-content: center;
     /* position: sticky;
     top:0; */
     z-index: 900000;
     position: fixed;
-    max-width: calc(100vw - 18px);
+    
     
     /* opacity: 0.5 */
+}
+.navInnerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 93%;
+    height: 100%;
+    /* background: greenyellow; */
 }
 
 .hideNav{
     transform: translateY(-100px);
-    transition: all 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 .showNav{
     transform: translateY(0px);
     width: 100%;
-    transition: all 200ms ease-in-out;
-    
+    transition: transform 200ms ease-in-out;
+
 }
 .setBg{
     /* opacity: 0.5; */
@@ -34,10 +44,10 @@
 
 .navMain{
     display: flex;
-    width: 97%;
+    width: 90%;
     height: 100%;
     /* max-height: 90px; */
-    background: rgb(128, 0, 96);
+    /* background: rgb(128, 0, 96); */
     align-items: center;
     justify-content: space-between;
 }
@@ -47,24 +57,33 @@
     width: 15%;
     max-width: 95px;
     
-    background: gold;
+    /* background: gold; */
 }
+
+.Logo img{
+    
+    padding-top: 5px;
+    width: 75%;
+    height: 100%;
+}
+
 .Right{
     display: flex;
     height: 100%;
     /* max-height: 90px; */
-    width: 65%;
+    width: 62%;
     /* max-width: 360px; */
-    background: gold;
+    /* background: gold; */
     align-items: center;
+    justify-content: center;
     justify-content: flex-end;
     
 }
 .Options{
     height: 100%;
-    width: 60%;
-   
-    background: rgb(5, 183, 112);
+    width: 70%;
+/*    
+    background: rgb(5, 183, 112); */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -72,23 +91,31 @@
 }
 .Options a{
     text-decoration: none;
+    color: white;
 }
 .Options div{
     height: 50%;
-    width: 30%;
-    background: gray;
-    font-size: 2vw;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    /* background: gray; */
+    font-size: 1.2vw;
+    font-weight:bolder;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 500;
 }
 
 .ToggleBar{
-    width:20%;
+    width: 50px;
     max-width: 80px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* max-height: 90px; */
-    background: goldenrod;
+    /* background: goldenrod; */
 }
 
 /* .modalOverlay {

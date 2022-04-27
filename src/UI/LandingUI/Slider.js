@@ -1,9 +1,6 @@
 import React, { useEffect,useRef,useState } from "react";
 import "./Slider.css"
-import image1 from "../../Assets/SliderImages/img-1.jpg"
-import image2 from "../../Assets/SliderImages/img-2.jpg"
-import image3 from "../../Assets/SliderImages/img-3.jpg"
-import image4 from "../../Assets/SliderImages/img-4.jpg"
+
 const Slider = (prop) => {
 
     const [data,setData]= useState({data:'',bool:false})
