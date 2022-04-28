@@ -6,7 +6,7 @@ import GridCard from '../UI/LandingUI/GridCard';
 import { CSSTransition } from 'react-transition-group';
 import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
-import useScrollBlock from '../Hooks/useScrollBlock';
+import ClientSection from '../UI/LandingUI/ClientSection';
 import BgImage from "../Assets/LandingBG/homebg.png"
 import prakriyaMan from "../Assets/LandingBG/prakriyaMan.png"
 import prakriyaMan2 from "../Assets/LandingBG/prakriyaman.svg"
@@ -14,12 +14,11 @@ const Landing = (props) => {
 
   
   
-  const [blockScroll, allowScroll] = useScrollBlock();
   
 
   const container = useRef();
-  const scrollContainer = useRef();
-  const circle = useRef();
+  
+  
 
   const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
@@ -92,47 +91,8 @@ const Landing = (props) => {
   
    
  }
- const onWheel=(e)=>{
-  let count = 0;
-  // if(count === 0){
-  //   circle.current.children[1].classList.remove(classes.circleTransform)
-  //   circle.current.children[0].classList.add(classes.circleTransform)
-    
-  //  }
-   console.log(e.deltaY)
-  //  console.log(scrollContainer);
-  //  console.log(window.pageYOffset)
-  // console.log(scrollContainer.current.scrollLeft += e.deltaY*2000)
-  
-  
-   scrollContainer.current.scrollLeft += e.deltaY*2000;
  
-   
-   if(e.deltaY > 0){
-    circle.current.children[1].classList.add(classes.circleTransform)
-    circle.current.children[0].classList.remove(classes.circleTransform)
-    return;
-   }
-   if(e.deltaY < 0){
-    circle.current.children[1].classList.remove(classes.circleTransform)
-    circle.current.children[0].classList.add(classes.circleTransform)
-   }
-   
-  
-  
 
-  
-   scrollContainer.current.classList.add(classes.setPos)
- }
-
- const mouseOnClient = ()=>{
-   if(isMobile){
-      blockScroll();
-      props.navWidthHandler(true);
-   }
-   
-   
- }
 
 
 
@@ -166,18 +126,18 @@ const Landing = (props) => {
           </div>
           
         </div>
+        <div className={classes.bottomText}>
+            <div className={classes.bottomTextTop}>
+                Starting a business is one thing while growing it is another.
+            </div>
+            <div className={classes.bottomTextBottom}>
+                This is where <span>prakriya</span>  comes into the picture.
+            </div>
+        </div>
       </div>
      
 
-      <div id='content2' className={classes.Data}>
-        <div className={classes.DataContainer}>
-          <DataCard title={"ANALYZE"}></DataCard>
-          <DataCard title={"FORMULATE"}></DataCard>
-          <DataCard title={"IMPLEMENT"}></DataCard>
-          <DataCard title={"AUGMENT"}></DataCard>
-          
-        </div>
-      </div>
+ 
   
       {isMobile&&<div className={classes.Data2}>
         <div className={classes.data2MainTitle}><div><span>OUR</span> SERVICES</div></div>
@@ -200,7 +160,7 @@ const Landing = (props) => {
               <CardModal dim = {dim} data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>
 
          </CSSTransition>
-          {/* {bool&& <CardModal dim = {dim} data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>} */}
+      
             
          <CSSTransition
           mountOnEnter
@@ -239,22 +199,7 @@ const Landing = (props) => {
 
             </CSSTransition>  
 
-          {/* {!bool&&<div className={classes.gridContainer} ref={container}>
-          
-            <GridCard bool={handleBool} data={'1'}>1</GridCard>
-
-            <GridCard bool={handleBool} data={'2'}>2</GridCard>
-            <GridCard bool={handleBool} data={'3'}>3</GridCard>
-            <GridCard bool={handleBool} data={'4'}>4</GridCard>
-            <GridCard bool={handleBool} data={'5'}>5</GridCard>
-            <GridCard bool={handleBool} data={'6'}>6</GridCard>
-            <GridCard bool={handleBool} data={'7'}>7</GridCard>
-            <GridCard bool={handleBool} data={'8'}>8</GridCard>
-            <GridCard bool={handleBool} data={'9'}>9</GridCard>
-            <GridCard bool={handleBool} data={'10'}>10</GridCard>
-
-
-          </div>} */}
+       
          
         
       </div>}
@@ -310,33 +255,18 @@ const Landing = (props) => {
         
       </div> } 
 
-     
-      <div className={classes.bodyForClient}  >
- 
-        <div className={classes.containerForClient} onWheel={onWheel}  ref={scrollContainer} onMouseEnter={mouseOnClient} onMouseLeave={()=>{allowScroll()}} > 
+      <div id='content2' className={classes.Data}>
+        <div className={classes.DataContainer}>
+          <DataCard title={"ANALYZE"}></DataCard>
+          <DataCard title={"FORMULATE"}></DataCard>
+          <DataCard title={"IMPLEMENT"}></DataCard>
+          <DataCard title={"AUGMENT"}></DataCard>
           
-            <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient} style={{background:'green'}}></div>
-            <div className={classes.contentForClient}></div>
-            <div className={classes.contentForClient} style={{background:'green'}}></div>
-            <div className={classes.contentForClient}></div>
-            
-            <div className={classes.contentForClient} style={{background:'green'}}></div>
-         
-           
-         
-           
-        </div> 
-        
-        <div className={classes.clientDot} ref={circle}>
-                <div className={`${classes.clientDotCircle1} ${classes.circleTransform}`}> </div>
-                <div className={classes.clientDotCircle1}> </div>
         </div>
-  
-    
-        
-        
       </div>
+
+     <ClientSection navWidthHandler={props.navWidthHandler} isMobile={isMobile}></ClientSection>
+    
          
 
 
