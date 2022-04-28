@@ -1,12 +1,45 @@
 .cardContainer{
-    width: 23%;
+  position: relative;
+    width: 22%;
     height: 90%;
-    background: darkcyan;
+    /* background: darkcyan; */
     display: flex;
     align-items: center;
     justify-content: center;
     /* transition: all 1s ease; */
 }
+
+.dataCardTitle{
+  position: absolute;
+  /* border: 2px solid greenyellow; */
+  background: black;
+  color: white;
+  width: 78%;
+  height: 15%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2vw;
+}
+
+.dataCardBg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid green; */
+}
+
+.dataCardBg img{
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 800px) {
  
   .cardContainer{
@@ -24,28 +57,44 @@
     width: 100%;
     height: 100%;
     background: black;
-    opacity: 0.6;
+  
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 .Heading{
     width: 100%;
     height: 20%;
-    background: gold;
+    /* background: gold; */
+    /* border: 2px solid white; */
+    color: white;
+    display: flex;
+    align-items: center;
 }
+
+.Heading div{
+  margin-left: 8px;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
 .Para{
     width: 100%;
     height: 60%;
-    background: gold;
+    /* background: gold; */
+    /* border: 2px solid white; */
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.1vw;
 }
 
 .transition{
     
     -webkit-transition: all 5s ease;
-  transition: all 15 ease;
+  transition: all 5s ease;
 }
 
 .MyClassEnter{
@@ -54,16 +103,16 @@
 
   .MyClassEnterActive {
     
-    transition: opacity 500ms;
-    opacity:0.6 ;        
+    transition: opacity 300ms;
+    opacity:0.97 ;        
   }
   .MyClassEnterDone{
-    opacity: 0.6;
+    opacity: 0.97;
   }
 
 
   .MyClassExit {
-    opacity: 0.6;
+    opacity: 0.97;
   }
   .MyClassExitActive {
     opacity: 0;

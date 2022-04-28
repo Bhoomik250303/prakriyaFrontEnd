@@ -1,7 +1,9 @@
 import React,{useState} from "react";
 import classes from "./DataCard.module.css"
 import { CSSTransition } from "react-transition-group";
-const DataCard = ()=>{
+import dataCardBg from "../../Assets/ImageAssets/Section2/approachBox-01.png"
+import approachText from "../../Assets/TextAssets/approachText.js"
+const DataCard = (props)=>{
 
     console.log("function ran")
     const[dataShow,setDataShow]= useState(false);
@@ -18,7 +20,10 @@ const DataCard = ()=>{
     return(
         <>
             <div className={classes.cardContainer} onMouseEnter={Enterhandler} onMouseLeave={leaveHandler}>
-                
+                <div className={classes.dataCardBg}>
+                    <img src={dataCardBg}></img>
+                </div>
+                <div className={classes.dataCardTitle}>{props.title}</div>
                 {/* {dataShow&&<div className={`${classes.showModal} ${classes.transition}`}>
                     <div className={classes.Heading}></div>
                     <div className={classes.Para}></div>
@@ -39,10 +44,12 @@ const DataCard = ()=>{
                     
                 }}>
                     <div className={`${classes.showModal}`}>
-                        <div className={classes.Heading}></div>
-                        <div className={classes.Para}></div>
+                        <div className={classes.Heading}><div>{props.title}</div></div>
+                        <div className={classes.Para}>{approachText[`${props.title}`].text}</div>
                     </div>
                 </CSSTransition>
+
+
             </div>
         </>
     )

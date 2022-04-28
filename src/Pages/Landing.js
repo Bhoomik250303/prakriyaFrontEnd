@@ -171,16 +171,16 @@ const Landing = (props) => {
 
       <div id='content2' className={classes.Data}>
         <div className={classes.DataContainer}>
-          <DataCard className={classes.temp}></DataCard>
-          <DataCard></DataCard>
-          <DataCard></DataCard>
-          <DataCard></DataCard>
+          <DataCard title={"ANALYZE"}></DataCard>
+          <DataCard title={"FORMULATE"}></DataCard>
+          <DataCard title={"IMPLEMENT"}></DataCard>
+          <DataCard title={"AUGMENT"}></DataCard>
           
         </div>
       </div>
   
       {isMobile&&<div className={classes.Data2}>
-        
+        <div className={classes.data2MainTitle}><div><span>OUR</span> SERVICES</div></div>
          <CSSTransition
             mountOnEnter
             unmountOnExit
@@ -221,17 +221,17 @@ const Landing = (props) => {
           }}> 
                 <div className={classes.gridContainer} ref={container}>
                     
-                    <GridCard bool={handleBool} data={'image1'}></GridCard>
+                    <GridCard bool={handleBool} data={'image1'} title="Social Media" ></GridCard>
 
-                    <GridCard bool={handleBool} data={'image2'}></GridCard>
-                    <GridCard bool={handleBool} data={'image3'}></GridCard>
-                    <GridCard bool={handleBool} data={'image4'}></GridCard>
-                    <GridCard bool={handleBool} data={'image5'}></GridCard>
-                    <GridCard bool={handleBool} data={'image6'}></GridCard>
-                    <GridCard bool={handleBool} data={'image7'}></GridCard>
-                    <GridCard bool={handleBool} data={'image8'}></GridCard>
-                    <GridCard bool={handleBool} data={'image9'}></GridCard>
-                    <GridCard bool={handleBool} data={'image10'}></GridCard>
+                    <GridCard bool={handleBool} data={'image2'} title="Search Engine Optimization" ></GridCard>
+                    <GridCard bool={handleBool} data={'image3'} title="Content Marketing" ></GridCard>
+                    <GridCard bool={handleBool} data={'image4'} title="Digital PR" ></GridCard>
+                    <GridCard bool={handleBool} data={'image5'} title="Brand Strategy" ></GridCard>
+                    <GridCard bool={handleBool} data={'image6'} title="Paid Marketing" ></GridCard>
+                    <GridCard bool={handleBool} data={'image7'} title="Analytics" ></GridCard>
+                    <GridCard bool={handleBool} data={'image8'} title="Conversion Optimization" ></GridCard>
+                    <GridCard bool={handleBool} data={'image9'} title="Affiliates" ></GridCard>
+                    <GridCard bool={handleBool} data={'image10'} title="Influencer Marketing" ></GridCard>
 
 
                 </div>

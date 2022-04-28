@@ -11,6 +11,8 @@ import image6 from "../../Assets/ImageAssets/Section3/paid_marketing_inner-01.pn
 import image2 from "../../Assets/ImageAssets/Section3/SEO_inner-01.png"
 import image1 from "../../Assets/ImageAssets/Section3/sm_inner-01.png"
 
+import servicesText from "../../Assets/TextAssets/servicesText.js"
+
 const images = {image1,image2,image3 ,image4,image5,image6 ,image7 ,image8 ,image9 ,image10 }
 
 
@@ -48,7 +50,7 @@ const CardModal = (dim) => {
                         <img src={images[`${dim.data}`]}></img>
                     </div>
                     <div className={classes.imageText}>
-                            loremIpsum
+                            {servicesText[`${dim.data}`].text}
                     </div>
                 </div>
             

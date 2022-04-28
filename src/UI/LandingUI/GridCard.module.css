@@ -1,7 +1,9 @@
 .square{
+    position: relative;
     width: 15vw;
     height: 16vw;
-
+    display: flex;
+    justify-content: center;
     /* max-width: 210px;
     max-height:210px ; */
     background: #D81330;
@@ -12,10 +14,29 @@
 }
 
 .square img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .square:hover{
     opacity: 0.9;
 }
+
+.title{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    height: 25%;
+    /* border: 2px solid green; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    text-align: center;
+    color: white;
+    
+
+}
+

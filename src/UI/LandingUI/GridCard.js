@@ -21,7 +21,10 @@ const GridCard = (props)=>{
 
     return(
         <>
-            <div onClick={clickHandler} className={classes.square}><img src={images[`${props.data}`]}></img></div>
+            <div onClick={clickHandler} className={classes.square}>
+                <img src={images[`${props.data}`]}></img>
+                <div className={classes.title}>{props.title}</div>
+            </div>
         </>
     )
 }
