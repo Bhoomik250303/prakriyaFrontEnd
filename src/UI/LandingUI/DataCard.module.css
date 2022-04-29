@@ -50,6 +50,19 @@
     max-width: 530px;
     min-height: 410px;
   }
+  .Para{
+   
+    background-color: aqua;
+    
+    font-size: clamp(15px,4vw, 20px) !important;
+    
+    
+  }
+  .Heading div{
+    
+    font-size:clamp(18px,4vw, 20px) !important;
+    
+  }
 }
 
 .showModal{
@@ -88,7 +101,8 @@
     color: white;
     text-align: justify;
     text-justify: inter-word;
-    font-size: 1.1vw;
+    font-size: clamp(10px, 1.105vw, 30px)
+    
 }
 
 .transition{

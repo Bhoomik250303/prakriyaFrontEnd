@@ -7,9 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
 import ClientSection from '../UI/LandingUI/ClientSection';
-import BgImage from "../Assets/LandingBG/homebg.png"
-import prakriyaMan from "../Assets/LandingBG/prakriyaMan.png"
-import prakriyaMan2 from "../Assets/LandingBG/prakriyaman.svg"
+import Section1 from '../UI/LandingUI/Section1';
 const Landing = (props) => {
 
   
@@ -100,43 +98,9 @@ const Landing = (props) => {
   return (
     <>
 
-      <div className={classes.container}>
-        
-      <img className={classes.prakriyaMan} src={prakriyaMan2}></img>
-      
-        <img className={classes.BgImage} src={BgImage}></img>
-        <div className={classes.frontText}>
-          <div className={classes.frontTextTop}>
-              <div className={classes.frontTextTopLeft}>
-                The Caffeine
-              </div>
-              <div className={classes.frontTextTopRight}>
-                <div className={classes.frontTextTopRightContent}> For your </div>
-              </div>
-          </div>
-          <div className={classes.frontTextBottom}>
-                <span>B</span>
-                <span>U</span>
-                <span>S</span>
-                <span>I</span>
-                <span>N</span>
-                <span>E</span>
-                <span>S</span>
-                <span>S</span>
-          </div>
-          
-        </div>
-        <div className={classes.bottomText}>
-            <div className={classes.bottomTextTop}>
-                Starting a business is one thing while growing it is another.
-            </div>
-            <div className={classes.bottomTextBottom}>
-                This is where <span>prakriya</span>  comes into the picture.
-            </div>
-        </div>
-      </div>
+   
      
-
+      <Section1></Section1>
  
   
       {isMobile&&<div className={classes.Data2}>
