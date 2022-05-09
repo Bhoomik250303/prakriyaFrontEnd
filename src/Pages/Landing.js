@@ -8,6 +8,12 @@ import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
 import ClientSection from '../UI/LandingUI/ClientSection';
 import Section1 from '../UI/LandingUI/Section1';
+
+import approachImg from "../Assets/ImageAssets/Approach/approach.svg"
+import WhoWeAre from '../UI/LandingUI/WhoWeAre';
+import Careers from '../UI/LandingUI/Careers';
+import ContactUs from '../UI/LandingUI/ContactUs';
+
 const Landing = (props) => {
 
   
@@ -101,7 +107,7 @@ const Landing = (props) => {
    
      
       <Section1></Section1>
- 
+      <WhoWeAre></WhoWeAre>
   
       {isMobile&&<div className={classes.Data2}>
         <div className={classes.data2MainTitle}><div><span>OUR</span> SERVICES</div></div>
@@ -220,6 +226,19 @@ const Landing = (props) => {
       </div> } 
 
       <div id='content2' className={classes.Data}>
+        <div className={classes.approach}>
+            <div className={classes.approach_text}>
+                <div  className={classes.approach_text_top}>
+                      <span>our</span> approach
+                </div>
+                <div className={classes.approach_text_bottom}>
+                      By adopting a four step AFIA approach, we bridge the gap between your business and your potential customers.
+                </div>
+            </div>
+            <div className={classes.approach_image}>
+                <img src={approachImg}></img>
+            </div>
+        </div>
         <div className={classes.DataContainer}>
           <DataCard title={"ANALYZE"}></DataCard>
           <DataCard title={"FORMULATE"}></DataCard>
@@ -230,8 +249,9 @@ const Landing = (props) => {
       </div>
 
      <ClientSection navWidthHandler={props.navWidthHandler} isMobile={isMobile}></ClientSection>
-    
-         
+     <Careers></Careers>
+     <ContactUs></ContactUs> 
+          
 
 
     </>

@@ -5,7 +5,7 @@
     bottom: 0;
     right: 0;
     overflow: auto;
-    background: rgb(0, 0, 0);
+    background: #100e10;
     opacity: 1;
     height: 100vh;
     display: flex;
@@ -16,12 +16,14 @@
 
   .closeModal{
       
-      background-color: aqua;
+      /* background-color: aqua; */
+      /* border: 2px solid white; */
       width: 100%;
       height: 10%;
   }
   .options{
     /* background-color: bisque; */
+    /* border: 2px solid greenyellow; */
     width: 100%;
     height: 60%;
     display: flex;
@@ -31,18 +33,23 @@
 }
 .optionsStyle{
   /* background-color: bisque; */
+  /* border: 2px solid wheat; */
   width: 90%;
-  
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
   
 }
 
 .textStyle{
   height:100%;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 900;
   font-family: cursive;
   color: aliceblue;
+  font-family: 'Komu A';
+  font-weight: 300;
  
   /* animation: TextAnimationSpan  400ms ease-out forwards; */
 
@@ -53,15 +60,15 @@
 .textStyle a{
 
   text-decoration: none;
-
-}
-
-.textStyle span sup{
-  font-size: 15px;
  
 }
 
-.textStyle span:hover{
+/* .textStyle span sup{
+  font-size: 15px;
+ 
+} */
+
+.textStyle  span a:hover{
   display: inline-block;
   /* background: green; */
   /* transition: all 100ms linear; */
@@ -69,7 +76,7 @@
   /* left: 10px;  */
   /* translate:r̥ */
   /* transform: translateX(15px); */
-  animation: animateSpan 300ms ease-out forwards;
+  animation: animateSpan 200ms ease-out forwards ;
 
 }
 
@@ -87,6 +94,18 @@
   }
   
 }
+
+@keyframes moveImage{
+  from{
+    position: relative;
+    top:0px
+  
+  } to{
+    position: relative;
+    top:-4px;
+  }
+}
+
 @keyframes reverseAnimateSpan {
   0%{
     position: relative; 
@@ -100,15 +119,80 @@
 }
 
 
-
+.wrapper{
+  /* border: 2px solid wheat; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    justify-content: space-evenly;
+    
+    
+}
 .contactUs{
-   background-color: rgb(255, 66, 66);
+   /* background-color: rgb(255, 66, 66); */
+    /* border: 2px solid white; */
     width: 100%;
     height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+    
 }
+.contactUs_text{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.contactUs_text_title{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contactUs_text_subTitle{
+  /* border: 2px solid wheat; */
+  display: flex;
+  width: 30%;
+  color: rgba(240, 248, 255, 0.617);
+  font-size: 14px;
+}
+
+.contactUs_image{
+  /* border: 2px solid wheat; */
+  display: flex;
+  width: 30%;
+  height: 30%;
+}
+
+.contactUs_image div{
+  width: 4vw;
+  height: 4vw;
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contactUs_image div img{
+  background-color: #100e10;
+ 
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+}
+
+.contactUs_image div img:hover{
+  transition: 300ms ease ;
+  animation: moveImage 100ms ease forwards;
+  
+    
+}
+
 
 .closeButton{
     margin-right: 15px;
+    cursor: pointer;
     
 }
 
@@ -153,15 +237,15 @@
   .MyClassEnterActive {
     
     transition: opacity 500ms;
-    opacity:0.9 ;        
+    opacity:0.99 ;        
   }
   .MyClassEnterDone{
-    opacity: 0.9;
+    opacity: 0.99;
   }
 
 
   .MyClassExit {
-    opacity: 0.9;
+    opacity: 0.99;
   }
   .MyClassExitActive {
     opacity: 0;

@@ -11,7 +11,7 @@
 
 .dataCardTitle{
   position: absolute;
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
   background: black;
   color: white;
   width: 78%;
@@ -32,7 +32,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .dataCardBg img{
@@ -43,7 +43,7 @@
 @media (max-width: 800px) {
  
   .cardContainer{
-    background: rgb(24, 139, 215);
+    /* background: rgb(24, 139, 215); */
     margin: 5px;
     width: 93%;
     height: 90vw;
@@ -52,7 +52,7 @@
   }
   .Para{
    
-    background-color: aqua;
+    /* background-color: aqua; */
     
     font-size: clamp(15px,4vw, 20px) !important;
     
@@ -69,8 +69,8 @@
     transition: all 1s ease ease-in-out;
     width: 100%;
     height: 100%;
-    background: black;
-  
+    background-color: rgba(0, 0, 0, 0.95);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -81,7 +81,7 @@
     width: 100%;
     height: 20%;
     /* background: gold; */
-    border: 2px solid white;
+    /* border: 2px solid white; */
     color: white;
     display: flex;
     align-items: center;
@@ -95,13 +95,13 @@
 
 .Para{
     width: 100%;
-    height: 60%;
+    height: 70%;
     /* background: gold; */
-    border: 2px solid white;
+    /* border: 2px solid white; */
     color: white;
     text-align: justify;
     text-justify: inter-word;
-    font-size: clamp(10px, 1.105vw, 30px)
+    font-size: clamp(8px, 1vw, 20px)
     
 }
 
@@ -117,7 +117,7 @@
 
   .MyClassEnterActive {
     
-    transition: opacity 300ms;
+    transition: opacity 500ms;
     opacity:0.97 ;        
   }
   .MyClassEnterDone{

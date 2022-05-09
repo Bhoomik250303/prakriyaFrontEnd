@@ -4,18 +4,64 @@
 
 .Data {
     width: 100%;
-    height: 100vh;
-    background: rgb(55, 82, 59);
+    height: fit-content;
+    background: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.approach{
+  color: white;
+  margin-top: 200px;
+  width: 78%;
+  height: 26vw;
+  max-height: 60%;
+  /* border: 2px solid white; */
+  display: flex;
+}
+.approach_text{
+  width: 65%;
+  height: 100%;
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
+.approach_text_top{
+  width: 100%;
+  height: 40%;
+  /* border: 2px solid white; */
+  font-family: 'Komu A';
+  font-size: 6.5vw;
+}
+.approach_text_top span{
+  color: #FFDC6D;
+}
+
+.approach_text_bottom{
+  width: 100%;
+  height: 30%;
+  /* border: 2px solid white; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.7vw;
+}
+
+.approach_image{
+  width: 35%;
+  height: 100%;
+  /* border: 2px solid blue; */
+}
+
+
 .DataContainer{
-    width: 90%;
-    height: 40vw;
+    width: 82%;
+    height: 26vw;
     max-height: 60%;
-    background-color: aqua;
+    /* background-color: aqua; */
+    /* border: 2px solid white; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -86,8 +132,8 @@
 .data2MainTitle div{
   width:100%;
   height:100%;
-  border:2px solid red;
-  margin-left: 14%;
+  /* border:2px solid red; */
+  margin-left: 10.8%;
   font-family: 'Komu A';
   font-size: 8vw;
 
@@ -117,11 +163,11 @@
 
 .gridContainer{
     width: 100%;
-    gap: 8px;
+    gap: 15px;
     height: fit-content;
     max-width: fit-content;
     max-height: fit-content;
-    border: 4px solid green;
+    /* border: 4px solid green; */
     /* background-color: rgb(185, 1, 154); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
