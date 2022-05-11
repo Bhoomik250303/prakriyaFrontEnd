@@ -1,7 +1,8 @@
 .mainContainer{
 
+    /* border: 2px solid white; */
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     background: rgb(0, 0, 0);
     display: flex;
     align-items: center;
@@ -85,7 +86,7 @@
 .label{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 90%;
+    font-size: 0.2vw;
     font-weight: 500;
 }
 /* .resumeLabel{
@@ -109,7 +110,7 @@
     display: block;
     position: relative;
     top: 1.6%;
-    font-size: 95%;
+    font-size: 1.2vw;
 }
 .formContainer form input{
     background: black;
@@ -123,7 +124,7 @@
 .formContainer form input:-webkit-autofill {
     color: #000000 !important;
 }
-.formContainer form input[type=file]::file-selector-button {
+/* .formContainer form input[type=file]::file-selector-button {
     
     width: 7vw;
     height: 100%;
@@ -134,11 +135,20 @@
     color: white;
     font-size: 1vw;
     font-weight: 500;
+  } */
+  ::-webkit-file-upload-button {
+    
+    height: 100%;
+    font-size: 1vw;
+    cursor: pointer;
+    background-color:#D81330;
+    color: white;
   }
 
-
 .file{
-   font-size: 50%;
+   height: 2.5vw !important;
+   font-size: 1vw !important;
+   cursor: pointer;
 }  
 
 

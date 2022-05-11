@@ -6,12 +6,14 @@
     /* background: goldenrod; */
     /* align-items: center; */
     z-index: 500;
+    
 }
 .closeButton{
   
     /* display: inline-block; */
    
     cursor: pointer;
+    color: white;
   
 }
 .mainContainer{
@@ -20,6 +22,7 @@
   background-color: #D81330;
   /* border: 2px solid red; */
   position: absolute;
+  cursor: pointer;
 }
 
 .closeModal{

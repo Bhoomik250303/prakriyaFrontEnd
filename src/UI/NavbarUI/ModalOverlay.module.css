@@ -237,15 +237,15 @@
   .MyClassEnterActive {
     
     transition: opacity 500ms;
-    opacity:0.99 ;        
+    opacity:0.999 ;        
   }
   .MyClassEnterDone{
-    opacity: 0.99;
+    opacity: 0.999;
   }
 
 
   .MyClassExit {
-    opacity: 0.99;
+    opacity: 0.995;
   }
   .MyClassExitActive {
     opacity: 0;

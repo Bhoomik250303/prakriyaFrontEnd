@@ -158,7 +158,7 @@
        height: 220px;
        display: flex;
        background: black;
-       border: 2px solid red;
+       /* border: 2px solid red; */
        
        scroll-behavior: smooth;
      

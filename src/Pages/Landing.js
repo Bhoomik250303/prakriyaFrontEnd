@@ -8,7 +8,7 @@ import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
 import ClientSection from '../UI/LandingUI/ClientSection';
 import Section1 from '../UI/LandingUI/Section1';
-
+import Navbar from '../Components/Navbar/Navbar';
 import approachImg from "../Assets/ImageAssets/Approach/approach.svg"
 import WhoWeAre from '../UI/LandingUI/WhoWeAre';
 import Careers from '../UI/LandingUI/Careers';
@@ -96,7 +96,12 @@ const Landing = (props) => {
    
  }
  
+ 
 
+ const navWidthHandler=(bool)=>{
+   setNavWidth(bool);
+   props.navWidthHandler(bool);
+ }
 
 
 
@@ -104,12 +109,12 @@ const Landing = (props) => {
   return (
     <>
 
-   
-     
+{/*    
+      <Navbar navWidth={navWidth} /> */}
       <Section1></Section1>
       <WhoWeAre></WhoWeAre>
   
-      {isMobile&&<div className={classes.Data2}>
+      {isMobile&&<div className={classes.Data2} id="services">
         <div className={classes.data2MainTitle}><div><span>OUR</span> SERVICES</div></div>
          <CSSTransition
             mountOnEnter
@@ -225,7 +230,7 @@ const Landing = (props) => {
         
       </div> } 
 
-      <div id='content2' className={classes.Data}>
+      <div id='approach' className={classes.Data}>
         <div className={classes.approach}>
             <div className={classes.approach_text}>
                 <div  className={classes.approach_text_top}>
@@ -248,7 +253,7 @@ const Landing = (props) => {
         </div>
       </div>
 
-     <ClientSection navWidthHandler={props.navWidthHandler} isMobile={isMobile}></ClientSection>
+     <ClientSection navWidthHandler={navWidthHandler} isMobile={isMobile}></ClientSection>
      <Careers></Careers>
      <ContactUs></ContactUs> 
           

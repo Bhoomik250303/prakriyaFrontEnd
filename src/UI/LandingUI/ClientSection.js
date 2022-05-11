@@ -61,7 +61,7 @@ const ClientSection = (props) => {
     return (
         <>
 
-            <div className={classes.bodyForClient}  >
+            <div className={classes.bodyForClient} id="clients" >
                 <div className={classes.title}><div><span>Our</span> Clients</div></div>
                 <div className={classes.containerForClient} onWheel={onWheel} ref={scrollContainer} onMouseEnter={mouseOnClient} onMouseLeave={() => { allowScroll() }} >
 

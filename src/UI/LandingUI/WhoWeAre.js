@@ -5,7 +5,7 @@ import avatar from "../../Assets/ImageAssets/WhoWeAre/whoWeAre.svg"
 const WhoWeAre = ()=>{
     return(
         <>
-            <div className={classes.mainContainer}>
+            <div className={classes.mainContainer} id="about">
                 
                 <div className={classes.container}>
                        <div className={classes.title}>

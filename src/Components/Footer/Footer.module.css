@@ -75,8 +75,19 @@ img{
     width: 2%;
     margin: 10px;
 }
+.socialMediaIcons img{
+    height: 1vw;
+    width:  1vw ;
+   
+}
 }
 @media screen and (min-width: 480px){
+    .socialMediaIcons img{
+        height: 2vw;
+        width:  2vw ;
+       
+    }
+
 .footerDiv{
     background-color: #d81330;
     padding-top: 4%;

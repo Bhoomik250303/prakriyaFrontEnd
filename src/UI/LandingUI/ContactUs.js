@@ -21,7 +21,7 @@ const ContactUs=()=>{
 
     return (
         <>
-            <div className={classes.mainContainer}>
+            <div className={classes.mainContainer} id="contactUs">
                 <div className={classes.container}>
                     <div className={classes.avatar}>
                         <img src={avatar}></img>

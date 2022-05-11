@@ -46,14 +46,14 @@ const ModalOverlay = (props) => {
                     <div className={classes.options}>
 
                         <div className={classes.optionsStyle}>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>HOME</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>About Us</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Our Services</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Our Approach</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#section1">HOME</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#about">About Us</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#services">Our Services</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#approach">Our Approach</a></span></div>
                             
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Our Clients</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#content2">Influencer Registration</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Contact Us</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#clients">Our Clients</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Influencer Registration</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#contactUs">Contact Us</a></span></div>
                             <div className={classes.textStyle} onClick={clickHandler}><span><a>Team Prakriya</a></span></div>
 
                         </div>

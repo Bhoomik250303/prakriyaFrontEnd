@@ -6,7 +6,7 @@ import prakriyaMan2 from "../../Assets/LandingBG/prakriyaman.svg"
 const Section1 = () => {
   return (
     <>
-      <div className={classes.container}>
+      < div className={classes.container} id='home'>
 
         {/* <img className={classes.prakriyaMan} src={prakriyaMan2}></img> */}
 

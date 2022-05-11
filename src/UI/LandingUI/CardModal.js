@@ -34,7 +34,7 @@ const CardModal = (dim) => {
            
                
                 {/* <div style={{ maxWidth: dim.dim.width + "px", maxHeight: dim.dim.height + "px", background: "pink", height: "40vw", width: "90%" ,display:"flex",flexDirection:"column",alignItems:"center"}}> */}
-                <div className={classes.mainContainer}>
+                <div className={classes.mainContainer} onClick={clickHandler}>
                     <div className={classes.container}>
                         <div className={classes.closeModal}>
                                 <div className={classes.closeButton} onClick={clickHandler}>
@@ -47,7 +47,7 @@ const CardModal = (dim) => {
                     </div>
                     
                     <div className={classes.imagee}>
-                        <img src={images[`${dim.data}`]}></img>
+                        <img loading="lazy" src={images[`${dim.data}`]}></img>
                     </div>
                     <div className={classes.imageText}>
                             {servicesText[`${dim.data}`].text}
