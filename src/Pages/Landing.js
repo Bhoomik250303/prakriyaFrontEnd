@@ -137,13 +137,12 @@ const Landing = (props) => {
 
 
 
-
   return (
     <>
 
 {/*    
       <Navbar navWidth={navWidth} /> */}
-      <Section1></Section1>
+      <Section1 transparentNav = {props.transparentNav} ></Section1>
       <WhoWeAre></WhoWeAre>
   
       {isMobile&&<div className={classes.Data2} id="services">

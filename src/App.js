@@ -12,24 +12,24 @@ import TeamPrakriya from './Pages/TeamPrakriya';
 
 const App = () => {
   const[navWidth,setNavWidth]=useState(false);
-
+  const[transparent,setTransparent] = useState(false);
   const navWidthHandler=(bool)=>{
     setNavWidth(bool);
   }
-  // const location = useLocation();
-  // // Scroll to top if path changes
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location.pathname]);
+  const transparentNav = (bool)=>{
+    console.log(bool)
+    setTransparent(bool)
+  }
+
 
   return (
     <>
     
     
-      <Navbar navWidth={navWidth} />
+      <Navbar navWidth={navWidth}  transparent={transparent}/>
             {/* <GoToTop></GoToTop> */}
             <Routes>
-              <Route exact path="/" element={<Landing navWidthHandler={navWidthHandler}/>}></Route>
+              <Route exact path="/" element={<Landing navWidthHandler={navWidthHandler} transparentNav={transparentNav}/>} ></Route>
               <Route path="/about" element={<About></About>}></Route>
               <Route path="/teamPrakriya" element={<TeamPrakriya></TeamPrakriya>}></Route>
             </Routes>

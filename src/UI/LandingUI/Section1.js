@@ -1,12 +1,35 @@
 import BgImage from "../../Assets/LandingBG/homebg.svg"
-import React from "react"
+import React, { useEffect } from "react"
+import { useState } from "react"
 import classes from "./Section1.module.css"
+import { useRef } from "react"
+
+const Section1 = (props) => {
+  const section1 = useRef(null);
+  const  [bool, setBool] = useState(false) 
+  useEffect(()=>{
+   
+    console.log(section1)
+  
+    const callback = (entries, observer)=>{
+      // console.log(entries[0].isIntersecting)
+      props.transparentNav(entries[0].isIntersecting)
+    }
+  
+    const observer = new IntersectionObserver(callback, {
+      root:null,
+      threshold:0.1
+    })
+    observer.observe(section1.current)
+  },[])
+
+ 
 
 
-const Section1 = () => {
+
   return (
     <>
-      < div className={classes.container} id='home'>
+      < div className={classes.container} id='home' ref={section1}>
 
         {/* <img className={classes.prakriyaMan} src={prakriyaMan2}></img> */}
 
