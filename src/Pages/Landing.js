@@ -211,7 +211,7 @@ const Landing = (props) => {
         
       </div>}
 
-      {!isMobile &&<div className={classes.Data3}>
+      {!isMobile &&<div id='services' className={classes.Data3}>
         <div className={classes.Data3Title}><span>Our </span>Services</div>
         <div className={classes.sliderContainer}>
         

@@ -1,0 +1,158 @@
+@media (max-width:800px){
+    .mainContainer{
+        width: 100%;
+        height: fit-content;
+        background: black;
+        color: white;
+        /* padding-top: 20vw; */
+        display: flex;
+        
+        justify-content: center;
+    }
+    
+    .container{
+        /* border: 2px solid wheat; */
+        width: 83%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 95px;
+    }
+    .mainTitle{
+        font-family: 'Komu A';
+        font-size: 13vw;
+        /* border: 2px solid wheat; */
+        margin-bottom: 13vw;
+    }
+    
+    .mainTitle span{
+        color: #FFDC6D;
+    }
+    
+    .teamContainer{
+        width: 100%;
+        height: fit-content;
+        /* border: 2px solid wheat; */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .teamImage{
+        /* border: 2px solid wheat; */
+        height: fit-content;
+        width: fit-content;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .teamImage img{
+        width: 38vw;
+        height: 38vw;
+        border: 2px solid white;
+    }
+    .teamData{
+        /* border: 2px solid wheat; */
+        height: 100%;
+        width: 100%;
+        display: flex;
+        
+        /* justify-content: center; */
+    }
+    .dataContainer{
+        width: 100%;
+        height: 48vw;
+        /* border: 2px solid wheat; */
+        font-size: 3.3vw;
+    }
+    .subTitle{
+        margin-top: 2vw;
+        font-family: 'Montserrat', sans-serif;
+        color:#FFDC6D;
+        margin-bottom: 1vw;
+        font-weight: 500;
+    }
+    .description{
+        font-family: 'Montserrat', sans-serif;
+        text-align: justify;
+    }
+}
+
+@media (min-width:800px){
+    .mainContainer{
+        width: 100%;
+        height: fit-content;
+        background: black;
+        color: white;
+        /* padding-top: 20vw; */
+        display: flex;
+        
+        justify-content: center;
+    }
+    
+    .container{
+        /* border: 2px solid wheat; */
+        width: 83%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 130px;
+    }
+    .mainTitle{
+        font-family: 'Komu A';
+        font-size: 6vw;
+        /* border: 2px solid wheat; */
+        margin-bottom: 3vw;
+    }
+    
+    .mainTitle span{
+        color: #FFDC6D;
+    }
+    
+    .teamContainer{
+        width: 100%;
+        height: 20vw;
+        /* border: 2px solid wheat; */
+        display: flex;
+        /* flex-direction: column; */
+    }
+    
+    .teamImage{
+        /* border: 2px solid wheat; */
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .teamImage img{
+        width: 16vw;
+        height: 16vw;
+        border: 2px solid white;
+    }
+    .teamData{
+        /* border: 2px solid wheat; */
+        height: 100%;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dataContainer{
+        width: 90%;
+        height: 12vw;
+        /* border: 2px solid wheat; */
+        font-size: 1.3vw;
+    }
+    .subTitle{
+        font-family: 'Montserrat', sans-serif;
+        color:#FFDC6D;
+        margin-bottom: 1vw;
+        font-weight: 500;
+    }
+    .description{
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+

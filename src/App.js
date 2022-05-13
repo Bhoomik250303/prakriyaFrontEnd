@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import About from './Pages/About';
 import GoToTop from './Hooks/goToTop';
+import TeamPrakriya from './Pages/TeamPrakriya';
 
 const App = () => {
   const[navWidth,setNavWidth]=useState(false);
@@ -30,6 +31,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Landing navWidthHandler={navWidthHandler}/>}></Route>
               <Route path="/about" element={<About></About>}></Route>
+              <Route path="/teamPrakriya" element={<TeamPrakriya></TeamPrakriya>}></Route>
             </Routes>
       <Footer/>
   

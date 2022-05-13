@@ -10,7 +10,7 @@ import image10 from "../../Assets/ImageAssets/Section3/ICONS/influencer_icon-01.
 import image6 from "../../Assets/ImageAssets/Section3/ICONS/paid _marketing_icon-01.png"
 import image2 from "../../Assets/ImageAssets/Section3/ICONS/seo_icon-01.png"
 import image1 from "../../Assets/ImageAssets/Section3/ICONS/sm_icon-01.png"
-
+import arrows from "../../Assets/ImageAssets/Section3/ICONS/arrows.svg"
 const Slider = (prop) => {
 
     const [data,setData]= useState({data:'',bool:false})
@@ -165,8 +165,12 @@ const Slider = (prop) => {
                     
                 </div>
                 <div className="slider-modal-button">
-                    <button className="slider__btn slider__btn--left">&larr;</button>
-                    <button className="slider__btn slider__btn--right">&rarr;</button>
+                    <div className="slider__btn slider__btn--left">
+                        <img src={arrows} style={{transform:"scale(-1)"}}></img>
+                    </div>
+                    <div className="slider__btn slider__btn--right">
+                        <img src={arrows}></img>
+                    </div>
                 </div>
                 <div className="slider-modal-circle">
                     <div className="circleContainer" ref={circle} style={{display:"none"}}>

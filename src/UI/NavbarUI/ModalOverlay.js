@@ -6,8 +6,8 @@ import facebook from "../../Assets/ImageAssets/Footer/facebook.png"
 import twitter from "../../Assets/ImageAssets/Footer/twitter.png"
 import instagram from "../../Assets/ImageAssets/Footer/instagram.png"
 import linkedin from "../../Assets/ImageAssets/Footer/linkedin.png"
-
-
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 const ModalOverlay = (props) => {
 
     const clickHandler = () => {
@@ -46,15 +46,15 @@ const ModalOverlay = (props) => {
                     <div className={classes.options}>
 
                         <div className={classes.optionsStyle}>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#section1">HOME</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#about">About Us</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#services">Our Services</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#approach">Our Approach</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><Link to="/">HOME</Link></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="about">About Us</HashLink></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#services">Our Services</HashLink></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#approach">Our Approach</HashLink></span></div>
                             
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#clients">Our Clients</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#clients">Our Clients</HashLink></span></div>
                             <div className={classes.textStyle} onClick={clickHandler}><span><a>Influencer Registration</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a href="#contactUs">Contact Us</a></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Team Prakriya</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#contactUs">Contact Us</HashLink></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="teamPrakriya">Team Prakriya</HashLink></span></div>
 
                         </div>
 

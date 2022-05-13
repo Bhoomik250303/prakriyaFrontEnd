@@ -1,23 +1,46 @@
 import React from "react";
 import classes from "./ContactUS.module.css"
-
+import { useState } from "react";
+import Button from "../../Components/Button";
 import avatar from "../../Assets/ImageAssets/ContactUs/contactUs.svg"
 
 const ContactUs=()=>{
 
 
-    const submitHandler = (e)=>{
+    const[spinner,setSpinner] = useState(false)
+    const submitHandler = async (e)=>{
+        setSpinner(true);
         e.preventDefault();
-        const data = new FormData(e.currentTarget);
+        const data = new FormData(e.currentTarget)
         const name = data.get('name');
         const email = data.get('email');
-        const number = data.get('contact');
+        const number = data.get('number');
         const message = data.get('message');
-
+        const dataa = {name,email,number,message}
+        console.log(dataa);
+       
+        const header = new Headers()
+       
+        header.append("Content-Type", "application/json")
         
-        console.log(name,email,number,message);
-    }
+        const raw = JSON.stringify(dataa)
+        try {
+            const response = await fetch("http://localhost:5000/contactUs",{
+                method:'POST',
+                body:raw,
+                headers:header
+                
+            
+            })
+            const dataa = await response.json();
+            console.log(dataa);
+            setSpinner(false);
+        } catch (error) {
+            setSpinner(false)
+        }
+       
 
+    }
 
     return (
         <>
@@ -36,16 +59,16 @@ const ContactUs=()=>{
                         <div className={classes.formTitle}>
                             REGISTRATION FORM
                         </div>
-                        <form className={classes.mainForm} autoComplete="off" onSubmit={submitHandler}>
+                        <form className={classes.mainForm} autoComplete="off" onSubmit={submitHandler} >
                                 <label>Full Name</label>
-                                <input type="text" name="name"></input>
+                                <input required type="text" name="name"></input>
                                 <label>E-Mail</label>
-                                <input type="email" name="email"></input>
+                                <input required type="email" name="email"></input>
                                 <label>Contact Number</label>
-                                <input type="text" name="contact"></input>
+                                <input required type="tel" name="number"></input>
                                 <label>Message</label>
-                                <textarea className={classes.message} name="message" cols="40" rows="5"></textarea>
-                                <button className={classes.button} type="submit">SUBMIT</button>
+                                <textarea className={classes.message} maxLength="550" name="message" cols="40" rows="5"></textarea>
+                                <Button spinner={spinner}></Button>
                         </form>
                     </div>
                 </div>
