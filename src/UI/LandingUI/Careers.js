@@ -4,7 +4,7 @@ import avatar1 from "../../Assets/ImageAssets/Careers/avatar1.svg"
 import light from "../../Assets/ImageAssets/Careers/light.svg"
 import wAvatar from "../../Assets/ImageAssets/Careers/wAvatar.svg"
 import cloud from "../../Assets/ImageAssets/Careers/cloud.svg"
-
+import careersMobile from "../../Assets/ImageAssets/Careers/careersMobile.svg"
 const Careers = () => {
 
     const submitHandler = async (e)=>{
@@ -46,6 +46,9 @@ const Careers = () => {
                     </div>
                     <div className={classes.subTitle}>
                         Keeping the finest and brightest in our wokrforce is critical to our success. If you're seeking for a place where you can collaborate with like-minded individuals, this may be the agency for you.
+                    </div>
+                    <div className={classes.careersMobile}>
+                        <img  src={careersMobile}></img>
                     </div>
                         <div className={classes.form}>
                             <div className={classes.formTitle}>APPLY</div>

@@ -14,6 +14,33 @@ import WhoWeAre from '../UI/LandingUI/WhoWeAre';
 import Careers from '../UI/LandingUI/Careers';
 import ContactUs from '../UI/LandingUI/ContactUs';
 
+
+import image9 from "../Assets/ImageAssets/Section3/MobileInner/affiliates_inner-01.png"
+import image7 from "../Assets/ImageAssets/Section3/MobileInner/analytic_ inner-01.png"
+import image5 from "../Assets/ImageAssets/Section3/MobileInner/brand_strategy-01.png"
+import image3 from "../Assets/ImageAssets/Section3/MobileInner/content_inner-01.png"
+import image8 from "../Assets/ImageAssets/Section3/MobileInner/conversion_ optimization-01.png"
+import image4 from "../Assets/ImageAssets/Section3/MobileInner/digital _pr_ inner-01.png"
+import image10 from "../Assets/ImageAssets/Section3/MobileInner/influencer_inner-01.png"
+import image6 from "../Assets/ImageAssets/Section3/MobileInner/paid_marketing_inner-01.png"
+import image2 from "../Assets/ImageAssets/Section3/MobileInner/SEO_inner-01.png"
+import image1 from "../Assets/ImageAssets/Section3/MobileInner/sm_inner-01.png"
+
+import {servicesTextForPhone, servicesTextForPhoneTitle} from "../Assets/TextAssets/servicesTextForPhone.js"
+
+const images = {image1,image2,image3 ,image4,image5,image6 ,image7 ,image8 ,image9 ,image10 }
+
+
+
+
+
+
+
+
+
+
+
+
 const Landing = (props) => {
 
   
@@ -29,6 +56,7 @@ const Landing = (props) => {
   const [cardModalData, setCardModalData] = useState('')
   const [navWidth, setNavWidth] = useState(false);
 
+
   const [temp, settemp] = useState(false)
   const isMobile = useMediaQuery({
     query: '(min-width: 800px)'
@@ -36,6 +64,8 @@ const Landing = (props) => {
 
   const [slideModalData, setSlideModalData] = useState({data:'',bool:false})
   
+
+  const [img, setImg] = useState(true);//Had to use it because Mobile's service section was causing wierd border to appear while transition between modal and slide
 
   // useEffect(() => {
   //   console.log("Useeffect Ran")
@@ -87,12 +117,14 @@ const Landing = (props) => {
   }
 
  const sliderDataHandler=(data)=>{
-   setSlideModalData(data)
+   setSlideModalData(data);
+   setImg(true);
  }
  const closeSlideModalOverlay=()=>{
    
+    setImg(false);
     setSlideModalData({bool:false})
-  
+    
    
  }
  
@@ -180,11 +212,12 @@ const Landing = (props) => {
       </div>}
 
       {!isMobile &&<div className={classes.Data3}>
-        <div className={classes.temp}></div>
+        <div className={classes.Data3Title}><span>Our </span>Services</div>
         <div className={classes.sliderContainer}>
         
          <CSSTransition
             mountOnEnter
+            
             
             in={!slideModalData.bool}
             timeout={time}
@@ -219,10 +252,16 @@ const Landing = (props) => {
                   
               
           }}>
-                  <div className={classes.SlideModalOverlay}>
-                    <button onClick={closeSlideModalOverlay}>X</button>
-                    {slideModalData.data}
+                  <div className={classes.SlideModalOverlay} onClick={closeSlideModalOverlay}>
+                    {/* <button onClick={closeSlideModalOverlay}>X</button> */}
+                    {/* {slideModalData.data} */}
+                    <img className={!img ? classes.displayNone:""} src={images[`image${slideModalData.data}`]}></img>
+                    <div className={classes.titleForSliderModal}>{servicesTextForPhoneTitle[`image${slideModalData.data}`]}</div>
+                    <div className={classes.dataForSliderModal}>
+                       {servicesTextForPhone[`image${slideModalData.data}`]}
+                    </div>
                   </div>
+                  
           </CSSTransition>
          
                   

@@ -1,6 +1,162 @@
 
+@media  (max-width:800px){
+  .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: url("../../Assets/LandingBG/homebgMobile.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    /* background: black !important; */
+  }
 
-.container {
+  .frontText{
+    position: absolute;
+    color: white;
+    top:12%;
+    left: 9.3%;
+    width: 50vw ;
+    max-width: 400px;
+    height: 27vw ;
+    /* border: 2px solid  wheat; */
+    font-family: 'Komu A';
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .frontTextTop{
+    width: 100%;
+    display: flex;
+    height: 38%;
+    /* border: 2px solid white; */
+  }
+  .frontTextTopLeft{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 68%;
+    /* border: 2px solid white; */
+    font-size: 9vw;
+    justify-content: flex-end;
+  
+  }
+  .frontTextTopRight{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 32%;
+    justify-content: flex-end;
+    /* border: 2px solid white; */
+  }
+  .frontTextTopRightContent{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+    font-size: 3vw;
+    margin-bottom: 2px;
+  
+    font-family: 'Open sans';
+    font-weight: 700;
+  
+  }
+  
+  
+  .frontTextBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFDC6D;
+    width: 100%;
+    height: 52%;
+    /* border: 2px solid white; */
+    font-size: 17vw;
+  }
+  
+  .bottomText{
+    position: absolute;
+    width: 58vw;
+    height: 55vw;
+    max-height: 280px;
+    /* border:2px solid white; */
+    bottom: 3%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .bottomTextTop{
+    /* border: 2px solid white; */
+    width: 100%;
+    height: 40%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: clamp(15px,3.5vw,30px);
+    font-weight: 500;
+    
+  
+  
+  }
+  .bottomTextBottom{
+    /* border:  2px solid white; */
+    width: 100%;
+    height: 60%;
+    font-family: 'Komu A';
+    color:#FFDC6D;
+    font-size: 7.7vw;
+    
+  
+    
+  }
+  .bottomTextBottom span{
+    
+    color:white;
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+
+@media (min-width:800px){
+  .container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -13,7 +169,6 @@
     background-position: center;
     
 }
-
 .container img{
   /* border: 5px solid wheat; */
   
@@ -159,3 +314,5 @@
   color:white;
   
 }
+}
+

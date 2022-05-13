@@ -1,7 +1,7 @@
 import BgImage from "../../Assets/LandingBG/homebg.svg"
 import React from "react"
 import classes from "./Section1.module.css"
-import prakriyaMan2 from "../../Assets/LandingBG/prakriyaman.svg"
+
 
 const Section1 = () => {
   return (

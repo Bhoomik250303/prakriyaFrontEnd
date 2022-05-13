@@ -1,8 +1,5 @@
 
 
-*{
-  /* scroll-behavior: smooth; */
-}
 
 .Data {
     width: 100%;
@@ -72,20 +69,55 @@
 @media (max-width: 800px) {
  
   .DataContainer {
-    background: rgb(181, 126, 126);
-    margin: 5px;
+    /* background: rgb(181, 126, 126); */
+    margin: 0px;
     flex-direction: column;
-    height: 210vh;
-    min-height: 2000px;
+    height: fit-content;
+    /* min-height: 2000px; */
 
   }
   .Data{
     width: 100%;
     height:fit-content;
     flex-direction: column;
+    /* border: 2px solid wheat; */
     
     
   }
+
+  .approach{
+    margin-top: 0px;
+    /* border: 2px solid wheat; */
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    width: 88%;
+  }
+  .approach_text{
+    
+    /* border: 2px solid wheat; */
+    width: 100%;
+  }
+  .approach_text_top{
+    
+    /* border: 2px solid wheat; */
+    font-size: 13vw;
+  }
+  .approach_text_bottom{
+    
+    /* border: 2px solid wheat; */
+    font-size: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+  .approach_image{
+    width: 90%;
+    height: 90%;
+    /* border: 2px solid wheat; */
+  }
+
+
+
   .gridContainer{
   display: none;
 }
@@ -93,7 +125,7 @@
 
 }
 
-@media(max-width: 500px){
+/* @media(max-width: 500px){
   .Data3{
     background: brown;
    
@@ -102,7 +134,7 @@
   .sliderContainer{
     background-color: blue;
   }
-}
+} */
 
 
 
@@ -148,7 +180,9 @@
   width: 100%;
   height: fit-content;
   
-  background: greenyellow;
+  
+  background: rgb(0, 0, 0);
+  /* border: 0px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,11 +190,13 @@
 }
 .sliderContainer{
   width: 95%;
-  height: 150vw;
+  height: 120vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aqua;
+  /* background-color: aqua; */
+  position: relative;
+  /* border: 2px solid green; */
 }
 
 .gridContainer{
@@ -178,20 +214,25 @@
     flex-wrap: wrap;
 }
 
-.temp{
-    background-color: rgb(255, 40, 40);
-    width: 100%;
-    height: 300px;
-    
+.Data3Title{
+    /* border: 2px solid white; */
+    margin-left: 5vw;
+    width: 92%;
+    height: 12vh;
+    color: white;
+    font-family: 'Komu A';
+    font-size: 13.5vw;
 }
-
+.Data3Title span{
+    color: #FFDC6D;
+}
 .MyClassEnter{
     opacity: 0;
   }
 
   .MyClassEnterActive {
     
-    transition: opacity 500ms;
+    /* transition: opacity 5500ms; */
     opacity:1 ;        
   }
   .MyClassEnterDone{
@@ -241,24 +282,59 @@
   } 
 
   .SlideModalOverlay{
+    border-radius: 8px;
     width: 95%;
-    height: 130vw;
+    height: 90%;
     max-height: 900px;
     margin: 0 auto;
     position: absolute;
-    background: rgb(132, 189, 0);
+    top: 0px;
+    background:  #D81330;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .SlideModalOverlay button{
-    width: 100px;
-    height: 100px;
+  .SlideModalOverlay img{
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    /* display: none; */
+    
+    /* border: 2px solid black; */
+  
    
   }
-
+  .displayNone{
+    display: none;
+  }
+  .dataForSliderModal{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    bottom: 2%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid black; */
+    text-align: justify;
+    font-size: 3.5vw;
+    padding: 10px;
+  }
+.titleForSliderModal{
+  position: absolute;
+    width: 100%;
+    height: 18%;
+    /* border: 2px solid black; */
+    top: 0%;
+    padding: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6.5vw;
+    font-weight: 600;
+    /* border: 2px solid black; */
+}
 
   /* //////////////////////////////////////////////////// */
 

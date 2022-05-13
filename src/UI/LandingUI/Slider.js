@@ -1,5 +1,15 @@
 import React, { useEffect,useRef,useState } from "react";
 import "./Slider.css"
+import image9 from "../../Assets/ImageAssets/Section3/ICONS/affiliates_icon-01.png"
+import image7 from "../../Assets/ImageAssets/Section3/ICONS/Analytics_icon-01.png"
+import image5 from "../../Assets/ImageAssets/Section3/ICONS/brand_icon-01.png"
+import image3 from "../../Assets/ImageAssets/Section3/ICONS/content_icon-01.png"
+import image8 from "../../Assets/ImageAssets/Section3/ICONS/conversion_icon-01.png"
+import image4 from "../../Assets/ImageAssets/Section3/ICONS/digitalPr_icon-01.png"
+import image10 from "../../Assets/ImageAssets/Section3/ICONS/influencer_icon-01.png"
+import image6 from "../../Assets/ImageAssets/Section3/ICONS/paid _marketing_icon-01.png"
+import image2 from "../../Assets/ImageAssets/Section3/ICONS/seo_icon-01.png"
+import image1 from "../../Assets/ImageAssets/Section3/ICONS/sm_icon-01.png"
 
 const Slider = (prop) => {
 
@@ -79,7 +89,9 @@ const Slider = (prop) => {
     }, [])
 
     const clickHandler = (e)=>{
-       prop.sliderDataHandler({data:e.target.id,bool:true})
+       prop.sliderDataHandler({data:e.target.closest('.slide').id,bool:true})
+    
+    
     }
 
 
@@ -97,16 +109,59 @@ const Slider = (prop) => {
             
                 <div className="slider">
 
-                    <div id={"A"} className="slide colour1"  onClick={clickHandler} >Tap A</div>
-                    <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
-                    <div id={"C"}  className="slide colour3" onClick={clickHandler}>Tap C</div>
-                    <div id={"D"}  className="slide colour4" onClick={clickHandler}>Tap D</div>
-                    <div id={"A"} className="slide colour1"  onClick={clickHandler}>Tap A</div>
-                    <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
-                    <div id={"C"}  className="slide colour3" onClick={clickHandler}>Tap C</div>
-                    <div id={"D"}  className="slide colour4" onClick={clickHandler}>Tap D</div>
-                    <div id={"A"} className="slide colour1"  onClick={clickHandler}>Tap A</div>
-                    <div id={"B"}  className="slide colour2"onClick={clickHandler}>Tap B</div>
+                    <div id={"1"} className="slide" onClick={clickHandler}  >
+                        
+                        <img src={image1}></img>
+                        <div className="title">Social Media</div>
+                    </div>
+                    <div id={"2"}  className="slide"onClick={clickHandler}>
+                      
+                        <img src={image2}></img>
+                        <div className="title">Search Engine Optimization</div>
+                    </div>
+                    <div id={"3"}  className="slide" onClick={clickHandler}>
+                        
+                        <img src={image3}></img>
+                        <div className="title">Content Marketing</div>
+                    </div>
+                    <div id={"4"}  className="slide" onClick={clickHandler}>
+                       
+                        <img src={image4}></img>
+                        <div className="title">Digital PR</div>
+                    </div>
+                    <div id={"5"} className="slide"  onClick={clickHandler}>
+                        
+                        <img src={image5}></img>
+                        <div className="title">Brand Strategy</div>
+                    </div>
+                    <div id={"6"}  className="slide"onClick={clickHandler}>
+                        
+                        <img src={image6}></img>
+                        <div className="title">Paid Marketing</div>
+                    </div>
+                    <div id={"7"}  className="slide" onClick={clickHandler}>
+                        
+                        <img src={image7}></img>
+                        <div className="title">Analytics</div>
+                    </div>
+                    <div id={"8"}  className="slide" onClick={clickHandler}>
+                        
+                        <img src={image8}></img>
+                        <div className="title">Conversion Optimization</div>
+                    </div>
+                    <div id={"9"} className="slide"  onClick={clickHandler}>
+                        
+                        
+                        <img src={image9}></img>
+                        <div className="title">Affiliates</div>
+                    </div>
+                    <div id={"10"}  className="slide"onClick={clickHandler}>
+                        
+                        
+                        <img src={image10}></img>
+                        <div className="title">Influencer Marketing</div>
+                    </div>
+                    
                     
                 </div>
                 <div className="slider-modal-button">
@@ -114,7 +169,7 @@ const Slider = (prop) => {
                     <button className="slider__btn slider__btn--right">&rarr;</button>
                 </div>
                 <div className="slider-modal-circle">
-                    <div className="circleContainer" ref={circle}>
+                    <div className="circleContainer" ref={circle} style={{display:"none"}}>
                         <div className="circleIndicator circleTransform "></div>
                         <div className="circleIndicator "></div>
                         <div className="circleIndicator "></div>

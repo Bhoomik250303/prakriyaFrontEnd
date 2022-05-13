@@ -1,4 +1,4 @@
-import React,{useState,useCallback,useEffect, useRef} from 'react';
+import React,{useState,useCallback,useLayoutEffect, useRef} from 'react';
 import HamBurger from '../../UI/NavbarUI/HamBurger';
 import ModalOverlay from '../../UI/NavbarUI/ModalOverlay';
 import classes from "./Navbar.module.css"
@@ -52,7 +52,7 @@ const Navbar = (props) => {
     }, [y]
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setY(window.scrollY);
     window.addEventListener("scroll", handleNavigation);
 

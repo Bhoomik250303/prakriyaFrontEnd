@@ -1,132 +1,249 @@
 
-.navWidth{
-    max-width: calc(100vw - 19px);
-}
-.navContainer{
-    display: flex;
-    width: 100%;
-    height: 13vw;
-    max-height: 100px;
-    /* background: green; */
 
-    justify-content: center;
-    /* position: sticky;
-    top:0; */
-    z-index: 900000;
-    position: fixed;
+@media (min-width:800px){
+    .navWidth{
+        max-width: calc(100vw - 19px);
+    }
+    .navContainer{
+        display: flex;
+        width: 100%;
+        height: 13vw;
+        max-height: 100px;
+        /* background: green; */
     
+        justify-content: center;
+        /* position: sticky;
+        top:0; */
+        z-index: 900000;
+        position: fixed;
+        
+        
+        /* opacity: 0.5 */
+    }
+    .navInnerContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 93%;
+        height: 100%;
+        /* background: greenyellow; */
+    }
     
-    /* opacity: 0.5 */
-}
-.navInnerContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 93%;
-    height: 100%;
-    /* background: greenyellow; */
-}
-
-.hideNav{
-    transform: translateY(-100px);
-    transition: transform 200ms ease-in-out;
-}
-.showNav{
-    transform: translateY(0px);
-    width: 100%;
-    transition: transform 200ms ease-in-out;
-
-}
-.setBg{
-    /* opacity: 0.5; */
-    background: black;
-}
-
-.navMain{
-    display: flex;
-    width: 90%;
-    height: 100%;
-    /* max-height: 90px; */
-    /* background: rgb(128, 0, 96); */
-    align-items: center;
-    justify-content: space-between;
-}
-
-.Logo{
-    height: 100%;
-    width: 15%;
-    max-width: 95px;
+    .hideNav{
+        transform: translateY(-100px);
+        transition: transform 200ms ease-in-out;
+    }
+    .showNav{
+        transform: translateY(0px);
+        width: 100%;
+        transition: transform 200ms ease-in-out;
     
-    /* background: gold; */
-}
-
-.Logo img{
+    }
+    .setBg{
+        /* opacity: 0.5; */
+        background: black;
+    }
     
-    padding-top: 5px;
-    width: 75%;
-    height: 100%;
-}
-
-.Right{
-    display: flex;
-    height: 100%;
-    /* max-height: 90px; */
-    width: 62%;
-    /* max-width: 360px; */
-    /* background: gold; */
-    align-items: center;
-    justify-content: center;
-    justify-content: flex-end;
+    .navMain{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        /* max-height: 90px; */
+        /* background: rgb(128, 0, 96); */
+        align-items: center;
+        justify-content: space-between;
+    }
     
-}
-.Options{
-    height: 100%;
-    width: 70%;
-/*    
-    background: rgb(5, 183, 112); */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-}
-.Options a{
-    text-decoration: none;
-    color: white;
-}
-.Options div{
-    height: 50%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    /* background: gray; */
-    font-size: 1.2vw;
-    font-weight:bolder;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-
-    font-weight: 500;
-}
-
-.ToggleBar{
-    width: 50px;
-    max-width: 80px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* max-height: 90px; */
-    /* background: goldenrod; */
-}
-
-/* .modalOverlay {
+    .Logo{
+        height: 100%;
+        width: 15%;
+        max-width: 95px;
+        
+        /* background: gold; */
+    }
     
-    background: black;
-    opacity: 0.9;
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100vh;
+    .Logo img{
+        
+        padding-top: 5px;
+        width: 75%;
+        height: 100%;
+    }
+    
+    .Right{
+        display: flex;
+        height: 100%;
+        /* max-height: 90px; */
+        width: 62%;
+        /* max-width: 360px; */
+        /* background: gold; */
+        align-items: center;
+        justify-content: center;
+        justify-content: flex-end;
+        
+    }
+    .Options{
+        height: 100%;
+        width: 70%;
+    /*    
+        background: rgb(5, 183, 112); */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+    .Options a{
+        text-decoration: none;
+        color: white;
+    }
+    .Options div{
+        height: 50%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        /* background: gray; */
+        font-size: 1.2vw;
+        font-weight:bolder;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    
+        font-weight: 500;
+    }
+    
+    .ToggleBar{
+        width: 50px;
+        max-width: 80px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* max-height: 90px; */
+        /* background: goldenrod; */
+    }
+}
 
-
-} */
+@media (max-width:800px){
+    .navWidth{
+        max-width: calc(100vw - 19px);
+    }
+    .navContainer{
+        display: flex;
+        width: 100%;
+        height: 18vw;
+        max-height: 100px;
+        /* background: green; */
+    
+        justify-content: center;
+        /* position: sticky;
+        top:0; */
+        z-index: 900000;
+        position: fixed;
+        
+        
+        /* opacity: 0.5 */
+    }
+    .navInnerContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 93%;
+        height: 100%;
+        /* background: greenyellow; */
+    }
+    
+    .hideNav{
+        transform: translateY(-100px);
+        transition: transform 200ms ease-in-out;
+    }
+    .showNav{
+        transform: translateY(0px);
+        width: 100%;
+        transition: transform 200ms ease-in-out;
+    
+    }
+    .setBg{
+        /* opacity: 0.5; */
+        background: black;
+    }
+    
+    .navMain{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        /* max-height: 90px; */
+        /* background: rgb(128, 0, 96); */
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .Logo{
+        height: 100%;
+        width: 15%;
+        /* max-width: 95px; */
+        
+        /* background: gold; */
+        /* border: 2px solid wheat; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Logo img{
+        
+        padding-top: 5px;
+        width: 75%;
+        height: 75%;
+    }
+    
+    .Right{
+        display: flex;
+        height: 100%;
+        /* max-height: 90px; */
+        width: 62%;
+        /* max-width: 360px; */
+        /* background: gold; */
+        align-items: center;
+        justify-content: center;
+        justify-content: flex-end;
+        
+    }
+    .Options{
+        height: 100%;
+        width: 70%;
+    /*    
+        background: rgb(5, 183, 112); */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+    .Options a{
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
+    .Options div{
+        height: 50%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        /* background: gray; */
+        font-size: 1.2vw;
+        font-weight:bolder;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    
+        font-weight: 500;
+        display: none;
+    }
+    
+    .ToggleBar{
+        width: 50px;
+        max-width: 80px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /* max-height: 90px; */
+        /* background: goldenrod; */
+    }
+}

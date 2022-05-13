@@ -44,11 +44,12 @@
  
   .cardContainer{
     /* background: rgb(24, 139, 215); */
-    margin: 5px;
+    margin: 35px;
     width: 93%;
     height: 90vw;
     max-width: 530px;
     min-height: 410px;
+    
   }
   .Para{
    
@@ -60,16 +61,33 @@
   }
   .Heading div{
     
-    font-size:clamp(18px,4vw, 20px) !important;
+    font-size:clamp(8px,4vw, 20px) !important;
     
+  }
+  .dataCardTitle{
+    position: absolute;
+    /* border: 2px solid greenyellow; */
+    background: black;
+    color: white;
+    width: 78%;
+    height: 15%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
   }
 }
 
 .showModal{
-    transition: all 1s ease ease-in-out;
+    
+    /* transition: baground-color 1s ease ease-in-out; */
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
+    height: 102%;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.985);
     
     display: flex;
     flex-direction: column;
@@ -98,6 +116,9 @@
     height: 70%;
     /* background: gold; */
     /* border: 2px solid white; */
+/*    
+    padding-left: 3vw;
+    padding-right: 3vw; */
     color: white;
     text-align: justify;
     text-justify: inter-word;
@@ -117,7 +138,7 @@
 
   .MyClassEnterActive {
     
-    transition: opacity 500ms;
+    transition: opacity 400ms;
     opacity:0.97 ;        
   }
   .MyClassEnterDone{
@@ -130,9 +151,9 @@
   }
   .MyClassExitActive {
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 400ms;
   } 
   .MyClassExitDone {
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 400ms;
   } 

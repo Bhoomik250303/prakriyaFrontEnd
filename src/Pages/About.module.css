@@ -1,43 +1,95 @@
-.container{
-    width: 100%;
-    height: fit-content;
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
+@media (max-width:800px){
+    .container{
+        width: 100%;
+        height: fit-content;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        
+        /* border: 2px solid white; */
+    }
     
-    /* border: 2px solid white; */
+    .mainContainer{
+        margin-top: 100px;
+        width: 83%;
+        height: fit-content;
+        /* border: 2px solid white; */
+        display: flex;
+        flex-direction: column;margin-bottom: 3vw;
+    }
+    .title{
+        font-family: 'Komu A';
+        font-size: 13vw;
+        padding-bottom: 3vw;
+    }
+    .title span{
+        color: #FFDC6D;
+    }
+    .text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3vw;
+        text-align: justify;
+    }
+    .subTitle{
+        color: #FFDC6D;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+    .subText{
+        color: #FFDC6D;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3vw;
+        font-weight: 500;
+    }
 }
 
-.mainContainer{
-    margin-top: 150px;
-    width: 83%;
-    height: fit-content;
-    /* border: 2px solid white; */
-    display: flex;
-    flex-direction: column;margin-bottom: 3vw;
+@media (min-width:800px){
+    .container{
+        width: 100%;
+        height: fit-content;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        
+        /* border: 2px solid white; */
+    }
+    
+    .mainContainer{
+        margin-top: 150px;
+        width: 83%;
+        height: fit-content;
+        /* border: 2px solid white; */
+        display: flex;
+        flex-direction: column;margin-bottom: 3vw;
+    }
+    .title{
+        font-family: 'Komu A';
+        font-size: 6vw;
+        padding-bottom: 3vw;
+    }
+    .title span{
+        color: #FFDC6D;
+    }
+    .text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3vw;
+        text-align: justify;
+    }
+    .subTitle{
+        color: #FFDC6D;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+    .subText{
+        color: #FFDC6D;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3vw;
+    }
 }
-.title{
-    font-family: 'Komu A';
-    font-size: 6vw;
-    padding-bottom: 3vw;
-}
-.title span{
-    color: #FFDC6D;
-}
-.text{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
-    text-align: justify;
-}
-.subTitle{
-    color: #FFDC6D;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 1.8vw;
-}
-.subText{
-    color: #FFDC6D;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
-}
+
