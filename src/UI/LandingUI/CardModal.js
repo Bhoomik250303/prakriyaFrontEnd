@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import classes from "./CardModal.module.css"
 import image9 from "../../Assets/ImageAssets/Section3/affiliates_inner-01.png"
 import image7 from "../../Assets/ImageAssets/Section3/analytic_ inner-01.png"
@@ -47,7 +47,7 @@ const CardModal = (dim) => {
                     </div>
                     
                     <div className={classes.imagee}>
-                        <img loading="lazy" src={images[`${dim.data}`]}></img>
+                        <img loading="lazy" src={images[`${dim.data}`]} alt=" "></img>
                     </div>
                     <div className={classes.imageText}>
                             {servicesText[`${dim.data}`].text}

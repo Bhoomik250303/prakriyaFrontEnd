@@ -5,15 +5,15 @@ import dataCardBg from "../../Assets/ImageAssets/Section2/approachBox-01.png"
 import approachText from "../../Assets/TextAssets/approachText.js"
 const DataCard = (props)=>{
 
-    console.log("function ran")
+    // console.log("function ran")
     const[dataShow,setDataShow]= useState(false);
 
     const Enterhandler = ()=>{
-        console.log("mouse enetered")
+        // console.log("mouse enetered")
         setDataShow(true);
     }
     const leaveHandler = ()=>{
-        console.log("mouse left")
+        // console.log("mouse left")
         setDataShow(false);
     }
 
@@ -21,7 +21,7 @@ const DataCard = (props)=>{
         <>
             <div className={classes.cardContainer} onMouseEnter={Enterhandler} onMouseLeave={leaveHandler} >
                 <div className={classes.dataCardBg}>
-                    <img src={dataCardBg}></img>
+                    <img src={dataCardBg} alt=" "></img>
                 </div>
                 <div className={classes.dataCardTitle}>{props.title}</div>
                 {/* {dataShow&&<div className={`${classes.showModal} ${classes.transition}`}>

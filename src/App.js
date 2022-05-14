@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Landing from './Pages/Landing';
 import "./App.css"
 import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { useLayoutEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
+
 import Footer from './Components/Footer/Footer';
 import About from './Pages/About';
-import GoToTop from './Hooks/goToTop';
+// import GoToTop from './Hooks/goToTop';
 import TeamPrakriya from './Pages/TeamPrakriya';
+import InfluencerRegistration from './Pages/InfluencerRegistration';
 
 const App = () => {
   const[navWidth,setNavWidth]=useState(false);
@@ -17,7 +17,7 @@ const App = () => {
     setNavWidth(bool);
   }
   const transparentNav = (bool)=>{
-    console.log(bool)
+    // console.log(bool)
     setTransparent(bool)
   }
 
@@ -32,6 +32,7 @@ const App = () => {
               <Route exact path="/" element={<Landing navWidthHandler={navWidthHandler} transparentNav={transparentNav}/>} ></Route>
               <Route path="/about" element={<About></About>}></Route>
               <Route path="/teamPrakriya" element={<TeamPrakriya></TeamPrakriya>}></Route>
+              <Route path="/InfluencerRegistration" element={<InfluencerRegistration></InfluencerRegistration>}></Route>
             </Routes>
       <Footer/>
   

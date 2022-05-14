@@ -1,15 +1,16 @@
-import BgImage from "../../Assets/LandingBG/homebg.svg"
+// import BgImage from "../../Assets/LandingBG/homebg.svg"
 import React, { useEffect } from "react"
-import { useState } from "react"
+// import { useState } from "react"
 import classes from "./Section1.module.css"
 import { useRef } from "react"
+import GoToTop from "../../Hooks/goToTop"
 
 const Section1 = (props) => {
   const section1 = useRef(null);
-  const  [bool, setBool] = useState(false) 
+  // const  [bool, setBool] = useState(false) 
   useEffect(()=>{
    
-    console.log(section1)
+    // console.log(section1)
   
     const callback = (entries, observer)=>{
       // console.log(entries[0].isIntersecting)
@@ -21,7 +22,7 @@ const Section1 = (props) => {
       threshold:0.1
     })
     observer.observe(section1.current)
-  },[])
+  },[props]) /*the addition of props in array might cause bug */
 
  
 
@@ -29,11 +30,12 @@ const Section1 = (props) => {
 
   return (
     <>
+    <GoToTop/>
       < div className={classes.container} id='home' ref={section1}>
 
         {/* <img className={classes.prakriyaMan} src={prakriyaMan2}></img> */}
 
-        <img className={classes.BgImage} ></img>
+        <img className={classes.BgImage} alt=" " ></img>
         <div className={classes.frontText}>
           <div className={classes.frontTextTop}>
             <div className={classes.frontTextTopLeft}>

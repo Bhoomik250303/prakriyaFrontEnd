@@ -17,7 +17,7 @@ const ContactUs=()=>{
         const number = data.get('number');
         const message = data.get('message');
         const dataa = {name,email,number,message}
-        console.log(dataa);
+        // console.log(dataa);
        
         const header = new Headers()
        
@@ -47,7 +47,7 @@ const ContactUs=()=>{
             <div className={classes.mainContainer} id="contactUs">
                 <div className={classes.container}>
                     <div className={classes.avatar}>
-                        <img src={avatar}></img>
+                        <img src={avatar} alt=" "></img>
                     </div>
                     <div className={classes.title}>
                             <span>Contact </span> &nbsp;Us

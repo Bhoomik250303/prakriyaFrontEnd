@@ -5,43 +5,45 @@ import facebook from "../../Assets/ImageAssets/Footer/facebook.png"
 import twitter from "../../Assets/ImageAssets/Footer/twitter.png"
 import instagram from "../../Assets/ImageAssets/Footer/instagram.png"
 import linkedin from "../../Assets/ImageAssets/Footer/linkedin.png"
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
     return (
         <>
             <div className={classes.footerDiv}>
-                <div className={classes.logoImageDiv}><img className={classes.logoImage} src={logo1} /></div>
+                <div className={classes.logoImageDiv}><img className={classes.logoImage} src={logo1} alt="" /></div>
                 <div className={classes.listOfLinksMobile}>
                     <div className={classes.listOfLinks}>
-                        <a href="#">Home</a>
+                        <HashLink to="/#home">Home</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">About</a>
+                        <Link  to='/about'>About</Link>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Our Services</a>
+                        <HashLink to="/#services">Our Services</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Our Approach</a>
+                        <HashLink to="/#approach">Our Approach</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Our Clients</a>
+                        <HashLink to="/#clients">Our Clients</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Influencer Registration</a>
+                        <Link to="InfluencerRegistration"> Influencer Registration</Link>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Contact Us</a>
+                        <HashLink to="/#contactUs">Contact Us</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
-                        <a href="#">Team Prakriya</a>
+                        <Link to="teamPrakriya">Team Prakriya</Link>
                     </div>
                     <div className={classes.listOfOtherLinks}>
-                        <a href="#">Career</a>
+                        <HashLink to="/#career">Career</HashLink>
                         <div className={classes.spaceBetweenLinks}></div>
 
                         <p >Send us your resume</p>
-                        <a href="#" type="email">prakriyadigital@gmail.com</a>
+                        <p>prakriyadigital@gmail.com</p>
                     </div>
                 </div>
                 <div className={classes.listOfSocialMedia}>
-                    <div className={classes.socialMediaIcons} ><img src={facebook}  /></div>
-                    <div className={classes.socialMediaIcons}><img src={twitter}  /></div>
-                    <div className={classes.socialMediaIcons}><img src={instagram} /></div>
-                    <div className={classes.socialMediaIcons}><img src={linkedin}  /></div>
+                    <div className={classes.socialMediaIcons} ><img src={facebook} alt=""  /></div>
+                    <div className={classes.socialMediaIcons}><img src={twitter} alt="" /></div>
+                    <div className={classes.socialMediaIcons}><img src={instagram} alt=""/></div>
+                    <div className={classes.socialMediaIcons}><img src={linkedin} alt="" /></div>
                 </div>
                 
             </div>

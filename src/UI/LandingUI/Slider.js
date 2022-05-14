@@ -1,4 +1,4 @@
-import React, { useEffect,useRef,useState } from "react";
+import React, { useEffect,useRef } from "react";
 import "./Slider.css"
 import image9 from "../../Assets/ImageAssets/Section3/ICONS/affiliates_icon-01.png"
 import image7 from "../../Assets/ImageAssets/Section3/ICONS/Analytics_icon-01.png"
@@ -13,12 +13,13 @@ import image1 from "../../Assets/ImageAssets/Section3/ICONS/sm_icon-01.png"
 import arrows from "../../Assets/ImageAssets/Section3/ICONS/arrows.svg"
 const Slider = (prop) => {
 
-    const [data,setData]= useState({data:'',bool:false})
+    // const [data,setData]= useState({data:'',bool:false})
     const circle = useRef();
-    let circleCount = 0;
+    // let circleCount = 0; do not delete this comment
 
 
     useEffect(() => {
+        let circleCount = 0;
         const slides = document.querySelectorAll('.slide');
         // const slider = document.querySelector('.slider');
         const btnRight = document.querySelector('.slider__btn--right')
@@ -30,7 +31,7 @@ const Slider = (prop) => {
         }
         const next = function () {
             if(circleCount<9){
-                console.log(circle.current.children[0].classList);
+                // console.log(circle.current.children[0].classList);
                 circle.current.children[circleCount].classList.remove('circleTransform')
                 circle.current.children[circleCount+1].classList.add('circleTransform')
                 circleCount++;
@@ -43,7 +44,7 @@ const Slider = (prop) => {
            
 
 
-            if (curSlide == maxSlide - 1) {
+            if (curSlide === maxSlide - 1) {
                 curSlide = 0;
             } else { curSlide++; };
 
@@ -52,7 +53,7 @@ const Slider = (prop) => {
         }
         const prev = function () {
             if(circleCount>0){
-                console.log(circle.current.children[0].classList);
+                // console.log(circle.current.children[0].classList);
                 circle.current.children[circleCount].classList.remove('circleTransform')
                 circle.current.children[circleCount-1].classList.add('circleTransform')
                 circleCount--;
@@ -65,7 +66,7 @@ const Slider = (prop) => {
 
 
 
-            if (curSlide == 0) {
+            if (curSlide === 0) {
                 curSlide = maxSlide - 1;
             } else { curSlide-- };
 
@@ -111,54 +112,54 @@ const Slider = (prop) => {
 
                     <div id={"1"} className="slide" onClick={clickHandler}  >
                         
-                        <img src={image1}></img>
+                        <img src={image1} alt=" "></img>
                         <div className="title">Social Media</div>
                     </div>
                     <div id={"2"}  className="slide"onClick={clickHandler}>
                       
-                        <img src={image2}></img>
+                        <img src={image2} alt=" "></img>
                         <div className="title">Search Engine Optimization</div>
                     </div>
                     <div id={"3"}  className="slide" onClick={clickHandler}>
                         
-                        <img src={image3}></img>
+                        <img src={image3} alt=" "></img>
                         <div className="title">Content Marketing</div>
                     </div>
                     <div id={"4"}  className="slide" onClick={clickHandler}>
                        
-                        <img src={image4}></img>
+                        <img src={image4} alt=" "></img>
                         <div className="title">Digital PR</div>
                     </div>
                     <div id={"5"} className="slide"  onClick={clickHandler}>
                         
-                        <img src={image5}></img>
+                        <img src={image5} alt=" "></img>
                         <div className="title">Brand Strategy</div>
                     </div>
                     <div id={"6"}  className="slide"onClick={clickHandler}>
                         
-                        <img src={image6}></img>
+                        <img src={image6} alt=" "></img>
                         <div className="title">Paid Marketing</div>
                     </div>
                     <div id={"7"}  className="slide" onClick={clickHandler}>
                         
-                        <img src={image7}></img>
+                        <img src={image7} alt=" "></img>
                         <div className="title">Analytics</div>
                     </div>
                     <div id={"8"}  className="slide" onClick={clickHandler}>
                         
-                        <img src={image8}></img>
+                        <img src={image8} alt=" "></img>
                         <div className="title">Conversion Optimization</div>
                     </div>
                     <div id={"9"} className="slide"  onClick={clickHandler}>
                         
                         
-                        <img src={image9}></img>
+                        <img src={image9} alt=" "></img>
                         <div className="title">Affiliates</div>
                     </div>
                     <div id={"10"}  className="slide"onClick={clickHandler}>
                         
                         
-                        <img src={image10}></img>
+                        <img src={image10} alt=" "></img>
                         <div className="title">Influencer Marketing</div>
                     </div>
                     
@@ -166,10 +167,10 @@ const Slider = (prop) => {
                 </div>
                 <div className="slider-modal-button">
                     <div className="slider__btn slider__btn--left">
-                        <img src={arrows} style={{transform:"scale(-1)"}}></img>
+                        <img src={arrows}alt=" " style={{transform:"scale(-1)"}}></img>
                     </div>
                     <div className="slider__btn slider__btn--right">
-                        <img src={arrows}></img>
+                        <img src={arrows} alt=" "></img>
                     </div>
                 </div>
                 <div className="slider-modal-circle">

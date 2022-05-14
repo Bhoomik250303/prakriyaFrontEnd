@@ -15,7 +15,7 @@ const TeamPrakriya = () => {
                             teamMembers.map((e)=>{
                                 return (<div className={classes.teamContainer}>
                                     <div className={classes.teamImage}>
-                                            <img src={logo}></img>
+                                            <img src={logo} alt=" "></img>
                                     </div>
                                     <div className={classes.teamData}>
                                             <div className={classes.dataContainer}>

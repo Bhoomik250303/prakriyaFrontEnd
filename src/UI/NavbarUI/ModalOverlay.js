@@ -52,9 +52,9 @@ const ModalOverlay = (props) => {
                             <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#approach">Our Approach</HashLink></span></div>
                             
                             <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#clients">Our Clients</HashLink></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><a>Influencer Registration</a></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><Link to="InfluencerRegistration"> Influencer Registration</Link></span></div>
                             <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="/#contactUs">Contact Us</HashLink></span></div>
-                            <div className={classes.textStyle} onClick={clickHandler}><span><HashLink to="teamPrakriya">Team Prakriya</HashLink></span></div>
+                            <div className={classes.textStyle} onClick={clickHandler}><span><Link to="teamPrakriya">Team Prakriya</Link></span></div>
 
                         </div>
 
@@ -71,10 +71,10 @@ const ModalOverlay = (props) => {
                                 </div>
                             </div>
                             <div className={classes.contactUs_image}>
-                                    <div><img src={facebook}></img></div>
-                                    <div><img src={instagram}></img></div>
-                                    <div><img src={linkedin}></img></div>
-                                    <div><img src={twitter}></img></div>
+                                    <div><img src={facebook} alt=" "></img></div>
+                                    <div><img src={instagram} alt=" "></img></div>
+                                    <div><img src={linkedin} alt=" "></img></div>
+                                    <div><img src={twitter} alt=" "></img></div>
                             </div>
                         </div>
 

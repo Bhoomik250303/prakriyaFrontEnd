@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {  useRef} from 'react';
 
 import useScrollBlock from '../../Hooks/useScrollBlock';
 import classes from "./ClientSection.module.css"
@@ -16,13 +16,13 @@ const ClientSection = (props) => {
     const [blockScroll, allowScroll] = useScrollBlock();
     const circle = useRef();
     const onWheel = (e) => {
-        let count = 0;
+        // let count = 0;
         // if(count === 0){
         //   circle.current.children[1].classList.remove(classes.circleTransform)
         //   circle.current.children[0].classList.add(classes.circleTransform)
 
         //  }
-        console.log(e.deltaY)
+        // console.log(e.deltaY)
         //  console.log(scrollContainer);
         //  console.log(window.pageYOffset)
         // console.log(scrollContainer.current.scrollLeft += e.deltaY*2000)
@@ -66,22 +66,22 @@ const ClientSection = (props) => {
                 <div className={classes.containerForClient} onWheel={onWheel} ref={scrollContainer} onMouseEnter={mouseOnClient} onMouseLeave={() => { allowScroll() }} >
 
                     <div className={classes.contentForClient}>
-                        <img src={client1}></img>
+                        <img src={client1} alt=" "></img>
                     </div>
                     <div className={classes.contentForClient} >
-                        <img src={client2}></img>
+                        <img src={client2} alt=" "></img>
                     </div>
                     <div className={classes.contentForClient}>
-                        <img src={client3}></img>
+                        <img src={client3} alt=" "></img>
                     </div>
                     <div className={classes.contentForClient}>
-                        <img src={client4}></img>
+                        <img src={client4} alt=" "></img>
                     </div>
                     <div className={classes.contentForClient}>
-                        <img src={client5}></img>
+                        <img src={client5} alt=" "></img>
                     </div>
                     <div className={classes.contentForClient} >
-                        <img src={client6}></img>
+                        <img src={client6} alt=" "></img>
                     </div>
 
 

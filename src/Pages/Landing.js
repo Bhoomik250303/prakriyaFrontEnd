@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import classes from "./Landing.module.css"
 import { useMediaQuery } from 'react-responsive'
 import DataCard from '../UI/LandingUI/DataCard';
@@ -8,7 +8,7 @@ import CardModal from '../UI/LandingUI/CardModal';
 import Slider from '../UI/LandingUI/Slider';
 import ClientSection from '../UI/LandingUI/ClientSection';
 import Section1 from '../UI/LandingUI/Section1';
-import Navbar from '../Components/Navbar/Navbar';
+// import Navbar from '../Components/Navbar/Navbar';
 import approachImg from "../Assets/ImageAssets/Approach/approach.svg"
 import WhoWeAre from '../UI/LandingUI/WhoWeAre';
 import Careers from '../UI/LandingUI/Careers';
@@ -254,7 +254,7 @@ const Landing = (props) => {
                   <div className={classes.SlideModalOverlay} onClick={closeSlideModalOverlay}>
                     {/* <button onClick={closeSlideModalOverlay}>X</button> */}
                     {/* {slideModalData.data} */}
-                    <img className={!img ? classes.displayNone:""} src={images[`image${slideModalData.data}`]}></img>
+                    <img className={!img ? classes.displayNone:""} alt=" "src={images[`image${slideModalData.data}`]}></img>
                     <div className={classes.titleForSliderModal}>{servicesTextForPhoneTitle[`image${slideModalData.data}`]}</div>
                     <div className={classes.dataForSliderModal}>
                        {servicesTextForPhone[`image${slideModalData.data}`]}
@@ -279,7 +279,7 @@ const Landing = (props) => {
                 </div>
             </div>
             <div className={classes.approach_image}>
-                <img src={approachImg}></img>
+                <img src={approachImg} alt=" "></img>
             </div>
         </div>
         <div className={classes.DataContainer}>

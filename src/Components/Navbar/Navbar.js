@@ -2,7 +2,7 @@ import React,{useState,useCallback,useLayoutEffect, useRef} from 'react';
 import HamBurger from '../../UI/NavbarUI/HamBurger';
 import ModalOverlay from '../../UI/NavbarUI/ModalOverlay';
 import classes from "./Navbar.module.css"
-import useWindowDimensions from '../../Hooks/useWindowDimension';
+// import useWindowDimensions from '../../Hooks/useWindowDimension';
 import logo from "../../Assets/ImageAssets/mainLogo.png"
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -67,11 +67,11 @@ const Navbar = (props) => {
       <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${props.transparent && classes.setBg } ${props.navWidth && classes.navWidth} `} ref={navBar} onWheel={navScrollHandler}>
         <div className={classes.navInnerContainer}>
           <div className={classes.navMain}>
-            <div className={classes.Logo}><img src={logo}></img></div>
+            <div className={classes.Logo}><img src={logo} alt=" "></img></div>
             <div className={classes.Right}>
               <div className={classes.Options}>
-                <div><HashLink  to='/#home'>Home</HashLink></div>
-                <div>Influencer Registration</div>
+                <div><HashLink  to='/'>Home</HashLink></div>
+                <div><Link to="/InfluencerRegistration">Influencer Registration</Link> </div>
                 <div><Link  to='/about'>About</Link></div>
                 <div><HashLink to='/#contactUs'>Contact Us</HashLink></div>
 
