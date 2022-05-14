@@ -98,8 +98,8 @@ img{
 
 .footerDiv{
     background-color: #d81330;
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding-top: 3vw !important;
+    padding-bottom: 3vw !important;
     padding-left: 5%;
     padding-right: 5;
     font-family: 'Montserrat', sans-serif;
