@@ -35,7 +35,7 @@ const Section1 = (props) => {
 
         {/* <img className={classes.prakriyaMan} src={prakriyaMan2}></img> */}
 
-        <img className={classes.BgImage} alt=" " ></img>
+        
         <div className={classes.frontText}>
           <div className={classes.frontTextTop}>
             <div className={classes.frontTextTopLeft}>

@@ -18,3 +18,8 @@ body,html {
         background: black !important;
     }
 }
+
+@font-face {
+    font-family: Komu A;
+    src: url("./Assets/Komu-A.ttf") format("truetype");
+}
