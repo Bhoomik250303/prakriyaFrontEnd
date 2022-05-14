@@ -420,7 +420,7 @@
     .formContainer form input{
         background: black;
         color: white;
-        height: 10.8%;
+        height: 9vw;
         border: 1px solid white;
         border-radius: 3px;
         font-family: 'Montserrat', sans-serif;
@@ -452,8 +452,8 @@
       }
     
     .file{
-       height: 12vw !important;
-       max-height: 30px;
+       height: 9vw !important;
+       /* max-height: 30px; */
        font-size: clamp(1px,3.5vw,15px)!important;
        cursor: pointer;
     }  

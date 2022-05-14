@@ -14,6 +14,9 @@
     font-weight: 500;
     
 }
+.footerDiv div{
+    /* border: 2px solid wheat; */
+}
 .listOfLinksMobile{
     display: flex;
     flex-direction: column;
@@ -61,8 +64,12 @@ img{
     flex-direction: row;
     width: 40%;
     min-width: 100px;
-    margin-right: 5%;
+    margin-right: 7%;
+    margin-top: 2vw;
     margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
              
 }
 
@@ -72,8 +79,8 @@ img{
     height: 5px;
 }
 .socialMediaIcons{
-    width: 4%;
-    margin: 10px;
+    width: fit-content;
+    margin-bottom: clamp(5px, 5vw, 20px);
 }
 .socialMediaIcons img{
     height: 4vw;
@@ -100,6 +107,7 @@ img{
     display: flex;
     flex-direction: row;
 }
+
 .listOfLinks{
     display: flex;
     flex-direction: column;

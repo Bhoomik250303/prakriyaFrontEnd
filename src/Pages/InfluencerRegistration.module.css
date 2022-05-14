@@ -215,7 +215,7 @@
     .mainForm input{
         background: black;
         border: 1px solid white;
-        height: 5.2vw;
+        height: 9vw;
         border-radius: 3px;
         margin-bottom: 15px;
         color: white;
@@ -229,7 +229,7 @@
     .message{
         background: black;
         color: white;
-        height: 30vw !important;
+        height: 35vw !important;
         overflow: auto;
         border: 1px solid white;
         border-radius: 3px;
