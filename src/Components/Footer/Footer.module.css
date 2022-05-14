@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 800px){
+@media (max-width: 800px){
     .footerDiv{
     padding-left: 2%;
     padding-top: 15%;
@@ -89,7 +89,7 @@ img{
 }
 }
 
-@media screen and (min-width: 800px){
+@media  (min-width: 800px){
     .socialMediaIcons img{
         height: 2vw;
         width:  2vw ;
@@ -98,8 +98,8 @@ img{
 
 .footerDiv{
     background-color: #d81330;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
     padding-left: 5%;
     padding-right: 5;
     font-family: 'Montserrat', sans-serif;
@@ -146,10 +146,7 @@ a:visited{
     width: 25%;
                 
 }
-img{
-    text-align: center;
-    flex-direction: column;
-}
+
 .logoImage{
     border-radius: 20%;
     height: 100%;
