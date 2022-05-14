@@ -7,6 +7,7 @@ body,html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Komu A';
    
 }
 * {
@@ -22,4 +23,5 @@ body,html {
 @font-face {
     font-family: Komu A;
     src: url("./Assets/Komu-A.ttf") format("truetype");
+    font-display: block;
 }

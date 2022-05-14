@@ -67,7 +67,7 @@ const Navbar = (props) => {
       <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${props.transparent && classes.setBg } ${props.navWidth && classes.navWidth} `} ref={navBar} onWheel={navScrollHandler}>
         <div className={classes.navInnerContainer}>
           <div className={classes.navMain}>
-            <div className={classes.Logo}><img src={logo} alt=" "></img></div>
+            <div className={classes.Logo}><HashLink  to='/#home'><img src={logo} alt=" "></img></HashLink></div>
             <div className={classes.Right}>
               <div className={classes.Options}>
                 <div><HashLink  to='/'>Home</HashLink></div>

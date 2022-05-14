@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <>
             <div className={classes.footerDiv}>
-                <div className={classes.logoImageDiv}><img className={classes.logoImage} src={logo1} alt="" /></div>
+                <div className={classes.logoImageDiv}><HashLink to="/#home"><img className={classes.logoImage} src={logo1} alt="" /></HashLink></div>
                 <div className={classes.listOfLinksMobile}>
                     <div className={classes.listOfLinks}>
                         <HashLink to="/#home">Home</HashLink>

@@ -142,6 +142,7 @@ const Landing = (props) => {
 
 {/*    
       <Navbar navWidth={navWidth} /> */}
+      {/* <GoToTop/> */}
       <Section1 transparentNav = {props.transparentNav} ></Section1>
       <WhoWeAre></WhoWeAre>
   

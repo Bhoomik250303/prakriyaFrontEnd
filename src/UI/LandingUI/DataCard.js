@@ -17,9 +17,13 @@ const DataCard = (props)=>{
         setDataShow(false);
     }
 
+    const clickHandler = ()=>{
+        dataShow ? setDataShow(false) : setDataShow(true) ;
+    }
+
     return(
         <>
-            <div className={classes.cardContainer} onMouseEnter={Enterhandler} onMouseLeave={leaveHandler} >
+            <div className={classes.cardContainer} on onMouseEnter={Enterhandler} onClick={clickHandler} onMouseLeave={leaveHandler} >
                 <div className={classes.dataCardBg}>
                     <img src={dataCardBg} alt=" "></img>
                 </div>

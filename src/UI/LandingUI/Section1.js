@@ -30,7 +30,7 @@ const Section1 = (props) => {
 
   return (
     <>
-    <GoToTop/>
+    {/* <GoToTop/> */}
       < div className={classes.container} id='home' ref={section1}>
 
         {/* <img className={classes.prakriyaMan} src={prakriyaMan2}></img> */}
