@@ -276,7 +276,7 @@ const Landing = (props) => {
                       <span>our</span> approach
                 </div>
                 <div className={classes.approach_text_bottom}>
-                      By adopting a four step AFIA approach, we bridge the gap between your business and your potential customers.
+                      By adopting a four step AFIA approach, we bridge the gap between your business and your <br></br> potential customers.
                 </div>
             </div>
             <div className={classes.approach_image}>

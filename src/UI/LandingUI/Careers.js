@@ -21,7 +21,7 @@ const Careers = () => {
         // const resume = data.get('resume');
         // data.append('resume',e.target.files[0])
         if(fileUpload.current.files[0].size > 2000000){
-            alert('File size Exeeds MAX limit of 2Mb 📄❗')
+            alert('File size Exceeds MAX limit of 2Mb 📄❗')
             return;
         }
         // console.log(e)
@@ -51,7 +51,7 @@ const Careers = () => {
     const changeHandler = (e)=>{
         if(fileUpload.current.files.length ===0) return;
         if(fileUpload.current.files[0].size > 2000000)
-            alert('File size Exeeds MAX limit of 2Mb 📄❗')
+            alert('File size Exceeds MAX limit of 2Mb 📄❗')
 
         // console.log(fileUpload.current.files[0].size);
 
@@ -66,7 +66,7 @@ const Careers = () => {
                         careers
                     </div>
                     <div className={classes.subTitle}>
-                        Keeping the finest and brightest in our wokrforce is critical to our success. If you're seeking for a place where you can collaborate with like-minded individuals, this may be the agency for you.
+                        Keeping the finest and brightest in our workforce is critical to our success. If you're seeking for a place where you can collaborate with like-minded individuals, this may be the agency for you.
                     </div>
                     <div className={classes.careersMobile}>
                         <img  src={careersMobile} alt=" "></img>

@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 // import { useState } from "react"
 import classes from "./Section1.module.css"
 import { useRef } from "react"
-import GoToTop from "../../Hooks/goToTop"
+// import GoToTop from "../../Hooks/goToTop"
 
 const Section1 = (props) => {
   const section1 = useRef(null);

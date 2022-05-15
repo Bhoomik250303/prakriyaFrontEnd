@@ -23,7 +23,7 @@ const DataCard = (props)=>{
 
     return(
         <>
-            <div className={classes.cardContainer} on onMouseEnter={Enterhandler} onClick={clickHandler} onMouseLeave={leaveHandler} >
+            <div className={classes.cardContainer} onMouseEnter={Enterhandler} onClick={clickHandler} onMouseLeave={leaveHandler} >
                 <div className={classes.dataCardBg}>
                     <img src={dataCardBg} alt=" "></img>
                 </div>
