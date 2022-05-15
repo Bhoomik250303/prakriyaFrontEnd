@@ -71,9 +71,9 @@ const ModalOverlay = (props) => {
                                 </div>
                             </div>
                             <div className={classes.contactUs_image}>
-                                    <div><img src={facebook} alt=" "></img></div>
-                                    <div><img src={instagram} alt=" "></img></div>
-                                    <div><img src={linkedin} alt=" "></img></div>
+                                    <div><a href="https://www.facebook.com/prakriyadigital" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""  /></a></div>
+                                    <div><a href="https://www.instagram.com/prakriyadigital/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""/></a></div>
+                                    <div><a href="https://www.linkedin.com/company/prakriya/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt=" "></img></a></div>
                                     <div><img src={twitter} alt=" "></img></div>
                             </div>
                         </div>

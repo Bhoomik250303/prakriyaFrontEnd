@@ -32,8 +32,13 @@ const ContactUs=()=>{
                 
             
             })
-            const dataa = await response.json();
-            console.log(dataa);
+            const responsedata = await response.json();
+            console.log(responsedata)
+            if(responsedata.message==='Success'){
+                alert('Message sent Successfully! ✉️')
+            }else{
+                alert("A Problem Occured ❌")
+            }
             setSpinner(false);
         } catch (error) {
             setSpinner(false)

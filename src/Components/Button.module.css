@@ -39,7 +39,7 @@
       }
       .lds_ellipsis div {
         position: absolute;
-        top: 1vw;
+        top: -3vw;
         width: 2vw;
         height: 2vw;
         border-radius: 50%;

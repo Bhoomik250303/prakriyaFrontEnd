@@ -16,7 +16,7 @@ const InfluencerRegistration = ()=>{
         const city = data.get('city');
         const message = data.get('message')
         const dataa = {name,email,number,city,message}
-        console.log(dataa);
+        // console.log(dataa);
        
         const header = new Headers()
        
@@ -31,8 +31,12 @@ const InfluencerRegistration = ()=>{
                 
             
             })
-            const dataa = await response.json();
-            console.log(dataa);
+            const responsedata= await response.json();
+            if(responsedata.message==='Success'){
+                alert('Message sent Successfully! ✉️')
+            }else{
+                alert("A problem Occured ❌")
+            }
             setSpinner(false);
         } catch (error) {
             setSpinner(false)
