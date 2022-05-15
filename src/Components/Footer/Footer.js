@@ -40,10 +40,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={classes.listOfSocialMedia}>
-                    <div className={classes.socialMediaIcons} ><img src={facebook} alt=""  /></div>
+                    <div className={classes.socialMediaIcons} ><a href="https://www.facebook.com/prakriyadigital" target="_blank"><img src={facebook} alt=""  /></a></div>
                     <div className={classes.socialMediaIcons}><img src={twitter} alt="" /></div>
-                    <div className={classes.socialMediaIcons}><img src={instagram} alt=""/></div>
-                    <div className={classes.socialMediaIcons}><img src={linkedin} alt="" /></div>
+                    <div className={classes.socialMediaIcons}><a href="https://www.instagram.com/prakriyadigital/" target="_blank"><img src={instagram} alt=""/></a></div>
+                    <div className={classes.socialMediaIcons}><a href="https://www.linkedin.com/company/prakriya/" target="_blank"><img src={linkedin} alt="" /></a></div>
                 </div>
                 
             </div>

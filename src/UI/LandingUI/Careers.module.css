@@ -513,12 +513,12 @@
         align-items: center;
         justify-content: center;
         width: fit-content;
-        height: 3vw;
+        height: fit-content;
         /* border: 2px solid rgb(0, 0, 0); */
         /* background: #000000; */
         position: absolute;
         color:#D81330;
-        top: 49vw;
+        top: 22%;
         right: 56%;
         z-index: 100;
         font-family: 'Komu A';
@@ -554,7 +554,7 @@
         width: 16vw;
         height:15.5vw;
         right: 2%;
-        top:40.5vw;
+        top:19%;
         
         /* border:2px solid rgb(213, 10, 254); */
     }
@@ -568,7 +568,7 @@
         color:#D81330;
         /* border: 2px solid wheat; */
         position: absolute;
-        top:2vw;
+        top:0%;
         right: 30%;
         height: 4vw;
         width: 6vw;
