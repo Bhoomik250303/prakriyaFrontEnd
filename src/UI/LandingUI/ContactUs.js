@@ -25,7 +25,7 @@ const ContactUs=()=>{
         
         const raw = JSON.stringify(dataa)
         try {
-            const response = await fetch("http://localhost:5000/contactUs",{
+            const response = await fetch("https://prakriyamailservice.herokuapp.com/contactUs",{
                 method:'POST',
                 body:raw,
                 headers:header
