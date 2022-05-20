@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classes from "./Landing.module.css"
 import { useMediaQuery } from 'react-responsive'
 import DataCard from '../UI/LandingUI/DataCard';
@@ -135,6 +135,10 @@ const Landing = (props) => {
    props.navWidthHandler(bool);
  }
 
+ useEffect(()=>{
+  const imagesToPre = [image1,image2,image3 ,image4,image5,image6 ,image7 ,image8 ,image9 ,image10 ]
+  imagesToPre.forEach(image => { new Image().src = image })
+},[]) //to kee or remove decide later
 
 
   return (

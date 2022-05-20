@@ -5,6 +5,11 @@
       cursor: pointer;
     }
   
+    .container img{
+      filter: invert(100);
+      width: 4vw;
+      height: 4vw;
+    }
   
   .container span{
     color: white;
@@ -40,7 +45,12 @@
       display: inline-block;
       cursor: pointer;
     }
-  
+    
+    .container img{
+      filter: invert(100);
+      width: 1.2vw;
+      height: 1.2vw;
+    }
   
   .container span{
     color: white;

@@ -19,7 +19,7 @@ const WhoWeAre = ()=>{
                                 <img alt=" " src={avatar}></img>
                             </div>
                             <div className={classes.textContainer}>
-                            Understanding your core business model and your vision of a successful organization are vital for us to provide a full range of comprehensive digital marketing solution that strikes the perfect balance between innovation, viability and crystal clear communication on and off the internet; the key ingredient to empower your company with the flexibility it needs to thrive in today's fiercely competitive onine business world.
+                            Understanding your core business model and your vision of a successful organization are vital for us to provide a full range of comprehensive digital marketing solutions that strikes the perfect balance between innovation, viability and crystal clear communication on and off the internet; the key ingredient to empower your company with the flexibility it needs to thrive in today's fiercely competitive online business world.
                             </div>
                             
                        </div>

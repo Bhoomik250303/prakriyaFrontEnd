@@ -39,7 +39,7 @@ const About = () => {
                     <div className={classes.subText}>
                         Commitment to Integrity and Honesty
                     </div>
-                    <div className={classes.text}>Through long-term mutually beneficial connections we aim for 100% customer satisfaction at Prakriya. Prakriya holds itself responsible to well-defined KPIs established at the beginning of every campaign. To ensure client satisfaction, we adhere to the Prariya motto: relationships, responsiveness, and outcomes.</div><br/><br/>
+                    <div className={classes.text}>Through long-term mutually beneficial connections we aim for 100% customer satisfaction at Prakriya. We hold ourselves responsible to well-defined KPIs established at the beginning of every campaign. To ensure client satisfaction, we adhere to the Prariya motto: relationships, responsiveness, and outcomes.</div><br/><br/>
                     <div className={classes.subText}>
                     Corporate Ethics
                     </div>
@@ -60,7 +60,7 @@ const About = () => {
                     <div className={classes.subText}>
                     Focused on Return on Investment (ROI).
                     </div>
-                    <div className={classes.text}>In order to achieve our customers' goals, we focus only on delivering demonstrable profits. It is a source of great satisfaction for us to provide top-notch service at some of the most competitive rates in the business.</div><br/><br/>
+                    <div className={classes.text}>In order to achieve customer goals, we focus only on delivering demonstrable profits. It is a source of great satisfaction for us to provide top-notch service at some of the most competitive rates in the business.</div><br/><br/>
                     <div className={classes.subText}>
                     Focused Strategy
                     </div>

@@ -17,7 +17,21 @@
         display: flex;
         flex-direction: column;
     }
-    
+    .mainFormContainer{
+        /* border: 2px solid wheat; */
+        width: 100%;
+        height: fit-content;
+        display: flex;
+    }
+    .illustration{
+        /* border: 2px solid wheat; */
+        width: 60%;
+        height: 100%;
+        margin-right: 0vw;
+    }
+    .illustration img{
+    margin-top: 5vw;
+    }
     .mainContainer div{
         /* border: 2px solid wheat; */
     }
@@ -67,6 +81,7 @@
         height: fit-content;
         width: 45%;
         margin-bottom: 8vw;
+        /* border: 2px solid wheat; */
     }
     .mainForm{
         display: flex;

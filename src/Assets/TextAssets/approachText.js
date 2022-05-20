@@ -1,6 +1,6 @@
 const approachText={
     ANALYZE:{
-        text:`An important first step in any trip is figuring out what you want to accomplish. It's our job to assist you discover who you are and who your audience believes you are throughout our deep research phase, We can help you establish a plan by gaining an in-depth knowledge of your audience.`
+        text:`An important first step in any trip is figuring out what you want to accomplish. It's our job to assist you discover who you are and who your audience believes you are. Throughout our deep research phase, we can help you establish a plan by gaining an in-depth knowledge of your audience.`
     },
     FORMULATE:{
         text:`Success is built on a solid foundation of strategy formulation. A well-defined plan is the framework of success, offering you the necessary tools, techniques and information to explore your next frontier. With these procedures in place, we’ll be ready to leap ahead.`

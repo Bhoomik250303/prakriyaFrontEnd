@@ -18,9 +18,9 @@ const Navbar = (props) => {
  
   const navBar = useRef();
 
-  const navScrollHandler =(e)=>{
-    console.log(navBar)
-  }
+  // const navScrollHandler =(e)=>{
+  //   console.log(navBar)
+  // }
   
   
 
@@ -64,7 +64,7 @@ const Navbar = (props) => {
   return (
     <>
       
-      <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${props.transparent && classes.setBg } ${props.navWidth && classes.navWidth} `} ref={navBar} onWheel={navScrollHandler}>
+      <div className={`${classes.navContainer} ${appear ? classes.showNav :classes.hideNav} ${props.transparent && classes.setBg } ${props.navWidth && classes.navWidth} `} ref={navBar}>
         <div className={classes.navInnerContainer}>
           <div className={classes.navMain}>
             <div className={classes.Logo}><HashLink  to='/#home'><img src={logo} alt=" "></img></HashLink></div>

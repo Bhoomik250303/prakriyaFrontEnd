@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./CardModal.module.css"
 import image9 from "../../Assets/ImageAssets/Section3/affiliates_inner-01.png"
 import image7 from "../../Assets/ImageAssets/Section3/analytic_ inner-01.png"
@@ -24,6 +24,11 @@ const CardModal = (dim) => {
     //     setdimension({width:dim.dim.width,height:dim.dim.height})
 
     // },[])
+    useEffect(()=>{
+        const imagesToPre = [image1,image2,image3 ,image4,image5,image6 ,image7 ,image8 ,image9 ,image10 ]
+        imagesToPre.forEach(image => { new Image().src = image })
+    },[])
+
     const clickHandler = ()=>{
         dim.setboolean();
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Hamburger.module.css"
-
+import hamburger from "../../Assets/ImageAssets/NavBar/hamBurger.svg"
 
 const HamBurger = (props) => {
 
@@ -41,7 +41,8 @@ const HamBurger = (props) => {
                 {/* <div className={classes.bar1}></div>
                 <div className={classes.bar2}></div>
                 <div className={classes.bar3}></div> */}
-                <span className="material-symbols-outlined">menu</span>
+                {/* <span className="material-symbols-outlined">menu</span> */}
+                <img src={hamburger}></img>
             </div>
         </>
     )
