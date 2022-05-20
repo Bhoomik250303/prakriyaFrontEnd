@@ -33,7 +33,7 @@ const Careers = () => {
         // const body = {resume,name,email,number}
         // const raw = JSON.stringify(data)
         try {
-            const response = await fetch("http://localhost:5000/careers",{
+            const response = await fetch("https://prakriyamailservice.herokuapp.com/careers",{
                 method:'POST',
                 body:data
             

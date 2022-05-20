@@ -25,7 +25,7 @@ const InfluencerRegistration = () => {
 
         const raw = JSON.stringify(dataa)
         try {
-            const response = await fetch("http://localhost:5000/InfluencerRegistration", {
+            const response = await fetch("https://prakriyamailservice.herokuapp.com/InfluencerRegistration", {
                 method: 'POST',
                 body: raw,
                 headers: header
