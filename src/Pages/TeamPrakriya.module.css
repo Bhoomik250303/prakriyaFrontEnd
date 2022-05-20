@@ -41,14 +41,16 @@
         /* border: 2px solid wheat; */
         height: fit-content;
         width: fit-content;
-        padding: 5px;
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: 16px;
     }
     .teamImage img{
         width: 38vw;
         height: 38vw;
+        padding: 2px;
         border: 2px solid white;
     }
     .teamData{
@@ -126,8 +128,9 @@
         justify-content: center;
     }
     .teamImage img{
-        width: 16vw;
-        height: 16vw;
+        width: 12vw;
+        height: 12vw;
+        padding: 2px;
         border: 2px solid white;
     }
     .teamData{

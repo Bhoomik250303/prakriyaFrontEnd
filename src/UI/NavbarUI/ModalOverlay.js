@@ -67,14 +67,14 @@ const ModalOverlay = (props) => {
                                     Get in touch
                                 </div >
                                 <div className={classes.contactUs_text_subTitle}>
-                                    Shop No.03, Sarvoday Residency Behind Golden Nest Police Chowki, near ICICI Bank, Mira, Bhayandar East, Mumbai, Maharashtra 401107
+                                Shop number 24, Prakriya Digital, Sonam Pushpanjali, Golden Nest Phase-3, Mira Bhayander road (East). Thane: 401107
                                 </div>
                             </div>
                             <div className={classes.contactUs_image}>
                                     <div><a href="https://www.facebook.com/prakriyadigital" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""  /></a></div>
                                     <div><a href="https://www.instagram.com/prakriyadigital/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""/></a></div>
                                     <div><a href="https://www.linkedin.com/company/prakriya/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt=" "></img></a></div>
-                                    <div><img src={twitter} alt=" "></img></div>
+                                    <div><a href="https://twitter.com/DigitalPrakriya?t=Tt2GOZAC1MAWjVKaXaUuLw&s=08" target="_blank" rel="noopener noreferrer"><img src={twitter} alt=" "></img></a></div>
                             </div>
                         </div>
 

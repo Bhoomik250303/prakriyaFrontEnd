@@ -41,7 +41,7 @@ const Footer = () => {
                 </div>
                 <div className={classes.listOfSocialMedia}>
                     <div className={classes.socialMediaIcons} ><a href="https://www.facebook.com/prakriyadigital" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""  /></a></div>
-                    <div className={classes.socialMediaIcons}><img src={twitter} alt="" /></div>
+                    <div className={classes.socialMediaIcons}><a href="https://twitter.com/DigitalPrakriya?t=Tt2GOZAC1MAWjVKaXaUuLw&s=08" target="_blank" rel="noopener noreferrer"><img src={twitter} alt="" /></a></div>
                     <div className={classes.socialMediaIcons}><a href="https://www.instagram.com/prakriyadigital/" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""/></a></div>
                     <div className={classes.socialMediaIcons}><a href="https://www.linkedin.com/company/prakriya/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="" /></a></div>
                 </div>
