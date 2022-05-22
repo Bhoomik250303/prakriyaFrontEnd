@@ -143,8 +143,8 @@
  }
       .arrow1{
         position: absolute;
-        width: 7%;
-        height: 30%;
+        width: 7vw;
+        height: 7vw;
         /* border: 2px solid wheat; */
         z-index: 500;
         display: flex;
@@ -155,8 +155,8 @@
       .arrow2{
       position: absolute;
       right: 0px;
-      width: 7%;
-      height: 30%;
+      width: 7vw;
+      height: 7vw;
       /* border: 2px solid wheat; */
       z-index: 500;
       display: flex;
