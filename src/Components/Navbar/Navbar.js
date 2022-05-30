@@ -72,7 +72,9 @@ const Navbar = (props) => {
               <div className={classes.Options}>
                 <div><HashLink  to='/'>Home</HashLink></div>
                 <div><Link to="/InfluencerRegistration">Influencer Registration</Link> </div>
-                <div><Link  to='/about'>About</Link></div>
+                
+                <div><Link  to='/about'>About Us</Link></div>
+                <div><a>Blogs</a></div>
                 <div><HashLink to='/#contactUs'>Contact Us</HashLink></div>
 
               </div>

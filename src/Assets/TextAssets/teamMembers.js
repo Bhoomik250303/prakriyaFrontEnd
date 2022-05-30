@@ -25,7 +25,7 @@ const teamMembers = [
     {
         logo: photoNilesh,
         title: `NILESH PARASHAR: THE DIGITAL GEEK`,
-        desc: `Nilesh is a self-starter who works hard to achieve his goals. As someone who thrives on pressure; problem-solving, making rapid judgments and coming up with effective solutions are all among his many superpowers. According to him, he key to his productivity is his favorite 'ghar ka khana.`
+        desc: `Nilesh is a self-starter who works hard to achieve his goals. As someone who thrives on pressure; problem-solving, making rapid judgments and coming up with effective solutions are all among his many superpowers. According to him, the key to his productivity is his favorite 'ghar ka khana.`
     },
     {
         logo: photoFauzia,
