@@ -7,7 +7,7 @@
     /* max-width: 210px;
     max-height:210px ; */
     background: #D81330;
-    transition: all ease-in 1000ms;
+    transition: all ease-in 600ms;
 }
 .temp{
     opacity: 0;

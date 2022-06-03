@@ -1,6 +1,6 @@
 .container{
     /* border: 2px solid wheat; */
-    transition: all ease-in 1000ms;
+    transition: all ease-in 500ms;
 }
 
 .temp{
