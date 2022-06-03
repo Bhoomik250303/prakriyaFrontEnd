@@ -1,12 +1,16 @@
-import React,{useState} from "react";
+import React,{useState, useRef, useEffect} from "react";
+import { useMediaQuery } from "react-responsive";
 import classes from "./DataCard.module.css"
 import { CSSTransition } from "react-transition-group";
 import dataCardBg from "../../Assets/ImageAssets/Section2/approachBox-01.png"
 import approachText from "../../Assets/TextAssets/approachText.js"
 const DataCard = (props)=>{
-
+    const isMobile = useMediaQuery({
+        query: '(max-width: 800px)'
+      })
     // console.log("function ran")
     const[dataShow,setDataShow]= useState(false);
+    const dataCardRef = useRef ();
 
     const Enterhandler = ()=>{
         // console.log("mouse enetered")
@@ -21,9 +25,32 @@ const DataCard = (props)=>{
         dataShow ? setDataShow(false) : setDataShow(true) ;
     }
 
+
+    useEffect(()=>{
+        if(!isMobile)return;
+        const obsCallback = (entries, observer)=>{
+            // console.log(entries[0].isIntersecting);
+            if(entries[0].isIntersecting){
+                setDataShow(true);
+            }else{
+                setDataShow(false);
+            }
+        }
+    
+        const obsOptions = {
+            root: null,
+            threshold :1
+        }
+    
+        const observer = new IntersectionObserver (obsCallback, obsOptions);
+        observer.observe(dataCardRef.current)
+    },[])
+
+    
+
     return(
         <>
-            <div className={classes.cardContainer} onMouseEnter={Enterhandler} onClick={clickHandler} onMouseLeave={leaveHandler} >
+            <div ref={dataCardRef} className={classes.cardContainer} onMouseEnter={Enterhandler} onClick={clickHandler} onMouseLeave={leaveHandler} >
                 <div className={classes.dataCardBg}>
                     <img src={dataCardBg} alt=" "></img>
                 </div>

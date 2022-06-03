@@ -1,3 +1,23 @@
+@keyframes shake {
+    /* 0% { transform:  rotate(0deg); } */
+    0% { transform:  rotate(0deg); }
+    50% { transform:  rotate(5deg); }
+    
+    100% { transform:  rotate(0deg); }
+    
+  }
+.temp{
+    transform: translateY(-1000px);
+    opacity: 0;
+}
+.illustration{
+    transition: all ease-in-out 1000ms;
+}
+.illustration img{
+    transition: all ease-in-out 500ms;
+    animation: shake 1000ms infinite;
+}
+
 @media (min-width:800px){
     .container{
         width: 100%;
@@ -7,6 +27,7 @@
         align-items: center;
         justify-content: center;
         color: white;
+        overflow: hidden;
     }
     
     .mainContainer{
@@ -161,6 +182,7 @@
         align-items: center;
         justify-content: center;
         color: white;
+        overflow: hidden;
     }
     
     .mainContainer{
@@ -273,6 +295,7 @@
     .illustration{
         padding-bottom: 14vw;
     }
+    
 
 }
 

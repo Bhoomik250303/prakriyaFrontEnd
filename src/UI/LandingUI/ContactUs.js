@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./ContactUS.module.css"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Button from "../../Components/Button";
 import avatar from "../../Assets/ImageAssets/ContactUs/contactUs.svg"
 
@@ -8,6 +8,10 @@ const ContactUs = () => {
 
 
     const [spinner, setSpinner] = useState(false)
+    const containerRef = useRef()
+    const avatarRef = useRef()
+
+
     const submitHandler = async (e) => {
         setSpinner(true);
         e.preventDefault();
@@ -47,11 +51,34 @@ const ContactUs = () => {
 
     }
 
+    useEffect(()=>{
+        const obsCallback = (entries, observer)=>{
+            // console.log(entries[0].isIntersecting);
+            if(entries[0].isIntersecting){
+                // console.log(entries[0]);
+            
+                containerRef.current.classList.remove(classes['temp1'])
+                avatarRef.current.classList.remove(classes['temp2'])
+                
+                // containerRef.current.classList.add(classes['unTemp'])
+                observer.unobserve(containerRef.current)
+            }
+        }
+    
+        const obsOptions = {
+            root: null,
+            threshold :0.3
+        }
+    
+        const observer = new IntersectionObserver (obsCallback, obsOptions);
+        observer.observe(containerRef.current)
+    },[])
+
     return (
         <>
             <div className={classes.mainContainer} id="contactUs">
-                <div className={classes.container}>
-                    <div className={classes.avatar}>
+                <div className={`${classes.container} ${classes.temp1}`} ref={containerRef}>
+                    <div className={`${classes.avatar} ${classes.temp2}`} ref={avatarRef}>
                         <img src={avatar} alt=" "></img>
                     </div>
                     <div className={classes.title}>

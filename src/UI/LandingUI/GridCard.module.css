@@ -7,8 +7,12 @@
     /* max-width: 210px;
     max-height:210px ; */
     background: #D81330;
+    transition: all ease-in 1000ms;
 }
-
+.temp{
+    opacity: 0;
+    transform: scale(0) ;
+}
 .square:hover{
     cursor: pointer;
 }
