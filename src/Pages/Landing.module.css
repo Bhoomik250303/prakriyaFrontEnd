@@ -162,9 +162,9 @@
 .Data2 {
     position: relative;
     width: 100%;
-    height: 110vh; /*dont make it fit-content*/
+    height: 52vw; /*dont make it fit-content*/
     padding-top: 1vw;
-  
+    
     background: rgb(0, 0, 0);
     display: flex;
     align-items: center;

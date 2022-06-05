@@ -69,12 +69,15 @@ const ClientSection = (props) => {
           scrollContainer.current.scrollLeft -= window.innerWidth
         }
       };
-      const onWheel = (event) => {
-        //   return //currently not useing onWheel, may implement in future
-        // console.log(event)
-        changePage(event.deltaY);
-      };
-    const onWheelThrottled = useMemo(() => _.throttle(onWheel, 1000), []);
+      
+    const onWheelThrottled = useMemo(() =>{
+        const onWheel = (event) => {
+            //   return //currently not useing onWheel, may implement in future
+            // console.log(event)
+            changePage(event.deltaY);
+          };
+        return _.throttle(onWheel, 1000)
+        }, []);
 
     const mouseOnClient = () => {
         // return //currently not useing mouseOnClient, may implement in future

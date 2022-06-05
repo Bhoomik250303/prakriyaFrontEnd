@@ -1,5 +1,6 @@
-import React, { useEffect,useRef } from "react";
+import React, { useEffect } from "react";
 import "./Slider.css"
+import servicesText from "../../Assets/TextAssets/servicesText";
 import image9 from "../../Assets/ImageAssets/Section3/ICONS/affiliates_icon-01.png"
 import image7 from "../../Assets/ImageAssets/Section3/ICONS/Analytics_icon-01.png"
 import image5 from "../../Assets/ImageAssets/Section3/ICONS/brand_icon-01.png"
@@ -13,15 +14,11 @@ import image1 from "../../Assets/ImageAssets/Section3/ICONS/sm_icon-01.png"
 import arrows from "../../Assets/ImageAssets/Section3/ICONS/arrows.svg"
 const Slider = (prop) => {
 
-    // const [data,setData]= useState({data:'',bool:false})
-    const circle = useRef();
-    // let circleCount = 0; do not delete this comment
-
 
     useEffect(() => {
-        let circleCount = 0;
+       
         const slides = document.querySelectorAll('.slide');
-        // const slider = document.querySelector('.slider');
+        
         const btnRight = document.querySelector('.slider__btn--right')
         const btnLeft = document.querySelector('.slider__btn--left');
         let curSlide = 0;
@@ -30,20 +27,7 @@ const Slider = (prop) => {
             slides.forEach((s, i) => s.style.transform = `translateX(${(i - slide) * 100}%)`);
         }
         const next = function () {
-            if(circleCount<9){
-                // console.log(circle.current.children[0].classList);
-                circle.current.children[circleCount].classList.remove('circleTransform')
-                circle.current.children[circleCount+1].classList.add('circleTransform')
-                circleCount++;
-            }else{
-                circle.current.children[circleCount].classList.remove('circleTransform')
-                circleCount=0;
-                circle.current.children[circleCount].classList.add('circleTransform')
-
-            }
            
-
-
             if (curSlide === maxSlide - 1) {
                 curSlide = 0;
             } else { curSlide++; };
@@ -52,20 +36,7 @@ const Slider = (prop) => {
             gotoSlide(curSlide);
         }
         const prev = function () {
-            if(circleCount>0){
-                // console.log(circle.current.children[0].classList);
-                circle.current.children[circleCount].classList.remove('circleTransform')
-                circle.current.children[circleCount-1].classList.add('circleTransform')
-                circleCount--;
-            }else{
-                circle.current.children[circleCount].classList.remove('circleTransform')
-                circleCount=9;
-                circle.current.children[circleCount].classList.add('circleTransform')
-
-            }
-
-
-
+           
             if (curSlide === 0) {
                 curSlide = maxSlide - 1;
             } else { curSlide-- };
@@ -80,12 +51,33 @@ const Slider = (prop) => {
         btnLeft.addEventListener('click', prev);
 
 
-        ////now to use arrowkeys for slider
 
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'ArrowLeft') prev();
-            if (e.key === 'ArrowRight') next();
-        });
+        const sliders=  document.querySelectorAll('.slide')
+        
+
+        const slideObserver = new IntersectionObserver((entries,observer)=>{
+            // const[entry] = entries;
+            // console.log(entries)
+            // entry.target.classList.remove('temp');
+            // observer.unobserve(entry.target);
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.childNodes[2].classList.remove('temp') 
+                }else{
+                    entry.target.childNodes[2].classList.add('temp')
+                }
+            })
+            
+            
+        },{
+            root:null,
+            threshold:0.95
+        })
+
+        sliders.forEach((slide)=>{
+            slideObserver.observe(slide)
+        })
+
 
     }, [])
 
@@ -95,6 +87,7 @@ const Slider = (prop) => {
     
     }
 
+    
 
     return (
         <>
@@ -114,53 +107,63 @@ const Slider = (prop) => {
                         
                         <img src={image1} alt=" "></img>
                         <div className="title">Social Media</div>
+                        <div className="description temp">{servicesText.image1.text.slice(0,129)+'   . . .'}</div>
                     </div>
                     <div id={"2"}  className="slide"onClick={clickHandler}>
                       
                         <img src={image2} alt=" "></img>
                         <div className="title">Search Engine Optimization</div>
+                        <div className="description temp">{servicesText.image2.text.slice(0,130)+'   . . .'}</div>
                     </div>
                     <div id={"3"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image3} alt=" "></img>
                         <div className="title">Content Marketing</div>
+                        <div className="description temp">{servicesText.image3.text.slice(0,130)+'   . . .'}</div>
                     </div>
                     <div id={"4"}  className="slide" onClick={clickHandler}>
                        
                         <img src={image4} alt=" "></img>
                         <div className="title">Digital PR</div>
+                        <div className="description temp">{servicesText.image4.text.slice(0,130)+'   . . .'}</div>
                     </div>
                     <div id={"5"} className="slide"  onClick={clickHandler}>
                         
                         <img src={image5} alt=" "></img>
                         <div className="title">Brand Strategy</div>
+                        <div className="description temp">{servicesText.image5.text.slice(0,130)+'   . . .'}</div>
                     </div>
                     <div id={"6"}  className="slide"onClick={clickHandler}>
                         
                         <img src={image6} alt=" "></img>
                         <div className="title">Paid Marketing</div>
+                        <div className="description temp">{servicesText.image6.text.slice(0,135)+'   . . .'}</div>
                     </div>
                     <div id={"7"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image7} alt=" "></img>
                         <div className="title">Analytics</div>
+                        <div className="description temp">{servicesText.image7.text.slice(0,135)+'   . . .'}</div>
                     </div>
                     <div id={"8"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image8} alt=" "></img>
                         <div className="title">Conversion Optimization</div>
+                        <div className="description temp">{servicesText.image8.text.slice(0,120)+'   . . .'}</div>
                     </div>
                     <div id={"9"} className="slide"  onClick={clickHandler}>
                         
                         
                         <img src={image9} alt=" "></img>
                         <div className="title">Affiliates</div>
+                        <div className="description temp">{servicesText.image9.text.slice(0,130)+'   . . .'}</div>
                     </div>
                     <div id={"10"}  className="slide"onClick={clickHandler}>
                         
                         
                         <img src={image10} alt=" "></img>
                         <div className="title">Influencer Marketing</div>
+                        <div className="description temp">{servicesText.image10.text.slice(0,140)+'   . . .'}</div>
                     </div>
                     
                     
@@ -173,20 +176,7 @@ const Slider = (prop) => {
                         <img src={arrows} alt=" "></img>
                     </div>
                 </div>
-                <div className="slider-modal-circle">
-                    <div className="circleContainer" ref={circle} style={{display:"none"}}>
-                        <div className="circleIndicator circleTransform "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                        <div className="circleIndicator "></div>
-                    </div>
-                </div>
+               
             
            
         </>

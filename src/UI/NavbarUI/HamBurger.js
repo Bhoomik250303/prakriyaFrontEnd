@@ -42,7 +42,7 @@ const HamBurger = (props) => {
                 <div className={classes.bar2}></div>
                 <div className={classes.bar3}></div> */}
                 {/* <span className="material-symbols-outlined">menu</span> */}
-                <img src={hamburger}></img>
+                <img src={hamburger} alt=" "></img>
             </div>
         </>
     )

@@ -127,7 +127,7 @@ const InfluencerRegistration = () => {
 
                         </div>
                         <div className={`${classes.illustration} ${classes.temp}`} ref={illustrationRef}>
-                                <img src={infuencer}></img>
+                                <img src={infuencer} alt=" "></img>
                         </div>
                     </div>
 

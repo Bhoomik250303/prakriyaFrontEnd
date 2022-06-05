@@ -44,6 +44,7 @@ const DataCard = (props)=>{
     
         const observer = new IntersectionObserver (obsCallback, obsOptions);
         observer.observe(dataCardRef.current)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     

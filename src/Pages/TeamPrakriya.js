@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./TeamPrakriya.module.css"
-import logo from "../Assets/ImageAssets/mainLogo.png"
+
 import teamMembers from "../Assets/TextAssets/teamMembers";
 import GoToTop from "../Hooks/goToTop.js"
 const TeamPrakriya = () => {

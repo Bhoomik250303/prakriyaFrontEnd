@@ -54,10 +54,10 @@ const Landing = (props) => {
   const servicesRef = useRef();
   
 
-  const [dim, setDim] = useState({})
+  // const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
-  const [navWidth, setNavWidth] = useState(false);
+  
 
 
   const [temp, settemp] = useState(false)
@@ -134,7 +134,7 @@ const Landing = (props) => {
  
 
  const navWidthHandler=(bool)=>{
-   setNavWidth(bool);
+
    props.navWidthHandler(bool);
  }
 
@@ -186,14 +186,14 @@ const Landing = (props) => {
   }
     const observer = new IntersectionObserver (obsCallback, obsOptions);
     observer.observe(ourApproachRef.current)
-
+  
     if(!isMobile){
       const observer2 = new IntersectionObserver (obsCallback2, obsOptions2);
       observer2.observe(servicesRef.current)
     }
-    
+  
 
-  },[])
+  },[isMobile])
 
 
 
@@ -224,7 +224,7 @@ const Landing = (props) => {
                 
             }}>
 
-              <CardModal dim = {dim} data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>
+              <CardModal data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>
 
          </CSSTransition>
       
