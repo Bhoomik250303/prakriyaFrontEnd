@@ -2,13 +2,10 @@ import React, { useEffect, useState } from "react";
 import {collection, query, orderBy, onSnapshot, where, FieldValue, getDoc, getDocs} from "firebase/firestore"
 import {db} from '../firebase'
 import classes from "./TeamPrakriya.module.css"
-<<<<<<< HEAD
 import logo from "../Assets/ImageAssets/mainLogo.png"
 // import teamMembers from "../Assets/TextAssets/teamMembers";
-=======
 
 import teamMembers from "../Assets/TextAssets/teamMembers";
->>>>>>> 4015be0e0712c754fd124885689a5c76f72dd884
 import GoToTop from "../Hooks/goToTop.js"
 
 

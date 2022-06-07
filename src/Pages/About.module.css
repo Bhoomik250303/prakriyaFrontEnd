@@ -53,6 +53,7 @@
     .relative{
         top:15px;
         padding-bottom: 15vw;
+        transition: all ease 2s;
     }
 }
 
@@ -69,16 +70,25 @@
     }
     .box{
         /* border:  2px solid wheat; */
-        display: flex;
-        /* align-items: center; */
-        
-        
-    }
-    .relative{
-        position: relative;
-        top: clamp(-290px,-10vw,-70px);
+        width: 100%;
+        margin-left: 150;
+        margin-right: 150;
 
     }
+    .relative {
+        height: 35vw;
+        width:  fit-content;
+        margin: auto;
+        transition: all ease 2s;
+        /* border:  2px solid wheat; */
+    }
+    .relative img{
+        width: 100%;
+        height: 100%;
+        /* border:  2px solid wheat; */
+        
+    }
+    
     .left{
         height: fit-content;
         width: 60%;
@@ -141,3 +151,8 @@
     }
 }
 
+.temp{
+    opacity: 0;
+    transform: translateY(100px);
+    border: 2px solid wheat;
+}

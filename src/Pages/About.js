@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "./About.module.css"
 import GoToTop from "../Hooks/goToTop.js"
 
@@ -10,9 +10,30 @@ import ourVision from "../Assets/ImageAssets/About Us/ourVision.svg"
 
 
 const About = () => {
+    const imageRefRefactor = (ref, tempClass) => {   
+        const observer = new IntersectionObserver((entries, observer)=>{
+            console.log(entries)
+            if(entries[0].isIntersecting){
+                ref.current.classList.remove(classes[`${tempClass}`]);
+                observer.unobserve(ref.current);
+            }
+        }, {
+            root : null,
+            threshold : 0.1,
+        })
+        observer.observe(ref.current);        
+    };
+    const imageRef = useRef();
+    const imageRefOne = useRef();
+    const imageRefTwo = useRef();
+    const imageRefThree = useRef();
 
-    const images = document.getElementsByClassName('right');
-    console.log(images)
+    useEffect(()=>{
+        imageRefRefactor(imageRefOne, 'temp')
+        imageRefRefactor(imageRef, 'temp')
+        imageRefRefactor(imageRefTwo, 'temp')
+        imageRefRefactor(imageRefThree, 'temp')
+    },[])
 
 
     return (
@@ -23,51 +44,45 @@ const About = () => {
                     <div className={classes.title}><span>About</span> Us</div>
                     <div className={classes.text}>
                         Our name itself suggests that we follow a process by taking cues from the traditional ways of marketing and revamping it to the new-age digital marketing methods. We are a team motivated by a passion for enabling small companies via the use of innovative digital solutions and services.<br /><br />
-
                         At Prakriya, it's all about anticipating the demands of the customer, solving difficulties, finding solutions, and improving and innovating constantly. We assist company owners, like you, design a digital marketing strategy that can withstand the test of time and is proven to generate revenue growth.<br /><br />
                     </div><br /><br />
+                    <div className={`${classes.relative} ${classes.temp}`} ref={imageRef} >
+                                <img  src={ourVision} alt=""></img>
+                            </div>
+                            
                     <div className={classes.subTitle}>OUR VISION</div>
-                    <div className={classes.box}>
-                        <div className={classes.left}>
+                    <div className={classes.box}>    
                             <div className={classes.subText}>
                                 To make the most of your potential so that you may achieve great heights.
-
                             </div><br></br>
                             <div className={classes.text}>
                                 Business owners like you inspire us by taking chances, defying expectations, and enhancing the lives of the people who matter most to you - those who are your target audience. Every one of us grows and changes when we work together<br /><br />
                             </div><br /><br />
-                        </div>
-                        <div className={classes.right}>
-                            <div className={classes.relative}>
-                                <img src={ourVision} alt=""></img>
-                            </div>
-                        </div>
-
+                           
                     </div>
-
+                    <div className={`${classes.relative} ${classes.temp}`} ref={imageRefOne} >
+                                <img src={ourMission} alt=""></img>
+                            </div>
                     <div className={classes.subTitle}>OUR MISSION</div>
                     <div className={classes.box}>
-                        <div className={classes.left}>
+                        
                             <div className={classes.subText}>
                                 To make your company's name count and make your mark on the world around you.
 
-                            </div><br></br>
+                            <br></br>
                             <div className={classes.text}>
                                 People, passion and procedures at our company allow you to be creative and pioneers without worry of income loss. We help you be confident in your ability to break through boundaries.<br /><br />
                             </div><br /><br />
                         </div>
-                        <div className={classes.right}>
-                            <div className={classes.relative}>
-                                <img src={ourMission} alt=""></img>
-                            </div>
-                        </div>
+                        
                     </div>
-
-
+        
+                    <div className={`${classes.relative} ${classes.temp}`} ref={imageRefTwo} >
+                        <img  src={ourValues} alt=""></img>
+                    </div>
 
                     <div className={classes.subTitle}>OUR VALUES</div>
                     <div className={classes.box}>
-                        <div className={classes.left}>
                             <div className={classes.text}>
                                 Keeping true to our core values has helped Prakriya grow tremendously in terms of both customer satisfaction and customer retention. Our company's operations, services, and culture are all built around these basic beliefs.<br /><br />
 
@@ -76,12 +91,9 @@ const About = () => {
                                 Commitment to Integrity and Honesty
                             </div>
                             <div className={classes.text}>Through long-term mutually beneficial connections we aim for 100% customer satisfaction at Prakriya. We hold ourselves responsible to well-defined KPIs established at the beginning of every campaign. To ensure client satisfaction, we adhere to the Prakriya motto: relationships, responsiveness, and outcomes.</div><br /><br />
-                        </div>
-                        <div className={classes.right}>
-                            <div>
-                                <img src={ourValues} alt=""></img>
-                            </div>
-                        </div>
+                        
+
+                        
                     </div>
 
                     <div className={classes.subText}>
@@ -95,13 +107,13 @@ const About = () => {
 
 
 
-
+                    <div className={`${classes.relative} ${classes.temp}`} ref={imageRefThree} >
+                                <img src={ourGoals} alt=""></img>
+                            </div>
                     <div className={classes.subTitle}>OUR GOALS</div>
                     <div className={classes.box}>
-                        <div className={classes.left}>
                             <div className={classes.text}>
                                 To identify your internet marketing objectives and develop a plan, timetable and forecast to meet them. Our methods allow us to forecast traffic growth for each channel and achieve the outcomes you want.<br /><br />
-
                             </div>
                             <div className={classes.subText}>
                                 Focused on Return on Investment (ROI).
@@ -111,15 +123,8 @@ const About = () => {
                                 Focused Strategy
                             </div>
                             <div className={classes.text}>In order to meet the needs of your company, we provide a wide range of personalized advertising options.</div><br /><br />
-                        </div>
-
-                        <div className={classes.right}>
-                            <div>
-                                <img src={ourGoals} alt=""></img>
-                            </div>
-                        </div>
+                        
                     </div>
-
 
                     <div className={classes.subText}>
                         Flexibility
