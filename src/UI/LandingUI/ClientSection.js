@@ -1,20 +1,27 @@
-import React, {  useMemo, useRef} from 'react';
+import React, { useMemo, useEffect, useRef, useState} from 'react';
 import _ from 'loadsh'
 import useScrollBlock from '../../Hooks/useScrollBlock';
 import classes from "./ClientSection.module.css"
-
+import {db} from '../../firebase'
 import arrow from "../../Assets/ImageAssets/Section3/ICONS/arrows.svg"
-import client1 from "../../Assets/ImageAssets/SectionClient/client 1-01.png"
-import client2 from "../../Assets/ImageAssets/SectionClient/client 2-01.png"
-import client3 from "../../Assets/ImageAssets/SectionClient/client 3-01.png"
-import client4 from "../../Assets/ImageAssets/SectionClient/client 4-01.png"
-import client5 from "../../Assets/ImageAssets/SectionClient/client 5-01.png"
-import client6 from "../../Assets/ImageAssets/SectionClient/client 6-01.png"
+import {collection, query, getDoc, onSnapshot, getDocs} from "firebase/firestore"
+
 
 const ClientSection = (props) => {
 
     const scrollContainer = useRef();
     const [blockScroll, allowScroll] = useScrollBlock();
+    const [clientList , setClientList] = useState([]);
+    const [showEmptyClient, setShowEmptyClient] = useState(true)
+    useEffect(() => {
+        const q = query(collection(db,'our clients'))
+        getDocs(q).then((querySnapshot)=>{
+                setClientList(querySnapshot.docs);
+                setShowEmptyClient(false)
+            })
+    },[])
+
+
     // const circle = useRef();
     
     // const onWheel = (e) => {
@@ -92,6 +99,12 @@ const ClientSection = (props) => {
     const rightArrowClickHandler = ()=>{
         scrollContainer.current.scrollLeft += window.innerWidth
     }
+    
+        const sortingIndexWise = () => {
+        clientList.sort((a,b)=>{
+            return a.data().index < b.data().index ? a.data().index : b.data().index;
+        })
+    }
 
     return (
         <>
@@ -105,24 +118,27 @@ const ClientSection = (props) => {
                     <div className={classes.arrow2} onClick={rightArrowClickHandler}>
                         <img src={arrow} alt=""></img>
                     </div>
-                    <div className={classes.contentForClient}>
-                        <img src={client1} alt=" "></img>
-                    </div>
-                    <div className={classes.contentForClient} >
-                        <img src={client2} alt=" "></img>
-                    </div>
-                    <div className={classes.contentForClient}>
-                        <img src={client3} alt=" "></img>
-                    </div>
-                    <div className={classes.contentForClient}>
-                        <img src={client4} alt=" "></img>
-                    </div>
-                    <div className={classes.contentForClient}>
-                        <img src={client5} alt=" "></img>
-                    </div>
-                    <div className={classes.contentForClient} >
-                        <img src={client6} alt=" "></img>
-                    </div>
+                    {
+                        showEmptyClient &&
+                                < >
+                                <div key="1" className={classes.contentForClient}/>
+                                <div key="2" className={classes.contentForClient}/>
+                                <div key="3" className={classes.contentForClient}/>
+                                </>
+                    }
+                    {
+                        sortingIndexWise()
+                    }
+                    {
+
+                        clientList.map((e)=>{
+                            return(
+                                <div key={e.data().displayName} className={classes.contentForClient}>
+                                    <img src={e.data().logoImageUrl} alt=" "></img>
+                                </div>
+                            )
+                        })
+                    }
 
 
 

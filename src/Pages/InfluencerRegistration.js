@@ -4,6 +4,9 @@ import classes from "./InfluencerRegistration.module.css"
 import Button from "../Components/Button";
 import GoToTop from "../Hooks/goToTop";
 import infuencer from "../Assets/ImageAssets/influencerRegistration/influencerillustration-01.svg"
+import {db} from '../firebase'
+import { collection , addDoc } from "firebase/firestore";
+
 const InfluencerRegistration = () => {
 
     const [spinner, setSpinner] = useState(false)
@@ -16,8 +19,13 @@ const InfluencerRegistration = () => {
         const number = data.get('number');
         const city = data.get('city');
         const message = data.get('message')
-        const dataa = { name, email, number, city, message }
-        // console.log(dataa);
+        const dataa = {name,email,number,city,message,dateTime : Date().toLocaleString().split(" GMT+")[0],}
+
+        try{
+            await addDoc(collection(db,'influencer registration'),dataa)
+        }catch(error){
+            alert(error)
+        }
 
         const header = new Headers()
 
@@ -100,7 +108,7 @@ const InfluencerRegistration = () => {
 
                         </div>
                         <div className={classes.illustration}>
-                                <img src={infuencer}></img>
+                                <img src={infuencer} ></img>
                         </div>
                     </div>
 

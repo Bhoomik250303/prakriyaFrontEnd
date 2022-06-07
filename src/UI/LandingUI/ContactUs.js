@@ -3,7 +3,8 @@ import classes from "./ContactUS.module.css"
 import { useState } from "react";
 import Button from "../../Components/Button";
 import avatar from "../../Assets/ImageAssets/ContactUs/contactUs.svg"
-
+import {collection, query, orderBy, onSnapshot, where, FieldValue, addDoc} from "firebase/firestore"
+import {db} from '../../firebase'
 const ContactUs = () => {
 
 
@@ -16,8 +17,14 @@ const ContactUs = () => {
         const email = data.get('email');
         const number = data.get('number');
         const message = data.get('message');
-        const dataa = { name, email, number, message }
+        const dataa = {name,email,number,message,'dateTime' : Date(),}
+
         // console.log(dataa);
+        try{
+            await addDoc(collection(db,'contact us'),dataa)
+        }catch(error){
+            alert(error)
+        }
 
         const header = new Headers()
 

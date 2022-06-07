@@ -207,7 +207,7 @@
         justify-content: center;
         width: 18vw;
         height: 3vw;
-        /* border: 2px solid rgb(0, 0, 0); */
+        /* border: 2px solid rgb(227, 95, 95); */
         /* background: #000000; */
         position: absolute;
         color:#D81330;
@@ -512,10 +512,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: fit-content;
+        /* width: fit-content; */
         height: fit-content;
-        /* border: 2px solid rgb(0, 0, 0); */
-        /* background: #000000; */
+        /* border: 2px solid rgb(227, 95, 95); */
+        width: 30vw;
         position: absolute;
         color:#D81330;
         top: 22%;

@@ -3,10 +3,8 @@ import Landing from './Pages/Landing';
 import "./App.css"
 import Navbar from './Components/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom'
-
 import Footer from './Components/Footer/Footer';
 import About from './Pages/About';
-// import GoToTop from './Hooks/goToTop';
 import TeamPrakriya from './Pages/TeamPrakriya';
 import InfluencerRegistration from './Pages/InfluencerRegistration';
 

@@ -1,5 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
+
+import {ref,  getDownloadURL, uploadBytes} from "firebase/storage";
+import { storage} from "../../firebase";
+import {collection, query, getDoc, onSnapshot, getDocs} from "firebase/firestore"
+import {db ,app} from '../../firebase'
 import classes from "./Careers.module.css"
 import avatar1 from "../../Assets/ImageAssets/Careers/avatar1.svg"
 import light from "../../Assets/ImageAssets/Careers/light.svg"
@@ -9,20 +14,48 @@ import careersMobile from "../../Assets/ImageAssets/Careers/careersMobile.svg"
 import Button from "../../Components/Button";
 const Careers = () => {
 
+    const [isHiring, setIsHiring] = useState(false)
+    const[hiringPosition,setHiringPosition] = useState("")
+    useEffect(() => {
+        const q = query(collection(db,'hiring status'))
+        getDocs(q).then((documents)=>{
+            setIsHiring(documents.docs[0].data()['isHiring']);
+            setHiringPosition(documents.docs[0].data()['positionHiring'])
+
+        });
+        // onSnapshot(q,(querySnapshot)=>{
+        //     })
+    },[])
+    
+
     const fileUpload = useRef();
     const[spinner,setSpinner] = useState(false)
     const submitHandler = async (e)=>{
         
         e.preventDefault();
         const data = new FormData(e.currentTarget);
-        // const name = data.get('name');
-        // const email = data.get('email');
-        // const number = data.get('number');
-        // const resume = data.get('resume');
+        const name = data.get('name');
+        const email = data.get('email');
+        const number = data.get('number');
+        const resume = data.get('resume');
         // data.append('resume',e.target.files[0])
         if(fileUpload.current.files[0].size > 2000000){
             alert('File size Exceeds MAX limit of 2Mb 📄❗')
             return;
+        }
+
+                
+        
+        try{
+            const file  = e.target.files[0];
+            const storageRef = app.storage().ref()
+            const fileRef = storageRef.child(file.name)
+            fileRef.put(file).then(()=>{
+                console.log("DONE")
+            })
+        }
+        catch(err){
+            console.log(err.toString())
         }
         // console.log(e)
         setSpinner(true);
@@ -107,9 +140,9 @@ const Careers = () => {
                     <div  className={classes.avatar3}>
                         <img src={wAvatar} alt=" "></img>
                     </div>
-                    <div className={classes.hiring}>Content Writer</div>
+                    <div className={classes.hiring}>{isHiring ? hiringPosition : "Stay Tuned!"}</div>
                     <div className={classes.cloud}>
-                        <div className={classes.cloudText}>WE ARE HIRING</div>
+                        <div className={classes.cloudText}>{isHiring ? 'WE ARE HIRING' : ' '}</div>
                         <img src={cloud} alt=" "></img>
                     </div>         
                 </div>
