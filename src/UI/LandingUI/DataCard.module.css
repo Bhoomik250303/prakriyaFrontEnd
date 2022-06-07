@@ -60,11 +60,7 @@
     
     
   }
-  .Heading div{
-    
-    font-size:clamp(8px,4vw, 20px) !important;
-    
-  }
+  
   .dataCardTitle{
     position: absolute;
     /* border: 2px solid greenyellow; */
@@ -82,11 +78,23 @@
   }
   .Heading div{
     margin-left: 8px;
-    font-size: 6.5vw !important;
+    font-size: 8vw !important;
     font-weight: 600;
     
   }
 }
+
+
+
+  .Heading div{
+    margin-left: 8px;
+    font-size: 2vw ;
+    font-weight: 600;
+    
+  }
+
+
+
 
 .showModal{
     
@@ -113,12 +121,6 @@
     
 }
 
-.Heading div{
-  margin-left: 8px;
-  font-size: 2vw !important;
-  font-weight: 600;
-  
-}
 
 .Para{
     width: 100%;
