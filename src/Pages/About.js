@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import classes from "./About.module.css"
 import GoToTop from "../Hooks/goToTop.js"
-
 import ourGoals from "../Assets/ImageAssets/About Us/ourGoals.svg"
 import ourMission from "../Assets/ImageAssets/About Us/ourMission.svg"
 import ourValues from "../Assets/ImageAssets/About Us/ourValues.svg"
