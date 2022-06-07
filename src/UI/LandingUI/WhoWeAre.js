@@ -1,13 +1,39 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import classes from "./WhoWeAre.module.css"
 import avatar from "../../Assets/ImageAssets/WhoWeAre/whoWeAre.svg"
 
 const WhoWeAre = ()=>{
+
+    const containerRef = useRef();
+    const imageRef = useRef();
+
+    useEffect(()=>{
+        const obsCallback = (entries, observer)=>{
+            // console.log(entries[0].isIntersecting);
+            if(entries[0].isIntersecting){
+                // console.log(entries[0]);
+            
+                containerRef.current.classList.remove(classes['temp'])
+                imageRef.current.classList.remove(classes['imageTemp'])
+                // containerRef.current.classList.add(classes['unTemp'])
+                observer.unobserve(containerRef.current)
+            }
+        }
+    
+        const obsOptions = {
+            root: null,
+            threshold :0.5
+        }
+    
+        const observer = new IntersectionObserver (obsCallback, obsOptions);
+        observer.observe(containerRef.current)
+    },[])
+
     return(
         <>
-            <div className={classes.mainContainer} id="about">
+            <div className={`${classes.mainContainer}`} id="about">
                 
-                <div className={classes.container}>
+                <div ref ={containerRef} className={`${classes.container} ${classes.temp}`}>
                        <div className={classes.title}>
                             <div className={classes.title_main}><span>Who</span> we are</div>
                             <div className={classes.title_sub}>
@@ -15,7 +41,7 @@ const WhoWeAre = ()=>{
                             </div>
                        </div>
                        <div className={classes.text}>
-                            <div className={classes.image}>
+                            <div ref={imageRef} className={`${classes.image} ${classes.imageTemp}`}>
                                 <img alt=" " src={avatar}></img>
                             </div>
                             <div className={classes.textContainer}>

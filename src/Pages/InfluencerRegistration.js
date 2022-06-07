@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import classes from "./InfluencerRegistration.module.css"
 import Button from "../Components/Button";
 import GoToTop from "../Hooks/goToTop";
@@ -10,6 +10,12 @@ import { collection , addDoc } from "firebase/firestore";
 const InfluencerRegistration = () => {
 
     const [spinner, setSpinner] = useState(false)
+    const illustrationRef = useRef();
+    const formContainerRef = useRef();
+
+
+
+
     const submitHandler = async (e) => {
         setSpinner(true);
         e.preventDefault();
@@ -54,7 +60,28 @@ const InfluencerRegistration = () => {
 
     }
 
-
+    useEffect(()=>{
+        
+        const obsCallback = (entries, observer)=>{
+            // console.log(entries[0].isIntersecting);
+            if(entries[0].isIntersecting){
+                // console.log(entries[0]);
+            
+                illustrationRef.current.classList.remove(classes['temp'])
+                
+                // containerRef.current.classList.add(classes['unTemp'])
+                observer.unobserve(formContainerRef.current)
+            }
+        }
+    
+        const obsOptions = {
+            root: null,
+            threshold :0.5
+        }
+    
+        const observer = new IntersectionObserver (obsCallback, obsOptions);
+        observer.observe(formContainerRef.current)
+    },[])
 
 
 
@@ -84,7 +111,7 @@ const InfluencerRegistration = () => {
                             We will Help you find the right Brands!
                         </div>
                     </div>
-                    <div className={classes.mainFormContainer}>
+                    <div className={classes.mainFormContainer} ref={formContainerRef}>
                         <div className={classes.formContainer}>
                             <div className={classes.formInnerContainer}>
                                 <div className={classes.subHead}>
@@ -107,8 +134,13 @@ const InfluencerRegistration = () => {
                             </div>
 
                         </div>
+<<<<<<< HEAD
                         <div className={classes.illustration}>
                                 <img src={infuencer} ></img>
+=======
+                        <div className={`${classes.illustration} ${classes.temp}`} ref={illustrationRef}>
+                                <img src={infuencer} alt=" "></img>
+>>>>>>> 4015be0e0712c754fd124885689a5c76f72dd884
                         </div>
                     </div>
 

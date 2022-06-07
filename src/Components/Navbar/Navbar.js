@@ -74,7 +74,7 @@ const Navbar = (props) => {
                 <div><Link to="/InfluencerRegistration">Influencer Registration</Link> </div>
                 
                 <div><Link  to='/about'>About Us</Link></div>
-                <div><a>Blogs</a></div>
+                <div><a href="/">Blogs</a></div>
                 <div><HashLink to='/#contactUs'>Contact Us</HashLink></div>
 
               </div>

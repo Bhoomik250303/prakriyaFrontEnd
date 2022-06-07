@@ -29,6 +29,7 @@ const Careers = () => {
     
 
     const fileUpload = useRef();
+    const containerRef = useRef();
     const[spinner,setSpinner] = useState(false)
     const submitHandler = async (e)=>{
         
@@ -95,11 +96,32 @@ const Careers = () => {
 
     }
 
+    useEffect(()=>{
+        const obsCallback = (entries, observer)=>{
+            // console.log(entries[0].isIntersecting);
+            if(entries[0].isIntersecting){
+                // console.log(entries[0]);
+            
+                containerRef.current.classList.remove(classes['temp'])
+                
+                // containerRef.current.classList.add(classes['unTemp'])
+                observer.unobserve(containerRef.current)
+            }
+        }
+    
+        const obsOptions = {
+            root: null,
+            threshold :0.1
+        }
+    
+        const observer = new IntersectionObserver (obsCallback, obsOptions);
+        observer.observe(containerRef.current)
+    },[])
 
     return (
         <>
             <div className={classes.mainContainer} id="career">
-                <div className={classes.container}>
+                <div className={`${classes.container} ${classes.temp}`} ref={containerRef}>
                     <div className={classes.title}>
                         careers
                     </div>

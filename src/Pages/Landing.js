@@ -48,13 +48,16 @@ const Landing = (props) => {
   
 
   const container = useRef();
-  
+  const ourApproachRef = useRef();
+  const ourApproachTextRef=useRef();
+  const ourApproachDataCardContainerRef = useRef();
+  const servicesRef = useRef();
   
 
-  const [dim, setDim] = useState({})
+  // const [dim, setDim] = useState({})
   const [bool, setbool] = useState(false)
   const [cardModalData, setCardModalData] = useState('')
-  const [navWidth, setNavWidth] = useState(false);
+  
 
 
   const [temp, settemp] = useState(false)
@@ -131,7 +134,7 @@ const Landing = (props) => {
  
 
  const navWidthHandler=(bool)=>{
-   setNavWidth(bool);
+
    props.navWidthHandler(bool);
  }
 
@@ -139,6 +142,59 @@ const Landing = (props) => {
   const imagesToPre = [image1,image2,image3 ,image4,image5,image6 ,image7 ,image8 ,image9 ,image10 ]
   imagesToPre.forEach(image => { new Image().src = image })
 },[]) //to kee or remove decide later
+
+
+//to add transition in ourApproach
+  useEffect(()=>{
+      const obsCallback = (entries, observer)=>{
+        // console.log(entries[0].isIntersecting);
+        if(!isMobile){
+          ourApproachDataCardContainerRef.current.classList.remove(classes['temp2'])
+          ourApproachTextRef.current.classList.remove(classes['temp1'])
+          observer.unobserve(ourApproachRef.current)
+          return;
+        }
+        if(entries[0].isIntersecting){
+            // console.log(entries[0]);
+        
+            ourApproachDataCardContainerRef.current.classList.remove(classes['temp2'])
+            ourApproachTextRef.current.classList.remove(classes['temp1'])
+            // containerRef.current.classList.add(classes['unTemp'])
+            observer.unobserve(ourApproachRef.current)
+        }
+    }
+    const obsCallback2 = (entries, observer)=>{
+      
+      
+      if(entries[0].isIntersecting){
+          // console.log(entries[0]);
+      
+          servicesRef.current.classList.remove(classes['temp3'])
+          
+          // containerRef.current.classList.add(classes['unTemp'])
+          observer.unobserve(servicesRef.current)
+      }
+  }
+
+    const obsOptions = {
+        root: null,
+        threshold :0.8
+    }
+    const obsOptions2 = {
+      root: null,
+      threshold :0.3
+  }
+    const observer = new IntersectionObserver (obsCallback, obsOptions);
+    observer.observe(ourApproachRef.current)
+  
+    if(!isMobile){
+      const observer2 = new IntersectionObserver (obsCallback2, obsOptions2);
+      observer2.observe(servicesRef.current)
+    }
+  
+
+  },[isMobile])
+
 
 
   return (
@@ -168,7 +224,7 @@ const Landing = (props) => {
                 
             }}>
 
-              <CardModal dim = {dim} data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>
+              <CardModal data={cardModalData} setboolean={CardModalBoolHandelr}></CardModal>
 
          </CSSTransition>
       
@@ -215,7 +271,7 @@ const Landing = (props) => {
         
       </div>}
 
-      {!isMobile &&<div id='services' className={classes.Data3}>
+      {!isMobile &&<div id='services' className={`${classes.Data3} ${classes.temp3}`} ref={servicesRef}>
         <div className={classes.Data3Title}><span>Our </span>Services</div>
         <div className={classes.sliderContainer}>
         
@@ -273,8 +329,8 @@ const Landing = (props) => {
         
       </div> } 
 
-      <div id='approach' className={classes.Data}>
-        <div className={classes.approach}>
+      <div id='approach' className={classes.Data} ref={ourApproachRef}>
+        <div className={`${classes.approach} ${classes.temp1}`} ref={ourApproachTextRef}>
             <div className={classes.approach_text}>
                 <div  className={classes.approach_text_top}>
                       <span>our</span> approach
@@ -287,7 +343,7 @@ const Landing = (props) => {
                 <img src={approachImg} alt=" "></img>
             </div>
         </div>
-        <div className={classes.DataContainer}>
+        <div className={`${classes.DataContainer} ${classes.temp2}`} ref={ourApproachDataCardContainerRef}>
           <DataCard title={"ANALYZE"}></DataCard>
           <DataCard title={"FORMULATE"}></DataCard>
           <DataCard title={"IMPLEMENT"}></DataCard>

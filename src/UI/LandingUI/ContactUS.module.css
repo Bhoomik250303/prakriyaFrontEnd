@@ -1,9 +1,30 @@
+.container{
+    /* border: 2px solid wheat; */
+    transition: all ease-in 500ms
+}
+.avatar{
+    transition: all ease-in 1000ms
+}
+
+.temp1{
+    transform:translatey(150px) ;
+    opacity: 0;
+}
+
+.temp2{
+  
+
+    transform:  scaleX(-1) ;
+    
+    opacity: 0;
+}
+
 @media (min-width:800px){
     .mainContainer{
         color: white;
         width: 100%;
-        height: 165vh;
-        padding-top: 10%;
+        height: fit-content;
+        padding-top: 7vw;
         background: rgb(0, 0, 0);
         display: flex;
         align-items: center;
@@ -157,6 +178,7 @@
 
 @media (max-width:800px){
     .mainContainer{
+        padding-top: 22vw;
         color: white;
         width: 100%;
         height: fit-content;
@@ -168,6 +190,7 @@
         align-items: center;
         justify-content: center;
         /* border: 2px solid wheat; */
+        padding-bottom: 22vw;
     }
     
     .container{
