@@ -23,7 +23,7 @@
         font-family: 'Montserrat', sans-serif;
         font-size: clamp(8px,3vw,15px);
         font-weight: 500;
-        margin-bottom: 10vw;
+        /* margin-bottom: 10vw; */
         
     }
     .button:hover{

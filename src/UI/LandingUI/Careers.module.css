@@ -321,6 +321,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 22vw;
         
     
     }
@@ -360,7 +361,7 @@
     .form{
         width: 100%;
         max-width: 500px;
-        height: 50%;
+        /* height: fit-content; */
         margin-top: 0;
         
         /* border: 2px solid wheat; */
@@ -472,30 +473,7 @@
        cursor: pointer;
     }  
     
-    
-    /* .button{
-        text-decoration: none;
-        width: fit-content;
-        height: fit-content;
-        padding: 2vw;
-        margin-top: 15px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        background: #D81330;
-        color: white;
-        border: none;
-        border-radius: 2px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1px,3.5vw,15px);
-        font-weight: 500;
-        
-    }
-    .button:hover{
-        cursor: pointer;
-        background: #d81331c5;
-    
-    } */
+  
     .avatar1{
         position: absolute;
         width: 25%;

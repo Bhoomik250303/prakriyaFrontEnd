@@ -21,7 +21,7 @@
         width: 100%;
         height: fit-content;
         padding-top: 10vw;
-        padding-bottom: 10vw;
+        /* padding-bottom: 10vw; */
         background: black;
         display: flex;
         align-items: center;

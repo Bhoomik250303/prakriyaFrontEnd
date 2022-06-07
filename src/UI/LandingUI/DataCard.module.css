@@ -104,12 +104,14 @@
     color: white;
     display: flex;
     align-items: center;
+    
 }
 
 .Heading div{
   margin-left: 8px;
-  font-size: 1.5vw;
-  font-weight: 500;
+  font-size: 6.5vw !important;
+  font-weight: 600;
+  
 }
 
 .Para{

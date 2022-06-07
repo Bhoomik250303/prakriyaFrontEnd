@@ -107,63 +107,63 @@ const Slider = (prop) => {
                         
                         <img src={image1} alt=" "></img>
                         <div className="title">Social Media</div>
-                        <div className="description temp">{servicesText.image1.text.slice(0,129)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image1.text.slice(0,110)+'   . . .'}</div>
                     </div>
                     <div id={"2"}  className="slide"onClick={clickHandler}>
                       
                         <img src={image2} alt=" "></img>
                         <div className="title">Search Engine Optimization</div>
-                        <div className="description temp">{servicesText.image2.text.slice(0,130)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image2.text.slice(0,110)+'   . . .'}</div>
                     </div>
                     <div id={"3"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image3} alt=" "></img>
                         <div className="title">Content Marketing</div>
-                        <div className="description temp">{servicesText.image3.text.slice(0,130)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image3.text.slice(0,110)+'   . . .'}</div>
                     </div>
                     <div id={"4"}  className="slide" onClick={clickHandler}>
                        
                         <img src={image4} alt=" "></img>
                         <div className="title">Digital PR</div>
-                        <div className="description temp">{servicesText.image4.text.slice(0,130)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image4.text.slice(0,100)+'   . . .'}</div>
                     </div>
                     <div id={"5"} className="slide"  onClick={clickHandler}>
                         
                         <img src={image5} alt=" "></img>
                         <div className="title">Brand Strategy</div>
-                        <div className="description temp">{servicesText.image5.text.slice(0,130)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image5.text.slice(0,100)+'   . . .'}</div>
                     </div>
                     <div id={"6"}  className="slide"onClick={clickHandler}>
                         
                         <img src={image6} alt=" "></img>
                         <div className="title">Paid Marketing</div>
-                        <div className="description temp">{servicesText.image6.text.slice(0,135)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image6.text.slice(0,110)+'   . . .'}</div>
                     </div>
                     <div id={"7"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image7} alt=" "></img>
                         <div className="title">Analytics</div>
-                        <div className="description temp">{servicesText.image7.text.slice(0,135)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image7.text.slice(0,110)+'   . . .'}</div>
                     </div>
                     <div id={"8"}  className="slide" onClick={clickHandler}>
                         
                         <img src={image8} alt=" "></img>
                         <div className="title">Conversion Optimization</div>
-                        <div className="description temp">{servicesText.image8.text.slice(0,120)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image8.text.slice(0,100)+'   . . .'}</div>
                     </div>
                     <div id={"9"} className="slide"  onClick={clickHandler}>
                         
                         
                         <img src={image9} alt=" "></img>
                         <div className="title">Affiliates</div>
-                        <div className="description temp">{servicesText.image9.text.slice(0,130)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image9.text.slice(0,90)+'   . . .'}</div>
                     </div>
                     <div id={"10"}  className="slide"onClick={clickHandler}>
                         
                         
                         <img src={image10} alt=" "></img>
                         <div className="title">Influencer Marketing</div>
-                        <div className="description temp">{servicesText.image10.text.slice(0,140)+'   . . .'}</div>
+                        <div className="description temp">{servicesText.image10.text.slice(0,100)+'   . . .'}</div>
                     </div>
                     
                     

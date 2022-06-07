@@ -98,6 +98,7 @@
   }
   .Data{
     width: 100%;
+    padding-top: 22vw;
     height:fit-content;
     flex-direction: column;
     /* border: 2px solid wheat; */
@@ -204,13 +205,14 @@
   
   
   background: rgb(0, 0, 0);
-  /* border: 0px solid white; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   transition: all ease-in 1000ms;
   /* border: 2px solid wheat; */
+  padding-top: 22vw;
 }
 .sliderContainer{
   width: 95%;

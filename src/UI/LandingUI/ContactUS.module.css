@@ -178,6 +178,7 @@
 
 @media (max-width:800px){
     .mainContainer{
+        padding-top: 22vw;
         color: white;
         width: 100%;
         height: fit-content;
@@ -189,6 +190,7 @@
         align-items: center;
         justify-content: center;
         /* border: 2px solid wheat; */
+        padding-bottom: 22vw;
     }
     
     .container{
