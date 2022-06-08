@@ -53,7 +53,7 @@
     .relative{
         top:15px;
         padding-bottom: 15vw;
-        transition: all ease 2s;
+        transition: all ease 600ms;
     }
 }
 
@@ -79,7 +79,7 @@
         height: 35vw;
         width:  fit-content;
         margin: auto;
-        transition: all ease 2s;
+        transition: all ease 600ms;
         /* border:  2px solid wheat; */
     }
     .relative img{
@@ -153,6 +153,6 @@
 
 .temp{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(200px);
     border: 2px solid wheat;
 }
