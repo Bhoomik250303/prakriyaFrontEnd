@@ -68,11 +68,11 @@ const About = () => {
                             <div className={classes.subText}>
                             To ensure that your company achieves its marketing goals using the full potential of the Digital World
 
-                            <br></br>
+                            <br></br></div>
                             <div className={classes.text}>
                                 People, passion and procedures at our company allow you to be creative and pioneers without worry of income loss. We help you be confident in your ability to break through boundaries.<br /><br />
                             </div><br /><br />
-                        </div>
+                        
                         
                     </div>
         
