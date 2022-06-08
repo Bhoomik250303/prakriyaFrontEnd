@@ -30,6 +30,7 @@
         align-items: center;
         justify-content: center;
         /* border: 2px solid white; */
+        overflow: hidden;
     }
     
     .container{
@@ -39,6 +40,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        overflow: hidden;
     }
     
     .title{
@@ -191,6 +193,7 @@
         justify-content: center;
         /* border: 2px solid wheat; */
         padding-bottom: 22vw;
+        overflow: hidden;
     }
     
     .container{
@@ -200,6 +203,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        overflow: hidden;
     
     }
     
