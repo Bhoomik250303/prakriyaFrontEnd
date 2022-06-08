@@ -66,7 +66,7 @@ const About = () => {
                     <div className={classes.box}>
                         
                             <div className={classes.subText}>
-                                To make your company's name count and make your mark on the world around you.
+                            To ensure that your company achieves its marketing goals using the full potential of the Digital World
 
                             <br></br>
                             <div className={classes.text}>
@@ -89,7 +89,7 @@ const About = () => {
                             <div className={classes.subText}>
                                 Commitment to Integrity and Honesty
                             </div>
-                            <div className={classes.text}>Through long-term mutually beneficial connections we aim for 100% customer satisfaction at Prakriya. We hold ourselves responsible to well-defined KPIs established at the beginning of every campaign. To ensure client satisfaction, we adhere to the Prakriya motto: relationships, responsiveness, and outcomes.</div><br /><br />
+                            <div className={classes.text}>Through long-term mutually beneficial connections we aim for 100% customer satisfaction at Prakriya. We hold ourselves responsible to well-defined KPIs established at the beginning of every campaign. To ensure client satisfaction, we adhere to the Prakriya motto: relationships, responsiveness & outcomes.</div><br /><br />
                         
 
                         
