@@ -31,6 +31,7 @@
         justify-content: center;
         /* border: 2px solid white; */
         overflow: hidden;
+        
     }
     
     .container{
@@ -40,7 +41,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
+        
     }
     
     .title{
@@ -203,7 +204,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        overflow: hidden;
+      
     
     }
     
