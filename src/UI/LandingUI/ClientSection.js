@@ -16,9 +16,16 @@ const ClientSection = (props) => {
     useEffect(() => {
         const q = query(collection(db,'our clients'))
         getDocs(q).then((querySnapshot)=>{
-                setClientList(querySnapshot.docs);
+            console.log(querySnapshot.docs[0].data().index)
+        console.log(querySnapshot.docs[1].data()['index'])
+                setClientList(querySnapshot.docs.sort((a,b)=>{
+                    return a.data()['index'] - b.data()['index'];
+                }));
                 setShowEmptyClient(false)
-            })
+            });
+            // clientList.sort((a,b)=>{
+            //     return b.data()['index'] - a.data()['index'];
+            // });
     },[])
 
 
@@ -105,11 +112,8 @@ const ClientSection = (props) => {
         scrollContainer.current.scrollLeft += window.innerWidth
     }
     
-        const sortingIndexWise = () => {
-        clientList.sort((a,b)=>{
-            return a.data().index < b.data().index ? a.data().index : b.data().index;
-        })
-    }
+       
+    
 
     return (
         <>
@@ -131,14 +135,12 @@ const ClientSection = (props) => {
                                 <div key="3" className={classes.contentForClient}/>
                                 </>
                     }
-                    {
-                        sortingIndexWise()
-                    }
+                  
                     {
 
                         clientList.map((e)=>{
                             return(
-                                <div key={e.data().displayName} className={classes.contentForClient}>
+                                <div key={e.data().documentName} className={classes.contentForClient}>
                                     <img src={e.data().logoImageUrl} alt=" "></img>
                                 </div>
                             )
