@@ -23,9 +23,6 @@ const ClientSection = (props) => {
                 }));
                 setShowEmptyClient(false)
             });
-            // clientList.sort((a,b)=>{
-            //     return b.data()['index'] - a.data()['index'];
-            // });
     },[])
 
 
